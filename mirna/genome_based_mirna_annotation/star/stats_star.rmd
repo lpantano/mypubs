@@ -1,0 +1,112 @@
+---
+title: "isomiR annotation with STAR using whole genome"
+author: "Lorena Pantano"
+date: "11/29/2014"
+output:
+  knitrBootstrap::bootstrap_document:
+    theme: readable
+    highlight: zenburn
+    theme.chooser: TRUE
+    highlight.chooser: TRUE
+  html_document:
+    highlight: zenburn
+
+---
+
+
+```{r setup, echo=FALSE}
+library(knitr)
+library(rmarkdown)
+library(knitrBootstrap)
+
+opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
+ fig.height=6, fig.width=6, message=F, error=F, warning=F, cache=T)
+```
+
+
+```{r load}
+data<-read.table("sim.20.hsa.dat", header=T)
+data_filtered<-read.table("sim.20.hsa.primary.dat", header=T)
+```
+
+# Overview
+
+The idea of this report is to show how well STAR is decting
+isomiRs using the genome as reference. I simulated a bunch of isomirs (~16900) that can have the folowing variation:
+
+* starts at different position than the reference miRNA: t5
+* ends at different position than the reference miRNA: t3
+* have a mutation: muts
+* have nt addition at the end: add
+
+## Methods
+
+
+`bash map_star.sh sim.20.hsa.fa`
+`bamtools filter -isPrimaryAlignment True -in sim.20.hsa.bam -out sim.20.hsa.primary.bam `
+`bedtools intersect -s -wo -bed -abam sim.20.hsa.primary.bam -b hsa.gff3 > sim.20.hsa.primary.bam.anno`
+`python parse_bam.py`
+
+# Results 
+
+## filtering
+
+Only 7283 mapped to the genome and were kept after filtering. And 3318
+overlapped with any miRNA.
+
+### detection
+
+```{r iso}
+library(ggplot2)
+library(reshape)
+data_gg <- melt(data_filtered,id.vars = c("seq","known","correct","mapped","amb"))
+ggplot(data_gg, aes(correct, fill = value)) +
+    geom_bar() +
+    scale_fill_brewer(palette = "Set1") +
+    theme_bw() +
+    facet_wrap(~variable)
+```
+
+
+### multi-mapped
+
+Many people filter out the sequences that map multiple times on the genome.
+I count the times the sequence was mapping to another miRNA.
+
+```{r m}
+ggplot(data_filtered, aes(correct, fill = factor(amb))) +
+    geom_bar() +
+    scale_fill_brewer("number of times annotated",palette = "Set1") +
+    theme_bw() 
+```
+
+## no filtering
+
+16377 mapped to the genome. And 12549
+overlapped with any miRNA.
+
+### detection
+
+```{r iso-no-filtered}
+library(ggplot2)
+library(reshape)
+data_gg <- melt(data,id.vars = c("seq","known","correct","mapped","amb"))
+ggplot(data_gg, aes(correct, fill = value)) +
+    geom_bar() +
+    scale_fill_brewer(palette = "Set1") +
+    theme_bw() +
+    facet_wrap(~variable)
+```
+
+
+### multi-mapped
+
+Many people filter out the sequences that map multiple times on the genome.
+I count the times the sequence was mapping to another miRNA.
+
+```{r m-no-filtered }
+ggplot(data, aes(correct, fill = factor(amb))) +
+    geom_bar() +
+    scale_fill_brewer("number of times annotated",palette = "Set1") +
+    theme_bw() 
+```
