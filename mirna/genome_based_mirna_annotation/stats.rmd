@@ -1,7 +1,7 @@
 ---
 title: "isomiR annotation using whole genome"
 author: "Lorena Pantano"
-date: "04/18/2015"
+date: "04/29/2015"
 ---
 
 ```{r setup, echo=FALSE}
@@ -20,7 +20,7 @@ data<-read.table("summary.tsv", header=T, sep=" ")
 # Overview
 
 The idea of this report is to show how well aligners are detecting
-miRNA/isomiRs using the whole genome as reference instead of
+[miRNA/isomiRs](http://en.wikipedia.org/wiki/IsomiR) using the whole genome as reference instead of
 using a specific database (such as, miRBase). I hope results
 help people decide when is good to align directly to the genome.
 
@@ -28,19 +28,19 @@ I simulated a bunch of isomiRs (~16900) that can have the following variation:
 
 * starts at different position than the reference miRNA: t5
 * ends at different position than the reference miRNA: t3
-* have a change in a nucleotide: muts
-* have nt addition at the end: add
+* have a nucleotide change in a position: muts
+* have nucleotide addition at the end: add
 
 ## Methods
 
-The simulation was done with the small script inside (SeqBuster tool)[http://github.com/lpantano/seqbuster].
+The simulation was done with a small script inside [SeqBuster tool](https://github.com/lpantano/seqbuster/blob/master/misc/miRNA.simulator.py).
 I used human miRBase to simulate isomiRs from precursors. I allowed trimming
-events at both sides up to 3 nucleotides, one nucleotide mutation and 
-up to 3 nucleotides as additions.
+events at both sides up to 3 nucleotides, 1 nucleotide mutation and 
+up to 3 nucleotides for addition events.
 
 Then, I used STAR, bowtie2 and HISAT to map to the genome in order to measure
 how good these tools are detecting the correct place. I wrapped everything
-into the following script: `run_analysis.py`. 
+into the following script: [run_analysis.py](https://github.com/lpantano/tools-mixer/blob/master/mirna/genome_based_mirna_annotation/run_tools.py). 
 Want to mention that I didn't put much effort to
 check parameters and tools, but if you have these tools installed, it
 should be pretty easy to reproduce results.
@@ -62,14 +62,14 @@ ggplot(data, aes(x=correct, fill=tool)) +
     ggtitle("Mapped correctly to isomiRs")
 ```
 
-All tools fail to map all isomiRs, and HISAT is not so good at this. 
+All tools fail to map the majority of isomiRs, and HISAT is not so good at this. 
 I am sure that there are parameters that will improve this, but it is
 good to know that using default values don't work. Furthermore, many of 
 them are not correct. We can expect to detect 60% of the sequenced isomiRs
 if this strategy is used.
 
-If you want to know what is the accuricy when mapping to miRBase directly,
-check out: XXXXXXX. Both reports use the same simulated isomiRs file.
+If you want to know what is the accuracy when mapping to miRBase directly,
+[check this post out](https://lorenapantano.wordpress.com/2014/02/28/mirna-annotation-tools-which-is-the-best/). Both reports use the same simulated isomiRs file.
 
 ### accuracy
 
@@ -87,7 +87,7 @@ ggplot(data_gg, aes(correct, fill = value)) +
 ### multi-mapped
 
 Many people filter out the sequences that map multiple times on the genome.
-I count the times the sequence was mapping to another miRNA, and as expected, it
+I count the times sequences were mapping to another miRNA, and as expected, it
 is a minority, but you will lose them if you apply the filter.
 
 ```{r multi-mapped}
