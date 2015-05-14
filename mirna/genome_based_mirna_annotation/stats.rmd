@@ -8,6 +8,7 @@ date: "05/14/2015"
 library(knitr)
 library(rmarkdown)
 library(knitrBootstrap)
+options(bitmapType = 'cairo')
 
 opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
  fig.height=6, fig.width=6, message=F, error=F, warning=F, cache=T)
