@@ -1,7 +1,7 @@
 ---
 title: "isomiR annotation using whole genome"
 author: "Lorena Pantano"
-date: "04/29/2015"
+date: "05/13/2015"
 ---
 
 
@@ -46,18 +46,11 @@ should be pretty easy to reproduce results.
 
 ```r
 data$is_mapped = (data$mapped != "False")
-ggplot(data, aes(x = is_mapped, fill = tool)) + geom_bar(position = "dodge") + 
-    scale_fill_brewer(palette = "Set1") + ggtitle("Mapped isomiRs")
+ggplot(data, aes(x = is_mapped, fill = correct)) + geom_bar(position = "dodge") + 
+    scale_fill_brewer(palette = "Set1") + facet_wrap(~tool) + ggtitle("Mapped isomiRs")
 ```
 
 ![plot of chunk summary](figure/summary-1.png) 
-
-```r
-ggplot(data, aes(x = correct, fill = tool)) + geom_bar(position = "dodge") + 
-    scale_fill_brewer(palette = "Set1") + ggtitle("Mapped correctly to isomiRs")
-```
-
-![plot of chunk summary](figure/summary-2.png) 
 
 All tools fail to map the majority of isomiRs, and HISAT is not so good at this. 
 I am sure that there are parameters that will improve this, but it is
@@ -66,15 +59,19 @@ them are not correct. We can expect to detect 60% of the sequenced isomiRs
 if this strategy is used.
 
 If you want to know what is the accuracy when mapping to miRBase directly,
-[check this post out](https://lorenapantano.wordpress.com/2014/02/28/mirna-annotation-tools-which-is-the-best/). Both reports use the same simulated isomiRs file.
+[read this post](https://lorenapantano.wordpress.com/2014/02/28/mirna-annotation-tools-which-is-the-best/). Both reports use the same simulated isomiRs file.
 
 ### accuracy
+
+It is interesting to know which changes affect more to the mapping accuracy. In this case nucleotides changes and additions. Addition is a post-transcriptional event that has been probe to be abundant in isomiRs, and even relevant in some cases, like development and aging. 
+
 
 
 ```r
 library(ggplot2)
 library(reshape)
-data_gg <- melt(data, id.vars = c("seq", "known", "correct", "mapped", "amb"))
+data_gg <- melt(data, id.vars = c("seq", "known", "correct", "mapped", "amb", 
+    "is_mapped"))
 ggplot(data_gg, aes(correct, fill = value)) + geom_bar() + scale_fill_brewer(palette = "Set1") + 
     theme_bw() + facet_wrap(~variable)
 ```
