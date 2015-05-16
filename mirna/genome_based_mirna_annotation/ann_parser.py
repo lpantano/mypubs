@@ -15,9 +15,9 @@ def read_sim_fa(fn):
 
 def read_bam(fn_name):
     mapped = {}
-    fn = pysam.Alignment(fn_name, 'rb')
+    fn = pysam.AlignmentFile(fn_name, 'rb')
     for record in fn:
-        mapped[record.rname] = get_name(record.rname)
+        mapped[record.query_name] = get_name(record.query_name)
     return mapped
 
 def read_ann(fn_name):

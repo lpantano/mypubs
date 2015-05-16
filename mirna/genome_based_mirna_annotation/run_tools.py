@@ -55,7 +55,7 @@ def _star(input, index, mirbase):
             do.run(cmd_bam.format(**locals()), "")
 
         mirbase_output = _annotate(output, mirbase)
-    return (mirbase_output, output)
+        return (mirbase_output, full(output))
 
 
 def _bowtie2(input, index, mirbase):
@@ -73,7 +73,7 @@ def _bowtie2(input, index, mirbase):
             do.run(cmd_bam.format(**locals()), "")
 
         mirbase_output = _annotate(output, mirbase)
-    return (mirbase_output, output)
+        return (mirbase_output, full(output))
 
 
 def _hisat(input, index, mirbase):
@@ -91,7 +91,7 @@ def _hisat(input, index, mirbase):
             do.run(cmd_bam.format(**locals()), "")
 
         mirbase_output = _annotate(output, mirbase)
-    return (mirbase_output, output)
+        return (mirbase_output, full(output))
 
 
 if __name__ == "__main__":
