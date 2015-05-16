@@ -9,6 +9,7 @@ import contextlib
 from os.path import exists as is_there
 from os.path import abspath as full
 from bcbio.provenance import do
+from bcbio.utils import safe_makedir
 import ann_parser as res
 
 @contextlib.contextmanager
@@ -38,6 +39,7 @@ def _annotate(input, mirbase):
 
 
 def _star(input, index, mirbase):
+    safe_makedir("star")
     with ch_directory("star"):
         output = "star_map.bam"
         cmd = ("STAR --genomeDir {index} --readFilesIN {input}"
@@ -56,9 +58,10 @@ def _star(input, index, mirbase):
 
 
 def _bowtie2(input, index, mirbase):
+    safe_makedir("bowtie2")
     with ch_directory("bowtie2"):
         output = "bowtie2_map.bam"
-        cmd = ("bowtie2 -k 50 -L 18 -x {index}"
+        cmd = ("bowtie2 -f -k 50 -L 18 -x {index}"
                " -U {input}"
                " >| hits.sam")
         cmd_bam = "samtools view -Sbh hits.sam >| {output}"
@@ -73,9 +76,10 @@ def _bowtie2(input, index, mirbase):
 
 
 def _hisat(input, index, mirbase):
+    safe_makedir("hisat")
     with ch_directory("hisat"):
         output = "hisat_map.bam"
-        cmd = ("hisat -k 50 -L 18 -x {index}"
+        cmd = ("hisat -f -k 50 -L 18 -x {index}"
                " -U {input}"
                " >| hits.sam")
         cmd_bam = "samtools view -Sbh hits.sam >| {output}"
