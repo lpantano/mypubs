@@ -20,12 +20,13 @@ def ch_directory(dir):
     os.chdir(cur_dir)
 
 
-def _stats(ann, fasta, prefix):
+def _stats(ann, bam, fasta, prefix):
     output = prefix + ".tsv"
     if not is_there(output):
         sim_data = res.read_sim_fa(fasta)
-        data, counts = res.read_bam(ann)
-        res.print_output(data, counts, sim_data, output, prefix)
+        data, counts = res.read_ann(ann)
+        mapped = res.read_bam(bam)
+        res.print_output(data, counts, sim_data, mapped, output, prefix)
     return output
 
 
@@ -54,7 +55,7 @@ def _star(input, index, mirbase):
             do.run(cmd_bam.format(**locals()), "")
 
         mirbase_output = _annotate(output, mirbase)
-    return mirbase_output
+    return (mirbase_output, output)
 
 
 def _bowtie2(input, index, mirbase):
@@ -72,7 +73,7 @@ def _bowtie2(input, index, mirbase):
             do.run(cmd_bam.format(**locals()), "")
 
         mirbase_output = _annotate(output, mirbase)
-    return mirbase_output
+    return (mirbase_output, output)
 
 
 def _hisat(input, index, mirbase):
@@ -90,7 +91,7 @@ def _hisat(input, index, mirbase):
             do.run(cmd_bam.format(**locals()), "")
 
         mirbase_output = _annotate(output, mirbase)
-    return mirbase_output
+    return (mirbase_output, output)
 
 
 if __name__ == "__main__":
@@ -117,5 +118,5 @@ if __name__ == "__main__":
     with open("summary.tsv", 'w') as out_handle:
         out_handle.write(res.H + "\n")
     for tool, stat in outputs.items():
-        stat_file = _stats(stat, args.fasta, tool)
+        stat_file = _stats(stat[0], stat[1], args.fasta, tool)
         do.run("cat %s >> summary.tsv" % stat_file, "merging %s" % tool)

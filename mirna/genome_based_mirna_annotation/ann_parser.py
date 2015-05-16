@@ -1,4 +1,5 @@
 from collections import Counter
+import pysam
 
 H = "seq known t5 t3 mut add correct mapped amb tool"
 
@@ -12,8 +13,14 @@ def read_sim_fa(fn):
                 sim[name] = get_name(name)
     return sim
 
-
 def read_bam(fn_name):
+    mapped = {}
+    fn = pysam.Alignment(fn_name, 'rb')
+    for record in fn:
+        mapped[record.rname] = get_name(record.rname)
+    return mapped
+
+def read_ann(fn_name):
     counts = Counter()
     data = {}
     pairs = {}
@@ -35,19 +42,23 @@ def read_bam(fn_name):
                 data[(cols[3], is_correct)] = "%s %s %s %s" % (cols[3], ann, str(is_correct), mir_ann)
     return data, counts
 
-
-def print_output(data, counts, sim, out_file, prefix):
+def print_output(data, counts, sim, mapped, out_file, prefix):
     with open(out_file, 'w') as out_handle:
         # out_handle.write(H + "\n")
         for k in counts:
             if counts[k] > 1 and (k, True) in data:
-                out_handle.write("%s %s %s\n" % (data[(k, True)],counts[k], prefix))
+                out_handle.write("%s %s %s\n" % (data[(k, True)], counts[k], prefix))
             elif counts[k] > 1:
-                out_handle.write("%s %s %s\n" % (data[(k, False)],counts[k], prefix))
+                out_handle.write("%s %s %s\n" % (data[(k, False)], counts[k], prefix))
             elif counts[k] == 1 and (k, True) in data:
-                out_handle.write("%s %s %s\n" % (data[(k, True)],counts[k], prefix))
+                out_handle.write("%s %s %s\n" % (data[(k, True)], counts[k], prefix))
             elif counts[k] == 1:
-                out_handle.write("%s %s %s\n" % (data[(k, False)],counts[k], prefix))
+                out_handle.write("%s %s %s\n" % (data[(k, False)], counts[k], prefix))
+
+        for mirna in mapped:
+            if mirna not in counts:
+                out_handle.write("%s %s False Non-mirna 0 %s\n" % (mirna, " ".join(sim[mirna]), prefix))
+                counts[mirna] = 0
 
         for mirna in sim:
             if mirna not in counts:
