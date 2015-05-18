@@ -54,7 +54,7 @@ ggplot(data, aes(V8, fill = V3)) + geom_bar() + theme_bw() + labs(x = "") +
     scale_fill_brewer("mapped", palette = "Set1")
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.svg) 
+![plot of chunk mapped-mir](figure/mapped-mir-1.svg) 
 
 
 # Size effect
@@ -65,7 +65,7 @@ ggplot(data, aes(V8, V7, fill = V3)) + geom_boxplot() + theme_bw() + labs(x = ""
     scale_fill_brewer("mapped", palette = "Set1")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.svg) 
+![plot of chunk size-mir](figure/size-mir-1.svg) 
 
 # Isomirs effect
 How changes affect the alignment
@@ -76,7 +76,7 @@ ggplot(data, aes(V8, fill = changes)) + geom_bar() + theme_bw() + labs(x = "") +
     hjust = 1))
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.svg) 
+![plot of chunk iso-mir](figure/iso-mir-1.svg) 
 
 
 # Specificity
@@ -88,6 +88,6 @@ ggplot(data[data$V3 == "yes", ], aes(V8, fill = factor(TP))) + geom_bar() +
     theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.svg) 
+![plot of chunk sp-mir](figure/sp-mir-1.svg) 
 
 

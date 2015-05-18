@@ -70,5 +70,5 @@ ggplot(subset(data_gg_ann, is_iso == "True" & find == "Yes"), aes(variable,
     palette = "Set1") + facet_wrap(~tool)
 ```
 
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png) 
+![plot of chunk acc-iso](figure/acc-iso-1.png) 
 

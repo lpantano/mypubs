@@ -14,17 +14,17 @@ output:
 ---
 
 
-```{r setup, echo=FALSE}
+```{r setup-iso, echo=FALSE}
 library(knitr)
 library(rmarkdown)
 library(knitrBootstrap)
 
 opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
- fig.height=6, fig.width=6, message=F, error=F, warning=F)
+ fig.height=5, fig.width=9, message=F, error=F, warning=F)
 ```
 
 
-```{r load}
+```{r load-iso}
 data<-read.table("stats_isomirs_full", header=T)
 ```
 
@@ -67,7 +67,7 @@ when there are multiple changes but there is no annotation of the exactly variat
 This happens because srnabench flag as `mv` when the sequence has variations at
 both sides.
 
-```{r }
+```{r acc-iso}
 data_gg_ann <- melt(subset(data, is_mir=="True"),id.vars = c("name","is_iso","tool","find"))
 ggplot(subset(data_gg_ann, is_iso == "True" & find == "Yes" ), aes(variable, fill=value))+
   geom_bar()+

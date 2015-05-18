@@ -13,7 +13,7 @@ output:
 
 ---
 
-```{r setup}
+```{r setup-mir}
 library(knitr)
 library(rmarkdown)
 library(knitrBootstrap)
@@ -23,7 +23,7 @@ opts_chunk$set(tidy=TRUE, highlight=T, figalign="center", cache=T,
 ```
 
 
-```{r}
+```{r load-mir}
 data<-read.table("stats",skip=1)
 data$V2<-as.character(data$V2)
 data$V4<-as.character(data$V4)
@@ -43,7 +43,7 @@ data$TP<-apply(data[,c(2,4)],1,function(x){
 
 # Mapped
 Proportion of mapped and no-mapped sequences
-```{r dev='svg'}
+```{r mapped-mir, dev='svg'}
 library(ggplot2)
 ggplot(data,aes(V8,fill=V3))+
   geom_bar()+
@@ -54,7 +54,7 @@ ggplot(data,aes(V8,fill=V3))+
 
 # Size effect
 How size affects the alignments
-```{r dev='svg'}
+```{r size-mir, dev='svg'}
 ggplot(data,aes(V8,V7,fill=V3))+
   geom_boxplot()+
   theme_bw()+ labs(x="")+
@@ -63,7 +63,7 @@ ggplot(data,aes(V8,V7,fill=V3))+
 
 # Isomirs effect
 How changes affect the alignment
-```{r dev='svg',fig.width=9}
+```{r iso-mir, dev='svg',fig.width=9}
 ggplot(data,aes(V8,fill=changes))+
   geom_bar()+
   theme_bw()+ labs(x="")+
@@ -74,7 +74,7 @@ ggplot(data,aes(V8,fill=changes))+
 
 # Specificity
 How many were assigned to only the correct miRNA. Normally miRNA can map to other miRNAs that are from the same family. "Red" will be sequences mapping to multiple miRNAs.
-```{r dev='svg'}
+```{r sp-mir, dev='svg'}
 ggplot(data[data$V3=="yes",],aes(V8,fill=factor(TP)))+
   geom_bar()+
   theme_bw()+ labs(x="")+
