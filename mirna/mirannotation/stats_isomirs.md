@@ -47,7 +47,8 @@ library(ggplot2)
 library(reshape)
 data_gg <- melt(data, id.vars = c("name", "is_iso", "tool", "find"))
 ggplot(data_gg, aes(tool, fill = is_iso)) + geom_bar() + scale_fill_brewer(palette = "Set1") + 
-    theme_bw() + facet_wrap("find")
+    theme_bw() + facet_wrap("find") + theme(axis.text.x = element_text(angle = 90, 
+    hjust = 1))
 ```
 
 ![plot of chunk iso](figure/iso-1.png) 
@@ -67,7 +68,8 @@ data_gg_ann <- melt(subset(data, is_mir == "True"), id.vars = c("name", "is_iso"
     "tool", "find"))
 ggplot(subset(data_gg_ann, is_iso == "True" & find == "Yes"), aes(variable, 
     fill = value)) + geom_bar() + theme_bw() + scale_fill_brewer("correct", 
-    palette = "Set1") + facet_wrap(~tool)
+    palette = "Set1") + facet_wrap(~tool) + theme(axis.text.x = element_text(angle = 90, 
+    hjust = 1))
 ```
 
 ![plot of chunk acc-iso](figure/acc-iso-1.png) 
