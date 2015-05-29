@@ -94,6 +94,24 @@ def _hisat(input, index, mirbase):
         return (mirbase_output, full(output))
 
 
+def _tailor(input, index, mirbase):
+    safe_makedir("tailor")
+    with ch_directory("tailor"):
+        output = "tailor_map.bam"
+        cmd = ("tailor  -l 15 map -p {index}"
+               " -i {input}"
+               " -o hits.sam")
+        cmd_bam = "samtools view -Sbh hits.sam >| {output}"
+
+        if not is_there("hits.sam"):
+            do.run(cmd.format(**locals()), "")
+        if not is_there(output):
+            do.run(cmd_bam.format(**locals()), "")
+
+        mirbase_output = _annotate(output, mirbase)
+        return (mirbase_output, full(output))
+
+
 if __name__ == "__main__":
     parser = ArgumentParser(description="Run different tools in simulated fasta file")
     parser.add_argument("--fasta", required=True, help="short reads")
@@ -101,6 +119,7 @@ if __name__ == "__main__":
     parser.add_argument("--star", help="star index")
     parser.add_argument("--bowtie2", help="bowtie2 index")
     parser.add_argument("--hisat", help="hisat index")
+    parser.add_argument("--tailor", help="tailor index")
     args = parser.parse_args()
 
     outputs = {}
@@ -113,6 +132,10 @@ if __name__ == "__main__":
     if args.hisat:
         print "doing hisat"
         outputs.update({"hisat": _hisat(full(args.fasta), full(args.hisat), full(args.mirbase))})
+
+    if args.tailor:
+        print "doing tailor"
+        outputs.update({"tailor": _tailor(full(args.fasta), full(args.tailor), full(args.mirbase))})
 
     os.remove("summary.tsv") if os.path.exists("summary.tsv") else None
     with open("summary.tsv", 'w') as out_handle:
