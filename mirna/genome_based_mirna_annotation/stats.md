@@ -68,9 +68,10 @@ It is interesting to know which changes affect more to the mapping accuracy. In 
 
 
 ```r
+library(ggplot2)
+library(reshape)
 data_gg <- melt(data, id.vars = c("seq", "known", "correct", "mapped", "amb", 
     "is_mapped", "tool"))
-
 ggplot(data_gg %>% filter(value == "True"), aes(correct, fill = tool)) + geom_bar(position = "dodge") + 
     scale_fill_brewer(palette = "Set1") + theme_bw() + facet_wrap(~variable)
 ```

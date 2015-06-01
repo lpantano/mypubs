@@ -112,6 +112,24 @@ def _tailor(input, index, mirbase):
         return (mirbase_output, full(output))
 
 
+def _bwa_aln(input, index, mirbase):
+    safe_makedir("bwa_aln")
+    with ch_directory("bwa_aln"):
+        output = "bwa_aln_map.bam"
+        cmd = ("tailor  -l 15 map -p {index}"
+               " -i {input}"
+               " -o hits.sam")
+        cmd_bam = "samtools view -Sbh hits.sam >| {output}"
+
+        if not is_there("hits.sam"):
+            do.run(cmd.format(**locals()), "")
+        if not is_there(output):
+            do.run(cmd_bam.format(**locals()), "")
+
+        mirbase_output = _annotate(output, mirbase)
+        return (mirbase_output, full(output))
+
+
 if __name__ == "__main__":
     parser = ArgumentParser(description="Run different tools in simulated fasta file")
     parser.add_argument("--fasta", required=True, help="short reads")
@@ -120,6 +138,7 @@ if __name__ == "__main__":
     parser.add_argument("--bowtie2", help="bowtie2 index")
     parser.add_argument("--hisat", help="hisat index")
     parser.add_argument("--tailor", help="tailor index")
+    parser.add_argument("--bwa_aln", help="bwa_aln index")
     args = parser.parse_args()
 
     outputs = {}
@@ -136,6 +155,10 @@ if __name__ == "__main__":
     if args.tailor:
         print "doing tailor"
         outputs.update({"tailor": _tailor(full(args.fasta), full(args.tailor), full(args.mirbase))})
+
+    if args.bwa_aln:
+        print "doing bwa_aln"
+        outputs.update({"bwa_aln": _bwa_aln(full(args.fasta), full(args.bwa_aln), full(args.mirbase))})
 
     os.remove("summary.tsv") if os.path.exists("summary.tsv") else None
     with open("summary.tsv", 'w') as out_handle:
