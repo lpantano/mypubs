@@ -78,6 +78,60 @@ ggplot(data_gg %>% filter(value == "True"), aes(correct, fill = tool)) + geom_ba
 
 ![plot of chunk accuracy](figure/accuracy-1.png) 
 
+
+If we merge mutations and additions that are the ones that affect more the alignment:
+
+
+
+```r
+library(ggplot2)
+library(reshape)
+nt_changes = paste0(data$mut, data$add)
+data$nt_changes = "without nt changes"
+data$nt_changes[grepl("True", nt_changes)] = "with nt changes"
+
+ggplot(data %>% filter(is_mapped == "TRUE"), aes(correct, fill = tool)) + geom_bar(position = "dodge") + 
+    scale_fill_brewer(palette = "Set1") + theme_bw() + facet_wrap(~nt_changes) + 
+    ggtitle("accuracy according isomiRs that has a nt change: mutation or/and addition")
+```
+
+![plot of chunk accuracy-changes](figure/accuracy-changes-1.png) 
+
+We detect that the problem is when randomly changing nt from the reference miRNA it 
+becomes similar to another miRNA or sequence. 
+
+If we only consider additions as nt changes:
+
+
+```r
+library(ggplot2)
+library(reshape)
+data$nt_changes = "without addition"
+data$nt_changes[grepl("True", data$add)] = "with addition"
+
+ggplot(data %>% filter(is_mapped == "TRUE", mut == "True"), aes(correct, fill = tool)) + 
+    geom_bar(position = "dodge") + scale_fill_brewer(palette = "Set1") + theme_bw() + 
+    facet_wrap(~nt_changes) + ggtitle("accuracy according isomiRs with mutations")
+```
+
+![plot of chunk accuracy-additions](figure/accuracy-additions-1.png) 
+
+```r
+ggplot(data %>% filter(is_mapped == "TRUE", mut == "False"), aes(correct, fill = tool)) + 
+    geom_bar(position = "dodge") + scale_fill_brewer(palette = "Set1") + theme_bw() + 
+    facet_wrap(~nt_changes) + ggtitle("accuracy according isomiRs without mutations")
+```
+
+![plot of chunk accuracy-additions](figure/accuracy-additions-2.png) 
+
+In conclusion:
+
+With isomirs with mutations alone, bowtie2 works better.
+
+With isomirs with mutation + addition, all perform poorly.
+
+With addition alone, star and tailor are better.
+
 ### multi-mapped
 
 Many people filter out the sequences that map multiple times on the genome.

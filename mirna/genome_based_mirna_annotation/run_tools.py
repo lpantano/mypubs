@@ -32,7 +32,7 @@ def _stats(ann, bam, fasta, prefix):
 
 def _annotate(input, mirbase):
     output = "mirbase.bed"
-    cmd = ("bedtools intersect -bed -wo -s -f 0.80 -abam"
+    cmd = ("bedtools intersect -bed -wo -s -f 0.80 -a"
            " {input} -b {mirbase} >| {output}")
     if not is_there(output):
         do.run(cmd.format(**locals()), "")
@@ -130,6 +130,26 @@ def _bwa_aln(input, index, mirbase):
         return (mirbase_output, full(output))
 
 
+def _srnamapper(input, index, mirbase):
+    safe_makedir("srnamapper")
+    with ch_directory("srnamapper"):
+        output = "srnamapper_map.bed"
+        cmd = ("sRNAmapper.pl  -i {input} -g  {index}"
+               " -s 10 -n 3 -o hits.eland")
+
+        if not is_there("hits.eland"):
+            do.run(cmd.format(**locals()), "")
+        if not is_there(output):
+            with open(output, 'w') as out_handle:
+                with open("hits.eland") as in_handle:
+                    for line in in_handle:
+                        cols = line.strip().split('\t')
+                        print >>out_handle, "%s\t%s\t%s\t%s\t1\t%s\t1\t1\t1\t1\t1\t1" % (cols[0], cols[1], int(cols[1]) + len(cols[2]), cols[3], cols[6])
+
+        mirbase_output = _annotate(output, mirbase)
+        return (mirbase_output, full(output))
+
+
 if __name__ == "__main__":
     parser = ArgumentParser(description="Run different tools in simulated fasta file")
     parser.add_argument("--fasta", required=True, help="short reads")
@@ -139,6 +159,7 @@ if __name__ == "__main__":
     parser.add_argument("--hisat", help="hisat index")
     parser.add_argument("--tailor", help="tailor index")
     parser.add_argument("--bwa_aln", help="bwa_aln index")
+    parser.add_argument("--srnamapper", help="srnamapper index")
     args = parser.parse_args()
 
     outputs = {}
@@ -159,6 +180,10 @@ if __name__ == "__main__":
     if args.bwa_aln:
         print "doing bwa_aln"
         outputs.update({"bwa_aln": _bwa_aln(full(args.fasta), full(args.bwa_aln), full(args.mirbase))})
+
+    if args.srnamapper:
+        print "doing srnamapper"
+        outputs.update({"srnamapper": _srnamapper(full(args.fasta), full(args.srnamapper), full(args.mirbase))})
 
     os.remove("summary.tsv") if os.path.exists("summary.tsv") else None
     with open("summary.tsv", 'w') as out_handle:
