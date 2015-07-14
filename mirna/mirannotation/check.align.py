@@ -19,22 +19,28 @@ for line in sim:
 sim.close()
 
 #load miraligner results
-check={}
+check, save = {}, {}
 mir=open('miraligner/sim.20.hsa.mirna')
 for line in mir:
     cols=line.split("\t")
     slot=cols[2].split("-")
     add=line.find("add:null")
     mut=line.find("mut:null")
+    score=len(cols[5]) - (len(cols[5]) - 1) + len(cols[6]) - (len(cols[6]) - 1)
+    if cols[1] not in check:
+        check[cols[1]] = 100
     if (line.find("hsa")>=0):
-        if (line.find("miRNA")>=0) and (not check.has_key(cols[1])):
-                check[cols[1]]=1
-                print "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner" %(cols[1],cols[2],cols[1].split("_")[1],add,mut,lendata[cols[1]])
-        elif (line.find("precursor")>=0) and (not check.has_key(cols[1])):
-                check[cols[1]]=1
+        if line.find("miRNA") >=0 and score < check[cols[1]]:
+                check[cols[1]]=score
+                save[cols[1]] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner" %(cols[1],cols[2],cols[1].split("_")[1],add,mut,lendata[cols[1]])
+        elif (line.find("precursor")>=0) and score < check[cols[1]]:
+                check[cols[1]]=score
                 slot=cols[2].split("-")
-                print "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner" %(cols[1],cols[2],cols[1].split("_")[0],add,mut,lendata[cols[1]])
+                save[cols[1]] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner" %(cols[1],cols[2],cols[1].split("_")[0],add,mut,lendata[cols[1]])
 mir.close()
+
+for k in save:
+    print save[k]
 
 #if not aligned, print them here
 for k in data.keys():
@@ -43,67 +49,54 @@ for k in data.keys():
         mut=k.find("mut:null")
         print "%s\t%s\tno\tNA\t%s\t%s\t%s\tmiraligner" % (k,data[k],add,mut,lendata[k])
 
-#load bwotie2 results
-check={}
-mir=open('bowtie2/sim.20.hsa.sam')
-for line in mir:
-    cols=line.split("\t")
-    if (cols[2].find("hsa")>=0) and (not check.has_key(cols[0])):
-            check[cols[0]]=1
-            slot=cols[2].split("-")
-            add=cols[0].find("add:null")
-            mut=cols[0].find("mut:null")
-            print "%s\t%s\tyes\t%s\t%s\t%s\t%s\tbowtie2" %(cols[0],cols[2],cols[0].split("_")[0],add,mut,lendata[cols[0]])
-mir.close()
+def _sam(fn, tool):
+    check, save = {}, {}
+    with open(fn) as in_handle:
+        for line in in_handle:
+            if line.startswith("@"):
+                continue
+            cols=line.split("\t")
+            if cols[0] not in check:
+                check[cols[0]] = 100
+            score = [len(flag) for flag in cols if flag.startswith('MD')]
+            if score:
+                score = score[0]
+            else:
+                score = 0
+            if (cols[2].find("hsa")>=0) and score < check[cols[0]]:
+                    check[cols[0]]=score
+                    slot=cols[2].split("-")
+                    add=cols[0].find("add:null")
+                    mut=cols[0].find("mut:null")
+                    save[cols[0]] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\t%s" %(cols[0],cols[2],cols[0].split("_")[0],add,mut,lendata[cols[0]], tool)
 
-#if not aligned, print them here
-for k in data.keys():
-    if not check.has_key(k):
-        add=k.find("add:null")
-        mut=k.find("mut:null")
-        print "%s\t%s\tno\tNA\t%s\t%s\t%s\tbowtie2" % (k,data[k],add,mut,lendata[k])
+    for k in save:
+        print save[k]
+    #if not aligned, print them here
+    for k in data.keys():
+        if k not in check:
+            add=k.find("add:null")
+            mut=k.find("mut:null")
+            print "%s\t%s\tno\tNA\t%s\t%s\t%s\t%s" % (k,data[k],add,mut,lendata[k], tool)
+
+
+#load razer3 results
+_sam('razer3/sim.20.hsa.sam', 'razer3')
+
+#load bwotie2 results
+_sam('bowtie2/sim.20.hsa.sam', 'bowtie2')
 
 #load bwotie results
-check={}
-mir=open('bowtie/sim.20.hsa.sam')
-for line in mir:
-    cols=line.split("\t")
-    if (cols[2].find("hsa")>=0) and (not check.has_key(cols[0])):
-            check[cols[0]]=1
-            slot=cols[2].split("-")
-            add=cols[0].find("add:null")
-            mut=cols[0].find("mut:null")
-            print "%s\t%s\tyes\t%s\t%s\t%s\t%s\tbowtie" %(cols[0],cols[2],cols[0].split("_")[0],add,mut,lendata[cols[0]])
-mir.close()
-
-#if not aligned, print them here
-for k in data.keys():
-    if not check.has_key(k):
-        add=k.find("add:null")
-        mut=k.find("mut:null")
-        print "%s\t%s\tno\tNA\t%s\t%s\t%s\tbowtie" % (k,data[k],add,mut,lendata[k])
-
+_sam('bowtie/sim.20.hsa.sam', 'bowtie')
 
 #load novoaligner results
-check={}
-mir=open('novo/sim.20.novo.sam')
-for line in mir:
-    cols=line.split("\t")
-    if (cols[2].find("hsa")>=0) and (not check.has_key(cols[0])):
-            slot=cols[2].split("-")
-            add=cols[0].find("add:null")
-            mut=cols[0].find("mut:null")
-            check[cols[0]]=1
-            print "%s\t%s\tyes\t%s\t%s\t%s\t%s\tnovocraft" %(cols[0],cols[2],cols[0].split("_")[0],add,mut,lendata[cols[0]])
-mir.close()
+_sam('novo/sim.20.hsa.sam', 'novo')
 
-#if not aligned, print them here
-for k in data.keys():
-    if not check.has_key(k):
-        add=k.find("add:null")
-        mut=k.find("mut:null")
-        print "%s\t%s\tno\tNA\t%s\t%s\t%s\tnovocraft" % (k,data[k],add,mut,lendata[k])
+#load GEM results
+_sam('gem/sim.20.hsa.sam', 'GEM')
 
+#load STAR results
+_sam('star/Aligned.out.sam', 'STAR')
 
 #load srnabench results
 check={}
@@ -138,26 +131,6 @@ for k in data.keys():
         print "%s\t%s\tno\tNA\t%s\t%s\t%s\tsrnabench" % (k,data[k],add,mut,lendata[k])
 
 
-#load GEM results
-check={}
-mir=open('gem/sim.20.hsa.sam')
-for line in mir:
-    if line.find("@")<0:
-            cols=line.split("\t")
-            if (cols[2].find("hsa")>=0) and (not check.has_key(cols[0])):
-                    slot=cols[2].split("-")
-                    add=cols[0].find("add:null")
-                    mut=cols[0].find("mut:null")
-                    check[cols[0]]=1
-                    print "%s\t%s\tyes\t%s\t%s\t%s\t%s\tGEM" %(cols[0],cols[2],cols[0].split("_")[0],add,mut,lendata[cols[0]])
-mir.close()
-
-#if not aligned, print them here
-for k in data.keys():
-    if not check.has_key(k):
-        add=k.find("add:null")
-        mut=k.find("mut:null")
-        print "%s\t%s\tno\tNA\t%s\t%s\t%s\tGEM" % (k,data[k],add,mut,lendata[k])
 
 #load microrazer results
 check={}
@@ -180,26 +153,6 @@ for k in data.keys():
             print "%s\t%s\tno\tNA\t%s\t%s\t%s\tmicrorazer" % (k,data[k],add,mut,lendata[k])
 
 
-#load STAR results
-check={}
-mir=open('star/Aligned.out.sam')
-for line in mir:
-    cols=line.split("\t")
-    if not line.startswith("@"):
-        if (cols[2].find("hsa")>=0) and (not check.has_key(cols[0])):
-            check[cols[0]]=1
-            slot=cols[2].split("-")
-            add=cols[0].find("add:null")
-            mut=cols[0].find("mut:null")
-            print "%s\t%s\tyes\t%s\t%s\t%s\t%s\tstar" %(cols[0],cols[2],cols[0].split("_")[0],add,mut,lendata[cols[0]])
-mir.close()
-
-#if not aligned, print them here
-for k in data.keys():
-    if not check.has_key(k):
-        add=k.find("add:null")
-        mut=k.find("mut:null")
-        print "%s\t%s\tno\tNA\t%s\t%s\t%s\tstar" % (k,data[k],add,mut,lendata[k])
 
 # load miRExpress results
 check={}

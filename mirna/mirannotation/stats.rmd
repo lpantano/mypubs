@@ -39,6 +39,14 @@ data$TP<-apply(data[,c(2,4)],1,function(x){
   if (length(v)==0){v<-0}
   return (v)
 })
+data$TPmirna<-apply(data[,c(2,4)],1,function(x){
+  h1 = unlist(strsplit(x[1], split = "-"))[1:3]
+  h2 = unlist(strsplit(x[2], split = "-"))[1:3]
+  v<-grep(paste0(h1, collapse = "-"),paste0(h2, collapse = "-"),ignore.case=T)
+  if (length(v)==0){v<-0}
+  return (v)
+})
+
 ```
 
 # Mapped
@@ -48,7 +56,8 @@ library(ggplot2)
 ggplot(data,aes(V8,fill=V3))+
   geom_bar()+
   theme_bw()+ labs(x="")+
-  scale_fill_brewer("mapped",palette="Set1")
+  scale_fill_brewer("mapped",palette="Set1")+
+    facet_wrap(~V3,scales = "free_y", ncol=1)
 ```
 
 
@@ -72,13 +81,24 @@ ggplot(data,aes(V8,fill=changes))+
 ```
 
 
-# Specificity
+# Specificity at precursor level
 How many were assigned to only the correct miRNA. Normally miRNA can map to other miRNAs that are from the same family. "Red" will be sequences mapping to multiple miRNAs.
 ```{r sp-mir, dev='svg'}
 ggplot(data[data$V3=="yes",],aes(V8,fill=factor(TP)))+
   geom_bar()+
   theme_bw()+ labs(x="")+
-  scale_fill_brewer("correct",palette="Set1") + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  scale_fill_brewer("correct",palette="Set1") + theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+    facet_wrap(~TP,scales = "free_y")
 ```
 
+
+# Specificity at miRNA level
+
+```{r sp-mir, dev='svg'}
+ggplot(data[data$V3=="yes",],aes(V8,fill=factor(TPmirna)))+
+  geom_bar()+
+  theme_bw()+ labs(x="")+
+  scale_fill_brewer("correct",palette="Set1") + theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+    facet_wrap(~TPmirna,scales = "free_y")
+```
 
