@@ -15,9 +15,15 @@ def read_sim_fa(fn):
 
 def read_bam(fn_name):
     mapped = {}
-    fn = pysam.AlignmentFile(fn_name, 'rb')
-    for record in fn:
-        mapped[record.query_name] = get_name(record.query_name)
+    if fn_name.endswith('bam'):
+        fn = pysam.AlignmentFile(fn_name, 'rb')
+        for record in fn:
+            mapped[record.query_name] = get_name(record.query_name)
+    else:
+        with open(fn_name) as in_handle:
+            for line in in_handle:
+                cols = line.strip().split('\t')
+                mapped[cols[3]] = get_name(cols[3])
     return mapped
 
 def read_ann(fn_name):
