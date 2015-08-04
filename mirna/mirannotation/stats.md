@@ -19,8 +19,8 @@ library(knitr)
 library(rmarkdown)
 library(knitrBootstrap)
 
-opts_chunk$set(tidy = TRUE, highlight = T, figalign = "center", cache = T, fig.height = 6, 
-    fig.width = 10, message = F, error = F, warning = F, bootstrap.show.code = FALSE)
+opts_chunk$set(tidy=TRUE, highlight=T, figalign="center", cache=T,
+               fig.height=6, fig.width=10, message=F, error=F, warning=F, bootstrap.show.code=FALSE)
 ```
 
 
@@ -43,6 +43,15 @@ data$TP <- apply(data[, c(2, 4)], 1, function(x) {
     }
     return(v)
 })
+data$TPmirna <- apply(data[, c(2, 4)], 1, function(x) {
+    h1 = unlist(strsplit(x[1], split = "-"))[1:3]
+    h2 = unlist(strsplit(x[2], split = "-"))[1:3]
+    v <- grep(paste0(h1, collapse = "-"), paste0(h2, collapse = "-"), ignore.case = T)
+    if (length(v) == 0) {
+        v <- 0
+    }
+    return(v)
+})
 ```
 
 # Mapped
@@ -51,10 +60,11 @@ Proportion of mapped and no-mapped sequences
 ```r
 library(ggplot2)
 ggplot(data, aes(V8, fill = V3)) + geom_bar() + theme_bw() + labs(x = "") + 
-    scale_fill_brewer("mapped", palette = "Set1")
+    scale_fill_brewer("mapped", palette = "Set1") + facet_wrap(~V3, scales = "free_y", 
+    ncol = 1)
 ```
 
-![plot of chunk mapped-mir](figure/mapped-mir-1.svg) 
+![plot of chunk mapped-mir](figure/mapped-mir-1.png) 
 
 
 # Size effect
@@ -65,7 +75,7 @@ ggplot(data, aes(V8, V7, fill = V3)) + geom_boxplot() + theme_bw() + labs(x = ""
     scale_fill_brewer("mapped", palette = "Set1")
 ```
 
-![plot of chunk size-mir](figure/size-mir-1.svg) 
+![plot of chunk size-mir](figure/size-mir-1.png) 
 
 # Isomirs effect
 How changes affect the alignment
@@ -76,18 +86,31 @@ ggplot(data, aes(V8, fill = changes)) + geom_bar() + theme_bw() + labs(x = "") +
     hjust = 1))
 ```
 
-![plot of chunk iso-mir](figure/iso-mir-1.svg) 
+![plot of chunk iso-mir](figure/iso-mir-1.png) 
 
 
-# Specificity
+# Specificity at precursor level
 How many were assigned to only the correct miRNA. Normally miRNA can map to other miRNAs that are from the same family. "Red" will be sequences mapping to multiple miRNAs.
 
 ```r
 ggplot(data[data$V3 == "yes", ], aes(V8, fill = factor(TP))) + geom_bar() + 
     theme_bw() + labs(x = "") + scale_fill_brewer("correct", palette = "Set1") + 
-    theme(axis.text.x = element_text(angle = 90, hjust = 1))
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) + facet_wrap(~TP, 
+    scales = "free_y")
 ```
 
-![plot of chunk sp-mir](figure/sp-mir-1.svg) 
+![plot of chunk sp-precursor](figure/sp-precursor-1.png) 
 
+
+# Specificity at miRNA level
+
+
+```r
+ggplot(data[data$V3 == "yes", ], aes(V8, fill = factor(TPmirna))) + geom_bar() + 
+    theme_bw() + labs(x = "") + scale_fill_brewer("correct", palette = "Set1") + 
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) + facet_wrap(~TPmirna, 
+    scales = "free_y")
+```
+
+![plot of chunk sp-mir](figure/sp-mir-1.png) 
 

@@ -81,7 +81,7 @@ def _sam(fn, tool):
 
 
 #load razer3 results
-_sam('razer3/sim.20.hsa.sam', 'razer3')
+_sam('razer/sim.20.hsa.sam', 'razer3')
 
 #load bwotie2 results
 _sam('bowtie2/sim.20.hsa.sam', 'bowtie2')
@@ -100,7 +100,7 @@ _sam('star/Aligned.out.sam', 'STAR')
 
 #load srnabench results
 check={}
-mir=open('srnabench/reads_orig.fa')
+mir=open('srnabench/srnabench/reads_orig.fa')
 srna={}
 name=""
 for line in mir:
@@ -111,7 +111,7 @@ for line in mir:
             srna[name]=line
 mir.close()
 
-mir=open('srnabench/hairpin.parsed')
+mir=open('srnabench/srnabench/hairpin.parsed')
 for line in mir:
     cols=line.split("\t")
     seq=srna[cols[0]]
@@ -156,16 +156,16 @@ for k in data.keys():
 
 # load miRExpress results
 check={}
-mir=open('mirexpress/out/read_align_premiRNA.txt')
+mir=open('mirexpress/out/hsa.sim.20')
 for line in mir:
     if line.startswith("hsa"):
         ref = line.strip()
         mir.next()
         mir.next()
-        mir.next()
+        # mir.next()
         continue
     cols = line.split()
-    if (line.find("hsa")<0) and (line.find("10") >= 0) and (not check.has_key(cols[0])):
+    if (line.find("hsa")<0) and (line.find("1") >= 0) and (not check.has_key(cols[0])):
         name = dataseq[cols[0]]
         slot=name.split("-")
         add=name.find("add:null")

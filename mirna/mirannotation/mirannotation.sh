@@ -7,10 +7,8 @@ set -v
 set -x
 export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 
-SB_HOME=~/repos/seqbuster/
-SB_DB="$SB_HOME/modules/miraligner/DB"
-RNAB_DB="~/soft/srnabench-db/sRNAbenchDB"
-RNAB="~/soft/srnabench"
+RNAB_DB="../tools/sRNAbenchDB"
+RNAB="../tools/"
 
 echo "download miRBase files"
 wget -q ftp://mirbase.org/pub/mirbase/CURRENT/hairpin.fa.gz
@@ -18,13 +16,13 @@ wget -q ftp://mirbase.org/pub/mirbase/CURRENT/miRNA.str.gz
 
 gunzip hairpin.fa.gz miRNA.str.gz
 
-awk '{if ($0~/>/){print name"\t"seq;name=$1;seq=""}else{seq=seq$0}}' hairpin.fa | grep "^>hsa" | sed "s/U/T/g" | sed 's/\t/\n/' > hairpin.hsa.fa
+# awk '{if ($0~/>/){print name"\t"seq;name=$1;seq=""}else{seq=seq$0}}' hairpin.fa | grep "^>hsa" | sed "s/U/T/g" | sed 's/\t/\n/' > hairpin.hsa.fa
 
-python "$SB_HOME"/misc/miRNA.simulator.py -f hairpin.hsa.fa -m miRNA.str -n 10 -s hsa > sim.20.hsa.fa
+# python "$SB_HOME"/misc/miRNA.simulator.py -f hairpin.hsa.fa -m miRNA.str -n 10 -s hsa > sim.20.hsa.fa
 
 mkdir -p miraligner
 cd miraligner
- java -jar  "$SB_HOME"/modules/miraligner/miraligner.jar  -sub 1 -trim 3 -add  3 -s hsa -i ../sim.20.hsa.fa -db $SB_DB -o sim.20.hsa -pre
+ miraligner  -sub 1 -trim 3 -add  3 -s hsa -i ../sim.20.hsa.fa -db ../ -o sim.20.hsa -pre
 cd ..
 
 mkdir -p bowtie2
@@ -42,7 +40,7 @@ cd ..
 mkdir -p novo
 cd novo
  novoindex -k 14 -s 2 -m mirnovo ../hairpin.hsa.fa  
- novoalign -d mirnovo -F FA -f ../sim.20.hsa.fa -a -l 15 -t 30 -o SAM >sim.20.novo.sam
+ novoalign -d mirnovo -F FA -f ../sim.20.hsa.fa -a -l 15 -t 30 -o SAM >sim.20.hsa.sam
 cd ..
 
 mkdir -p gem
@@ -54,12 +52,31 @@ cd ..
 
 mkdir -p srnabench
 cd srnabench
-java -jar $RNAB/sRNAbench.jar  dbPath=$RNAB_DB microRNA=hsa input=sim.20.hsa.fa output=srnabench isoMiR=true
+java -jar $RNAB/sRNAbench.jar  dbPath=$RNAB_DB microRNA=hsa input=../sim.20.hsa.fa output=srnabench isoMiR=true
 cd ..
 
-mkdir microrazer
-cd mircrorazer
-micro_razers64 -o sim.20.hsa.res -sL 10 ../hairpin.fa ../sim.20.hsa.fa
+mkdir -p microrazer
+cd microrazer
+micro_razers -o sim.20.hsa.res -sL 12 ../hairpin.hsa.fa ../sim.20.hsa.fa
+cd ..
+
+
+mkdir -p razer
+cd razer
+razers3 -f -o sim.20.hsa.sam ../hairpin.hsa.fa ../sim.20.hsa.fa
+cd ..
+
+mkdir -p mirexpress
+awk '{if ($0!~/^>/){print 1"\t"$0}}' ../sim.20.hsa.fa > sim.20.hsa.trim
+mkdir out
+alignmentSIMD -r ../tools/miRExpress/data_v2/hsa_precursor.txt -i sim.20.hsa.trim -o out
+analysis -r ../tools/miRExpress/data_v2/hsa_precursor.txt -m ../tools/miRExpress/data_v2/hsa_miRNA.txt -d out -o /hsa.sim.20 -t hsa.sim.20.profile
+
+mkdir -p star
+cd star
+mkdir -p genome
+STAR --runMode genomeGenerate --genomeDir genome --genomeFastaFiles ../hairpin.hsa.fa
+STAR --genomeDir genome --readFilesIn ../sim.20.hsa.fa --alignIntronMax 1  --outFilterMultimapNmax 1000 --outSAMattributes NH HI NM --outSAMtype SAM SortedByCoordinate
 cd ..
 
 python check.align.py > stats
