@@ -63,7 +63,7 @@ cd ..
 
 mkdir -p razer
 cd razer
-razers3 -f -o sim.20.hsa.sam ../hairpin.hsa.fa ../sim.20.hsa.fa
+razers3 -dr 0 -i 80 -rr 90 -f -o sim.20.hsa.sam ../hairpin.hsa.fa ../sim.20.hsa.fa
 cd ..
 
 mkdir -p mirexpress
