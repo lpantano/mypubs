@@ -11,7 +11,7 @@ wget http://bioinfo5.ugr.es/sRNAbench/sRNAbenchDB.tgz
 tar xzvf sRNAbenchDB.tgz
 
 wget https://github.com/seqan/seqan/releases/download/seqan-v1.4.2/seqan-apps-1.4.2-Linux-x86_64.tar.bz2
-tar xjfv seqan-apps-1.4.2-Linux-86_64.tar.bz2
+tar xjfv seqan-apps-1.4.2-Linux-x86_64.tar.bz2
 PATH=`pwd`/seqan-apps-1.4.2-Linux-x86_64/bin:$PATH
 cd ..
 
