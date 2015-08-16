@@ -1,4 +1,4 @@
-# tools-mixer
+# Some code comparing tools or analyzing public data
 creation of methods with the purpose of tools comparison
 
 ### miRNA
