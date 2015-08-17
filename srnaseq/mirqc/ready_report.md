@@ -10,7 +10,7 @@ output:
     highlight: zenburn
 ---
 
-last update Mon Aug 17 16:10:18 2015 by @lopantano
+last update Mon Aug 17 16:29:00 2015 by @lopantano
 
 
 
@@ -23,166 +23,24 @@ Document with R code [go here](http://github.com/lpantano/seqcluster/docs/post/m
 > library(ggplot2)
 > library(reshape)
 > library(DESeq2)
-```
-
-```
-Loading required package: S4Vectors
-Loading required package: stats4
-Loading required package: BiocGenerics
-Loading required package: parallel
-
-Attaching package: 'BiocGenerics'
-
-The following objects are masked from 'package:parallel':
-
-    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
-    clusterExport, clusterMap, parApply, parCapply, parLapply,
-    parLapplyLB, parRapply, parSapply, parSapplyLB
-
-The following object is masked from 'package:stats':
-
-    xtabs
-
-The following objects are masked from 'package:base':
-
-    anyDuplicated, append, as.data.frame, as.vector, cbind,
-    colnames, do.call, duplicated, eval, evalq, Filter, Find, get,
-    grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
-    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
-    Position, rank, rbind, Reduce, rep.int, rownames, sapply,
-    setdiff, sort, table, tapply, union, unique, unlist, unsplit
-
-
-Attaching package: 'S4Vectors'
-
-The following object is masked from 'package:reshape':
-
-    rename
-
-Loading required package: IRanges
-
-Attaching package: 'IRanges'
-
-The following object is masked from 'package:reshape':
-
-    expand
-
-Loading required package: GenomicRanges
-Loading required package: GenomeInfoDb
-Loading required package: SummarizedExperiment
-Loading required package: Biobase
-Welcome to Bioconductor
-
-    Vignettes contain introductory material; view with
-    'browseVignettes()'. To cite Bioconductor, see
-    'citation("Biobase")', and for packages 'citation("pkgname")'.
-
-Loading required package: Rcpp
-Loading required package: RcppArmadillo
-```
-
-```r
 > library(genefilter)
-```
-
-```
-
-Attaching package: 'genefilter'
-
-The following object is masked from 'package:base':
-
-    anyNA
-```
-
-```r
 > library(CHBUtils)
 > library(gtools)
 > library(gridExtra)
-```
-
-```
-Loading required package: grid
-```
-
-```r
 > library(devtools)
 > library(dplyr)
-```
-
-```
-
-Attaching package: 'dplyr'
-
-The following object is masked from 'package:Biobase':
-
-    combine
-
-The following objects are masked from 'package:GenomicRanges':
-
-    intersect, setdiff, union
-
-The following object is masked from 'package:GenomeInfoDb':
-
-    intersect
-
-The following objects are masked from 'package:IRanges':
-
-    collapse, desc, intersect, setdiff, slice, union
-
-The following objects are masked from 'package:S4Vectors':
-
-    intersect, rename, setdiff, union
-
-The following objects are masked from 'package:BiocGenerics':
-
-    combine, intersect, setdiff, union
-
-The following object is masked from 'package:reshape':
-
-    rename
-
-The following objects are masked from 'package:stats':
-
-    filter, lag
-
-The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union
-```
-
-```r
 > library(isomiRs)
-```
-
-```
-Loading required package: DiscriMiner
-```
-
-```r
 > library(edgeR)
 ```
 
-```
-Loading required package: limma
 
-Attaching package: 'limma'
 
-The following object is masked from 'package:DESeq2':
-
-    plotMA
-
-The following object is masked from 'package:BiocGenerics':
-
-    plotMA
-```
 
 ```r
 > root_file = paste0(root_path, "/report/")
 > 
 > condition = "condition"
 ```
-
-
 
 # Overview
 
@@ -237,7 +95,7 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     vjust = 0.5, hjust = 1))
 ```
 
-![](../figures/mirqcadapter-1.png) 
+![](figure/adapter-1.png) 
 
 ```r
 > ggplot(tab, aes(x = V1, y = V2, group = sample)) + geom_bar(stat = "identity", 
@@ -246,7 +104,7 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     vjust = 0.5, hjust = 1))
 ```
 
-![](../figures/mirqcadapter-2.png) 
+![](figure/adapter-2.png) 
 
 ## miRNA
 
@@ -269,7 +127,7 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     vjust = 0.5, hjust = 1))
 ```
 
-![](../figures/mirqcmirna-mirbase-1.png) 
+![](figure/mirna-mirbase-1.png) 
 
 ```r
 > mirna_step <- as.data.frame(colSums(counts(obj)))
@@ -283,7 +141,7 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
 
-![](../figures/mirqcdepth-1.png) 
+![](figure/depth-1.png) 
 
 ### Cumulative distribution of miRNAs
 
@@ -296,7 +154,7 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     scale_y_log10()
 ```
 
-![](../figures/mirqccum-1.png) 
+![](figure/cum-1.png) 
 
 ## Others small RNA
 
@@ -346,7 +204,7 @@ Number of reads in the data after each step:
 +     hjust = 1))
 ```
 
-![](../figures/mirqcreads-track-1.png) 
+![](figure/reads-track-1.png) 
 
 
 
@@ -420,7 +278,7 @@ Contribution by class:
 +     vjust = 0.5, hjust = 1))
 ```
 
-![](../figures/mirqccluster_type-1.png) 
+![](figure/cluster_type-1.png) 
 
 ```r
 > dd_norm = dd
@@ -431,7 +289,7 @@ Contribution by class:
 +     labs(list(title = "relative proportion of small RNAs", y = "% reads"))
 ```
 
-![](../figures/mirqccluster_type-2.png) 
+![](figure/cluster_type-2.png) 
 
 
 # Comparison
@@ -559,7 +417,7 @@ Characteristics 	biomaterial: Mixture of 75% UHRR and 25% HuBr Total RNA
 > GGally::ggpairs(mirna_n, axisLabels = "internal")
 ```
 
-![](../figures/mirqcmirqc-cor-1.png) 
+![](figure/mirqc-cor-1.png) 
 
 
 ```r
@@ -847,25 +705,25 @@ The x-axes shows the percentage of abundance with that change.
 > obj = isoPlot(obj)
 ```
 
-![](../figures/mirqcisomir-example-1.png) 
+![](figure/isomir-example-1.png) 
 
 ```r
 > obj = isoPlot(obj, type = "iso3")
 ```
 
-![](../figures/mirqcisomir-example-2.png) 
+![](figure/isomir-example-2.png) 
 
 ```r
 > obj = isoPlot(obj, type = "add")
 ```
 
-![](../figures/mirqcisomir-example-3.png) 
+![](figure/isomir-example-3.png) 
 
 ```r
 > obj = isoPlot(obj, type = "subs")
 ```
 
-![](../figures/mirqcisomir-example-4.png) 
+![](figure/isomir-example-4.png) 
 
 It seems there are some nt-changes for serum and MS2 samples at position 13/14, 
 and at position 9-11 for miRQC and liver samples. These are just
@@ -895,7 +753,7 @@ The same logic was applied to clusters detection.
 > GGally::ggpairs(clus_ma_norm, axisLabels = "internal")
 ```
 
-![](../figures/mirqccluster-cor-1.png) 
+![](figure/cluster-cor-1.png) 
 
 ### Abundance detection
 

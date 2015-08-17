@@ -16,7 +16,6 @@ last update `r date()` by @lopantano
 library(knitr)
 
 knitr::opts_chunk$set(tidy=TRUE, highlight=TRUE, dev="png", fig.width=6,fig.heigh=6,
-               fig.path="../figures/mirqc",
                cache=FALSE, highlight=TRUE, autodep=TRUE, warning=FALSE, error=FALSE,
                message=FALSE, prompt=TRUE, comment='', fig.cap='', bootstrap.show.code=FALSE)
 
@@ -28,7 +27,7 @@ For replication [go here](http://seqcluster.readthedocs.org/example_pipeline.htm
 
 Document with R code [go here](http://github.com/lpantano/seqcluster/docs/post/mirqc/report_with_code.md)
 
-```{r setup, message="FALSE"}
+```{r setup, message="FALSE",warning=FALSE, results='hide', eval=FALSE}
 
 library(ggplot2)
 library(reshape)
@@ -41,16 +40,20 @@ library(devtools)
 library(dplyr)
 library(isomiRs)
 library(edgeR)
-
-root_file = paste0(root_path,"/report/")
-
-condition = "condition"
 ```
 
 ```{r render,eval=FALSE, echo=FALSE}
 library(rmarkdown)
 library(knitrBootstrap)
 # render("report.rmd")
+```
+
+```{r setpath}
+
+root_file = paste0(root_path,"/report/")
+
+condition = "condition"
+
 ```
 
 # Overview
