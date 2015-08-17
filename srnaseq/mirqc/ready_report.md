@@ -10,222 +10,183 @@ output:
     highlight: zenburn
 ---
 
-last update Fri Aug 14 15:20:39 2015 by @lopantano
+last update Mon Aug 17 16:10:18 2015 by @lopantano
 
 
 
 For replication [go here](http://seqcluster.readthedocs.org/example_pipeline.html)
 
+Document with R code [go here](http://github.com/lpantano/seqcluster/docs/post/mirqc/report_with_code.md)
+
 
 ```r
-library(knitr)
-
-library(ggplot2)
-library(reshape)
-library(DESeq2)
+> library(ggplot2)
+> library(reshape)
+> library(DESeq2)
 ```
 
 ```
-## Loading required package: S4Vectors
-## Loading required package: stats4
-## Loading required package: BiocGenerics
-## Loading required package: parallel
-## 
-## Attaching package: 'BiocGenerics'
-## 
-## The following objects are masked from 'package:parallel':
-## 
-##     clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
-##     clusterExport, clusterMap, parApply, parCapply, parLapply,
-##     parLapplyLB, parRapply, parSapply, parSapplyLB
-## 
-## The following objects are masked from 'package:dplyr':
-## 
-##     combine, intersect, setdiff, union
-## 
-## The following objects are masked from 'package:stats':
-## 
-##     IQR, mad, xtabs
-## 
-## The following objects are masked from 'package:base':
-## 
-##     anyDuplicated, append, as.data.frame, as.vector, cbind,
-##     colnames, do.call, duplicated, eval, evalq, Filter, Find, get,
-##     grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
-##     match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
-##     Position, rank, rbind, Reduce, rep.int, rownames, sapply,
-##     setdiff, sort, table, tapply, union, unique, unlist, unsplit
-## 
-## 
-## Attaching package: 'S4Vectors'
-## 
-## The following object is masked from 'package:dplyr':
-## 
-##     rename
-## 
-## The following object is masked from 'package:reshape':
-## 
-##     rename
-## 
-## Loading required package: IRanges
-```
+Loading required package: S4Vectors
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
 
-```
-## Warning: replacing previous import by 'BiocGenerics::mad' when loading
-## 'IRanges'
-```
+Attaching package: 'BiocGenerics'
 
-```
-## Warning: replacing previous import by 'BiocGenerics::IQR' when loading
-## 'IRanges'
-```
+The following objects are masked from 'package:parallel':
 
-```
-## Warning: multiple methods tables found for 'mad'
-```
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
 
-```
-## Warning: multiple methods tables found for 'IQR'
-```
+The following object is masked from 'package:stats':
 
-```
-## 
-## Attaching package: 'IRanges'
-## 
-## The following objects are masked from 'package:dplyr':
-## 
-##     collapse, desc, slice
-## 
-## The following object is masked from 'package:reshape':
-## 
-##     expand
-## 
-## Loading required package: GenomicRanges
-## Loading required package: GenomeInfoDb
-```
+    xtabs
 
-```
-## Warning: replacing previous import by 'IRanges::mad' when loading
-## 'GenomeInfoDb'
-```
+The following objects are masked from 'package:base':
 
-```
-## Warning: replacing previous import by 'IRanges::IQR' when loading
-## 'GenomeInfoDb'
-```
+    anyDuplicated, append, as.data.frame, as.vector, cbind,
+    colnames, do.call, duplicated, eval, evalq, Filter, Find, get,
+    grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rep.int, rownames, sapply,
+    setdiff, sort, table, tapply, union, unique, unlist, unsplit
 
-```
-## Warning: replacing previous import by 'IRanges::mad' when loading
-## 'GenomicRanges'
-```
 
-```
-## Warning: replacing previous import by 'IRanges::IQR' when loading
-## 'GenomicRanges'
-```
+Attaching package: 'S4Vectors'
 
-```
-## Warning: replacing previous import by 'IRanges::mad' when loading 'XVector'
-```
+The following object is masked from 'package:reshape':
 
-```
-## Warning: replacing previous import by 'IRanges::IQR' when loading 'XVector'
-```
+    rename
 
-```
-## Loading required package: SummarizedExperiment
-## Loading required package: Biobase
-## Welcome to Bioconductor
-## 
-##     Vignettes contain introductory material; view with
-##     'browseVignettes()'. To cite Bioconductor, see
-##     'citation("Biobase")', and for packages 'citation("pkgname")'.
-```
+Loading required package: IRanges
 
-```
-## Warning: replacing previous import by 'IRanges::mad' when loading
-## 'SummarizedExperiment'
-```
+Attaching package: 'IRanges'
 
-```
-## Warning: replacing previous import by 'IRanges::IQR' when loading
-## 'SummarizedExperiment'
-```
+The following object is masked from 'package:reshape':
 
-```
-## Loading required package: Rcpp
-## Loading required package: RcppArmadillo
-```
+    expand
 
-```
-## Warning: replacing previous import by 'IRanges::mad' when loading 'DESeq2'
-```
+Loading required package: GenomicRanges
+Loading required package: GenomeInfoDb
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Welcome to Bioconductor
 
-```
-## Warning: replacing previous import by 'IRanges::IQR' when loading 'DESeq2'
-```
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
 
-```
-## Warning: replacing previous import by 'IRanges::mad' when loading
-## 'AnnotationDbi'
-```
-
-```
-## Warning: replacing previous import by 'IRanges::IQR' when loading
-## 'AnnotationDbi'
+Loading required package: Rcpp
+Loading required package: RcppArmadillo
 ```
 
 ```r
-library(genefilter)
+> library(genefilter)
 ```
 
 ```
-## 
-## Attaching package: 'genefilter'
-## 
-## The following object is masked from 'package:base':
-## 
-##     anyNA
-```
 
-```r
-library(CHBUtils)
-library(gtools)
-library(gridExtra)
-library(devtools)
-library(dplyr)
-library(isomiRs)
-```
+Attaching package: 'genefilter'
 
-```
-## Loading required package: DiscriMiner
-```
+The following object is masked from 'package:base':
 
-```
-## Warning: replacing previous import by 'IRanges::mad' when loading 'isomiRs'
-```
-
-```
-## Warning: replacing previous import by 'IRanges::IQR' when loading 'isomiRs'
+    anyNA
 ```
 
 ```r
-knitr::opts_chunk$set(tidy=TRUE, highlight=TRUE, dev="png", fig.width=6,fig.heigh=6,
-               cache=FALSE, highlight=TRUE, autodep=TRUE, warning=FALSE, error=FALSE,
-               message=FALSE, prompt=TRUE, comment='', fig.cap='', bootstrap.show.code=FALSE)
+> library(CHBUtils)
+> library(gtools)
+> library(gridExtra)
+```
 
-root_file = paste0(root_path,"/report/")
+```
+Loading required package: grid
+```
 
-condition = "condition"
+```r
+> library(devtools)
+> library(dplyr)
+```
+
+```
+
+Attaching package: 'dplyr'
+
+The following object is masked from 'package:Biobase':
+
+    combine
+
+The following objects are masked from 'package:GenomicRanges':
+
+    intersect, setdiff, union
+
+The following object is masked from 'package:GenomeInfoDb':
+
+    intersect
+
+The following objects are masked from 'package:IRanges':
+
+    collapse, desc, intersect, setdiff, slice, union
+
+The following objects are masked from 'package:S4Vectors':
+
+    intersect, rename, setdiff, union
+
+The following objects are masked from 'package:BiocGenerics':
+
+    combine, intersect, setdiff, union
+
+The following object is masked from 'package:reshape':
+
+    rename
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+```
+
+```r
+> library(isomiRs)
+```
+
+```
+Loading required package: DiscriMiner
+```
+
+```r
+> library(edgeR)
+```
+
+```
+Loading required package: limma
+
+Attaching package: 'limma'
+
+The following object is masked from 'package:DESeq2':
+
+    plotMA
+
+The following object is masked from 'package:BiocGenerics':
+
+    plotMA
+```
+
+```r
+> root_file = paste0(root_path, "/report/")
+> 
+> condition = "condition"
 ```
 
 
 
 # Overview
 
-mirRQC project
-
-[paper](http://www.nature.com/nmeth/journal/v11/n8/full/nmeth.3014.html)
+mirRQC project [paper](http://www.nature.com/nmeth/journal/v11/n8/full/nmeth.3014.html)
 
 samples overview:
 
@@ -256,7 +217,7 @@ samples overview:
 In this section we will see exploratory figures about quality of the data, 
 reads with adapter, reads mapped to miRNAs and reads mapped to other small RNAs. 
 
-## size distribution
+## Size distribution
 
 After adapter removal, we can plot the size distribution of the small RNAs. In a normal
 small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 depending on the biological background.
@@ -276,7 +237,7 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     vjust = 0.5, hjust = 1))
 ```
 
-![](figure/adapter-1.png) 
+![](../figures/mirqcadapter-1.png) 
 
 ```r
 > ggplot(tab, aes(x = V1, y = V2, group = sample)) + geom_bar(stat = "identity", 
@@ -285,11 +246,11 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     vjust = 0.5, hjust = 1))
 ```
 
-![](figure/adapter-2.png) 
+![](../figures/mirqcadapter-2.png) 
 
 ## miRNA
 
-### total miRNA expression annotated with mirbase
+### Total miRNA expression annotated with mirbase
 
 
 ```r
@@ -308,7 +269,7 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     vjust = 0.5, hjust = 1))
 ```
 
-![](figure/mirna-mirbase-1.png) 
+![](../figures/mirqcmirna-mirbase-1.png) 
 
 ```r
 > mirna_step <- as.data.frame(colSums(counts(obj)))
@@ -322,9 +283,9 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
 
-![](figure/depth-1.png) 
+![](../figures/mirqcdepth-1.png) 
 
-### cumulative distribution of miRNAs
+### Cumulative distribution of miRNAs
 
 
 ```r
@@ -335,7 +296,7 @@ small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 de
 +     scale_y_log10()
 ```
 
-![](figure/cum-1.png) 
+![](../figures/mirqccum-1.png) 
 
 ## Others small RNA
 
@@ -348,7 +309,7 @@ same sequences. This way the output are meta-clusters, common sequences that cou
 come from different region of the genome.
 
 
-### genome covered
+### Genome covered
 
 
 ```r
@@ -365,9 +326,9 @@ come from different region of the genome.
 |129 |        0|    0.9997890|
 |130 |        1|    0.0002112|
 
-The normal value for data with strong small RNA signal is: 0.0002
+The normal value for data with strong small RNA signal in human is: 0.0002
 
-### classification
+### Classification
 
 Number of reads in the data after each step:
 
@@ -385,7 +346,7 @@ Number of reads in the data after each step:
 +     hjust = 1))
 ```
 
-![](figure/reads-track-1.png) 
+![](../figures/mirqcreads-track-1.png) 
 
 
 
@@ -459,7 +420,7 @@ Contribution by class:
 +     vjust = 0.5, hjust = 1))
 ```
 
-![](figure/cluster_type-1.png) 
+![](../figures/mirqccluster_type-1.png) 
 
 ```r
 > dd_norm = dd
@@ -470,7 +431,7 @@ Contribution by class:
 +     labs(list(title = "relative proportion of small RNAs", y = "% reads"))
 ```
 
-![](figure/cluster_type-2.png) 
+![](../figures/mirqccluster_type-2.png) 
 
 
 # Comparison
@@ -543,7 +504,7 @@ Contribution by class:
 + }
 ```
 
-## mirna
+## miRNA
 
 
 ```r
@@ -551,7 +512,7 @@ Contribution by class:
 ```
 
 
-### abundance detection of miRQC samples
+### Abundance detection of miRQC samples
 
 There are 4 samples:
 
@@ -560,9 +521,9 @@ There are 4 samples:
 * C: 0.25 * A + 0.75 * B
 * D: 0.25 * B + 0.75 * A
 
-If A > B then A > C > D > B
+If A > B then A > D > C > B
 
-If A < B then A < C < D < B
+If A < B then A < D < C < B
 
 
 Note that C/D samples are swapped in the paper and in the GEO web. Text from the paper:
@@ -598,7 +559,7 @@ Characteristics 	biomaterial: Mixture of 75% UHRR and 25% HuBr Total RNA
 > GGally::ggpairs(mirna_n, axisLabels = "internal")
 ```
 
-![](figure/mirqc-cor-1.png) 
+![](../figures/mirqcmirqc-cor-1.png) 
 
 
 ```r
@@ -630,7 +591,7 @@ ratio expression summary of A/D
 |------:|-------:|------:|------:|-------:|------:|
 | 0.2856|  0.4861| 0.5816| 0.5789|  0.6748| 0.9794|
 
-the logFC is 0.5 that is a FC of log2(1/0.75)=0.5 that should be D according to description
+the logFC is 0.5 that is similar to the expected FC = log2(1/0.75) = 0.5
 
 
 ratio expression summary of A/C
@@ -646,7 +607,7 @@ ratio expression summary of A/C
 |------:|-------:|------:|-----:|-------:|-----:|
 | 0.3806|   1.071|  2.007| 1.667|   2.156| 2.891|
 
-the logFC is 1.6 that is a FC of log2(1/0.25)=2 that should be C according to description
+the logFC is 1.6 that is similar to the expected FC = log2(1/0.25) = 2
 
 Same happens when comparing B vs D 
 
@@ -683,7 +644,7 @@ miRQC_D = 0.75 * miRQC_A + 0.25 * miRQC_B
 that is the same that is in the GEO data set description file.
 
 
-### specificity
+### Specificity
 
 >> we spiked in 8 synthetic miRNAs from two miRNA families into human liver RNA (miR-302a/b/c/d) or MS2-phage RNA (let-7a/b/c/d)
 
@@ -829,7 +790,7 @@ According to the text they saw cross-mapping between these miRNAs, but here we a
 
 Probably the method was causing that, since I am not seeing this with seqbuster.
 
-### accuracy
+### Accuracy
 
 
 ```r
@@ -886,32 +847,32 @@ The x-axes shows the percentage of abundance with that change.
 > obj = isoPlot(obj)
 ```
 
-![](figure/isomir-example-1.png) 
+![](../figures/mirqcisomir-example-1.png) 
 
 ```r
 > obj = isoPlot(obj, type = "iso3")
 ```
 
-![](figure/isomir-example-2.png) 
+![](../figures/mirqcisomir-example-2.png) 
 
 ```r
 > obj = isoPlot(obj, type = "add")
 ```
 
-![](figure/isomir-example-3.png) 
+![](../figures/mirqcisomir-example-3.png) 
 
 ```r
 > obj = isoPlot(obj, type = "subs")
 ```
 
-![](figure/isomir-example-4.png) 
+![](../figures/mirqcisomir-example-4.png) 
 
-Seems there are some nt-changes for serum and MS2 samples at position 13/14, 
+It seems there are some nt-changes for serum and MS2 samples at position 13/14, 
 and at position 9-11 for miRQC and liver samples. These are just
-exploratory figures and could lead to a deep analysis of differential
-expression of isomiRs.
+exploratory figures and could lead to a differential
+expression analysis of isomiRs.
 
-## clusters
+## Clusters
  
 The same logic was applied to clusters detection.
 
@@ -922,19 +883,21 @@ The same logic was applied to clusters detection.
 > dge = DGEList(clus_ma[, keep])
 > dge = calcNormFactors(dge, method = "upperquartile")
 > clus_ma_norm = cpm(dge, normalized.lib.sizes = T, log = T)
-> clus_ma_norm = clus_ma_norm[rowMedians(clus_ma_norm) > 5, ]
+> enough = rowMedians(clus_ma_norm) > 5
+> clus_ma_norm = clus_ma_norm[enough, ]
+> is_mi = grepl("miRNA", ann)
 ```
 
-### matrix correlation among samples
+### Matrix correlation among samples
 
 
 ```r
 > GGally::ggpairs(clus_ma_norm, axisLabels = "internal")
 ```
 
-![](figure/cluster-cor-1.png) 
+![](../figures/mirqccluster-cor-1.png) 
 
-### abundance detection
+### Abundance detection
 
 
 ```r
@@ -950,8 +913,9 @@ The same logic was applied to clusters detection.
 > conc_b = top_b & mirqcb > mirqcc & mirqcc > mirqcd
 ```
 
-clusters which mirqca > mirqcd > mrqcc are 139 out of 147
-clusters which mirqcb > mirqcc > mrqcd are 222 out of 230
+clusters which mirqca > mirqcd > mrqcc are 139 (75 are miRNAs) out of 147
+
+clusters which mirqcb > mirqcc > mrqcd are 222 (129 out of 230
 
 ratio expression summary of A/D
 
@@ -966,7 +930,7 @@ ratio expression summary of A/D
 |-------:|-------:|------:|------:|-------:|------:|
 | -0.1564|   0.208| 0.3339| 0.3144|  0.4182| 0.7166|
 
-the logFC is 0.5 that is a FC of log2(1/0.75)=0.5 that should be D
+the average logFC is 0.3 that is similar to the expected FC = log2(1/0.75) = 0.41 
 
 
 ratio expression summary of A/C
@@ -982,7 +946,7 @@ ratio expression summary of A/C
 |-------:|-------:|------:|----:|-------:|-----:|
 | -0.4284|  0.5452|  1.588| 1.28|   1.937| 2.526|
 
-the logFC is 1.6 that is a FC of log2(1/0.25)=2 that should be C
+the logFC is 1.6 that is similar to the expected FC = log2(1/0.25) = 2
 
 Same happens when comparing B vs D 
 
