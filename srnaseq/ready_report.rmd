@@ -85,7 +85,7 @@ design <- data.frame(row.names=files$sample_id, condition=files$group)
 In this section we will see exploratory figures about quality of the data, 
 reads with adapter, reads mapped to miRNAs and reads mapped to other small RNAs. 
 
-## size distribution
+## Size distribution
 
 After adapter removal, we can plot the size distribution of the small RNAs. In a normal
 small RNA sample, we should see a peak at 22/23 and maybe another at 26 or 31 depending on the biological background.
@@ -114,7 +114,7 @@ ggplot(tab, aes(x=V1,y=V2,group=sample)) +
 
 ## miRNA
 
-### total miRNA expression annotated with mirbase
+### Total miRNA expression annotated with mirbase
 
 ```{r mirna,results='hide', cache=TRUE}
 mi_files = file.path(root_path, files[,"miraligner"])
@@ -140,7 +140,7 @@ ggplot(melt(counts(obj))) +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ```
 
-### cumulative distribution of miRNAs
+### Cumulative distribution of miRNAs
 
 ```{r cum}
 
@@ -172,7 +172,7 @@ kable(cov_stats[cov_stats$V1=="genome",] %>% select(coverage=V2,ratio_genome=V5)
 
 ```
 
-The normal value for data with strong small RNA signal is: 0.0002
+The normal value for data with strong small RNA signal in human is: 0.0002
 
 ### Classification
 
@@ -338,9 +338,9 @@ There are 4 samples:
 * C: 0.25 * A + 0.75 * B
 * D: 0.25 * B + 0.75 * A
 
-If A > B then A > C > D > B
+If A > B then A > D > C > B
 
-If A < B then A < C < D < B
+If A < B then A < D < C < B
 
 
 Note that C/D samples are swapped in the paper and in the GEO web. Text from the paper:
@@ -397,7 +397,7 @@ kable(t(as.matrix(summary(mirqca[top_a]-mirqcd[top_a]))))
 
 ```
 
-the logFC is 0.5 that is similar to the expected FC = log2(1/0.75)=0.5
+the logFC is 0.5 that is similar to the expected FC = log2(1/0.75) = 0.5
 
 
 ratio expression summary of A/C
@@ -407,7 +407,7 @@ kable(t(as.matrix(summary(mirqca[top_a]-mirqcc[top_a]))))
       
 ```
 
-the logFC is 1.6 that is similar to the expected FC = log2(1/0.25)=2
+the logFC is 1.6 that is similar to the expected FC = log2(1/0.25) = 2
 
 Same happens when comparing B vs D 
 
@@ -504,10 +504,10 @@ obj = isoPlot(obj, type="add")
 obj = isoPlot(obj, type="subs")
 ```
 
-Seems there are some nt-changes for serum and MS2 samples at position 13/14, 
+It seems there are some nt-changes for serum and MS2 samples at position 13/14, 
 and at position 9-11 for miRQC and liver samples. These are just
-exploratory figures and could lead to a deep analysis of differential
-expression of isomiRs.
+exploratory figures and could lead to a differential
+expression analysis of isomiRs.
 
 ## Clusters
  
@@ -556,7 +556,7 @@ kable(t(as.matrix(summary(mirqca[top_a]-mirqcd[top_a]))))
 
 ```
 
-the average logFC is 0.3 that is similar to the expected FC = log2(1/0.75)=0.41 
+the average logFC is 0.3 that is similar to the expected FC = log2(1/0.75) = 0.41 
 
 
 ratio expression summary of A/C
