@@ -19,7 +19,8 @@ knitr::opts_chunk$set(tidy=TRUE, highlight=TRUE, dev="png", fig.width=9,fig.heig
                cache=FALSE, highlight=TRUE, autodep=TRUE, warning=FALSE, error=FALSE, echo=FALSE,
                message=FALSE, prompt=TRUE, comment='', fig.cap='', bootstrap.show.code=FALSE)
 
-root_path = "~/orch/scratch/simulator/mirqc/work"
+root_path = "~/orch/scratch/simulator/mirqc/bcbio/config/work2/report"
+root_other_path = "~/orch/scratch/simulator/mirqc/bcbio/non_mirqc_bcbio/work/report"
 
 ```
 
@@ -64,7 +65,7 @@ samples overview:
 
 > Universal Human miRNA reference RNA (Agilent Technologies, #750700), human brain total RNA (Life Technologies, #AM6050), human liver total RNA (Life Technologies, #AM7960) and MS2-phage RNA (Roche, #10165948001) were diluted to a platform-specific concentration. RNA integrity and purity were evaluated using the Experion automated gel electrophoresis system (Bio-Rad) and Nanodrop spectrophotometer. All RNA samples were of high quality (miRQC A: RNA quality index (RQI, scale from 0 to 10) = 9.0; miRQC B: RQI = 8.7; human liver RNA: RQI = 9.2) and high purity (data not shown). RNA was isolated from serum prepared from three healthy donors using the miRNeasy mini kit (Qiagen) according to the manufacturer's instructions, and RNA samples were pooled. Informed consent was obtained from all donors (Ghent University Ethical Committee). Different kits for isolation of serum RNA are available; addressing their impact was outside the scope of this work. Synthetic miRNA templates for let-7a-5p, let-7b-5p, let-7c, let-7d-5p, miR-302a-3p, miR-302b-3p, miR-302c-3p, miR-302d-3p, miR-133a and miR-10a-5p were synthesized by Integrated DNA Technologies and 5′ phosphorylated. Synthetic let-7 and miR-302 miRNAs were spiked into MS2-phage RNA and total human liver RNA, respectively, at 5 × 106 copies/μg RNA. These samples do not contain endogenous miR-302 or let-7 miRNAs, which allowed unbiased analysis of cross-reactivity between the individual miR-302 and let-7 miRNAs measured by the platform and the different miR-302 and let-7 synthetic templates in a complex RNA background. Synthetic miRNA templates for miR-10a-5p, let-7a-5p, miR-302a-3p and miR-133a were spiked in human serum RNA at 6 × 103 copies per microliter of serum RNA or at 5-times higher, 2-times higher, 2-times lower and 5-times lower concentrations, respectively. All vendors received 10 μl of each serum RNA sample.
 
-[samples](http://www.nature.com.ezp-prod1.hul.harvard.edu/nmeth/journal/v11/n8/images/nmeth.3014-F1.jpg)
+[samples](figures/nmeth.3014-F1.jpg)
 
 ```{r load}
 # setwd(root_path)
@@ -80,6 +81,11 @@ names(groups) = samples
 
 summarydata = data.frame(row.names=samples,samples=samples,group=groups)
 design <- data.frame(row.names=files$sample_id, condition=files$group)
+
+
+files_other = read.table(file.path(root_other_path, "summary_re.csv"), sep=",",header=T,colClasses = "character")
+design_other <- data.frame(row.names=files_other$sample_id, condition=files_other$group)
+
 
 ```
 
@@ -164,7 +170,6 @@ step is to cluster sequences in all locations they overlap. The second step is t
 create meta-clusters: is the unit that merge all clusters that share the 
 same sequences. This way the output are meta-clusters, common sequences that could
 come from different region of the genome.
-
 
 ### Genome covered
 
@@ -252,7 +257,6 @@ ggplot(melt(dd_norm[,1:5])) +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
     labs(list(title="relative proportion of small RNAs",y="% reads"))
 ```
-
 
 # Comparison
 
@@ -438,48 +442,63 @@ that is the same that is in the GEO data set description file.
 
 ### Specificity
 
+```{r load-others, echo=FALSE}
+
+mi_files = file.path(root_other_path, files_other[,"miraligner"])
+
+obj_other <- IsomirDataSeqFromFiles(files = mi_files, design = design_other ,header = T, cov = 1)
+obj_other = isoCounts(obj_other)
+mirna_c_other = counts(obj_other)
+
+```
+
+
 > we spiked in 8 synthetic miRNAs from two miRNA families into human liver RNA (miR-302a/b/c/d) or MS2-phage RNA (let-7a/b/c/d)
 
 We should only see those miRNAs in those samples and not in anywhere else.
 
 ```{r detection-serum-ms2, results="asis"}
 
-kable(isoSelect(obj, mirna="hsa-let-7a-5p")[,grepl("MS", rownames(design))])
+kable(isoSelect(obj, mirna="hsa-let-7a-5p", minc=1)[,grepl("MS", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-let-7b-5p")[,grepl("MS", rownames(design))])
+kable(isoSelect(obj, mirna="hsa-let-7b-5p", minc=1)[,grepl("MS", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-let-7c-5p")[,grepl("MS", rownames(design))])
+kable(isoSelect(obj, mirna="hsa-let-7c-5p", minc=1)[,grepl("MS", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-let-7d-5p")[,grepl("MS", rownames(design))])
+kable(isoSelect(obj, mirna="hsa-let-7d-5p", minc=1)[,grepl("MS", rownames(design_other))])
 
+mirnas = c("hsa-let-7a-5p", "hsa-let-7b-5p", "hsa-let-7c-5p", "hsa-let-7d-5p")
+ma = log2(counts(obj)[mirnas, grepl("MS", rownames(design_other))] + 0.25)
+pheatmap(ma)
 ```
 
 ```{r detection-serum-liver, results="asis"}
 
-kable(isoSelect(obj, mirna="hsa-miR-302a-3p")[,grepl("liver", rownames(design))])
+kable(isoSelect(obj, mirna="hsa-miR-302a-3p", minc=1)[,grepl("liver", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-miR-302b-3p")[,grepl("liver", rownames(design))])
+kable(isoSelect(obj, mirna="hsa-miR-302b-3p", minc=1)[,grepl("liver", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-miR-302c-3p")[,grepl("liver", rownames(design))])
+kable(isoSelect(obj, mirna="hsa-miR-302c-3p", minc=1)[,grepl("liver", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-miR-302d-3p")[,grepl("liver", rownames(design))])
+kable(isoSelect(obj, mirna="hsa-miR-302d-3p", minc=1)[,grepl("liver", rownames(design_other))])
 
+mirnas = c("hsa-miR-302a-3p", "hsa-miR-302b-3p", "hsa-miR-302c-3p", "hsa-miR-302d-3p")
+ma = log2(counts(obj)[mirnas, grepl("liver", rownames(design_other))] + 0.25)
+pheatmap(ma)
 ```
 
 
-According to the text they saw cross-mapping between these miRNAs, but here we are seeing perfect annotation.
+According to the text they saw cross-mapping between these miRNAs, but here we are seeing perfect annotation for miR-302 family and some amplification of the reference miRNA in the MS-let-7c sample, where the let-7a is in low concentration (10 counts, compared to the TP=450 counts). A little more noise appears in the paper, maybe due to diffent tools for quantification.
 
-[Figure-e](http://www.nature.com.ezp-prod1.hul.harvard.edu/nmeth/journal/v11/n8/images/nmeth.3014-F4.jpg)
-
-Probably the method was causing that, since I am not seeing this with seqbuster.
+[Figure-e](figures/nmeth.3014-F4.jpg)
 
 ### Accuracy
 
 ```{r serum-accuracy}
 target = c("hsa-miR-10a-5p", "hsa-let-7a-5p", "hsa-miR-302a-3p", "hsa-miR-133a-3p")
-keep = grepl("serum", colnames(mirna_c))
-keep_d = grepl("serum", rownames(design))
-dge = DGEList(mirna_c[,keep])
+keep = grepl("serum", colnames(mirna_c_other))
+keep_d = grepl("serum", rownames(design_other))
+dge = DGEList(mirna_c_other[,keep])
 dge = calcNormFactors(dge,method = 'TMM')
 serum_n = cpm(dge, normalized.lib.sizes = T, log = T)
 
@@ -491,7 +510,14 @@ For miR10 and let-7a the changes are clear although not proportional.
 I cannot detect sequences for miR-302 and miR-133 (< 5 reads). I checked directly in the raw data and these sequences are not there.
 
 I think they weren't captured by the sequencing at all. The text shows the same for miR-302, and not 
-detection of changes in the miR-133 ( I guess for the same reason).
+detection in changes for miR-133 ( I guess for the same reason).
+
+```{r show-mir302}
+isoSelect(obj_other, "hsa-miR-302a-3p", minc=1)[, grepl("serum", rownames(design_other))]
+isoSelect(obj_other, "hsa-miR-133a-3p", minc=1)[, grepl("serum", rownames(design_other))]
+```
+
+These two miRNAs were the ones that supposed to be down by 2 and 5 times in the serum with variable []. Since, these miRNAs are not detected in the samples with higher [] (serum with constant []) it would be imposible to detecte them in the other two. I would say there is a bias when the platform capture the sequences, and these two are not being detected, meanwhile there is less problems for let-7a and miR-10a
 
 ## isomiRs
 
