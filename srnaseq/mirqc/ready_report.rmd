@@ -28,7 +28,7 @@ For replication [go here](http://seqcluster.readthedocs.org/example_pipeline.htm
 
 Document with R code [go here](http://github.com/lpantano/seqcluster/docs/post/mirqc/report_with_code.md)
 
-```{r setup, message="FALSE",warning=FALSE, results='hide', eval=FALSE}
+```{r setup, message="FALSE",warning=FALSE, results='hide', eval=TRUE}
 
 library(ggplot2)
 library(reshape)
@@ -41,12 +41,13 @@ library(devtools)
 library(dplyr)
 library(isomiRs)
 library(edgeR)
+library(pheatmap)
 ```
 
 ```{r render,eval=FALSE, echo=FALSE}
 library(rmarkdown)
 library(knitrBootstrap)
-# render("report.rmd")
+render("ready_report.rmd")
 ```
 
 ```{r setpath}
@@ -174,7 +175,7 @@ come from different region of the genome.
 ### Genome covered
 
 ```{r genome-covered, results='asis'}
-cov_stats <- read.table(file.path(root_path, "align", "seqs_clean_rmlw.bam_cov.tsv"),sep="\t",check.names = F)
+cov_stats <- read.table(file.path(root_path, "../align", "seqs_rmlw.bam_cov.tsv"),sep="\t",check.names = F)
 
 kable(cov_stats[cov_stats$V1=="genome",] %>% dplyr::select(coverage=V2,ratio_genome=V5), row.names = FALSE)
 
@@ -191,7 +192,7 @@ Number of reads in the data after each step:
 * multimap: after meta-cluster detection using all hits
 
 ```{r reads-track}
-reads_stats <- read.table(file.path(root_path, "seqcluster", "cluster", "read_stats.tsv"),sep="\t",check.names = F)
+reads_stats <- read.table(file.path(root_path, "../seqcluster", "cluster", "read_stats.tsv"),sep="\t",check.names = F)
 ggplot(reads_stats, aes(x=V2, y=V1, fill=V3)) + 
     geom_bar(stat = 'identity', position = 'dodge') +
     labs(list(x="samples", y="reads")) +
@@ -201,7 +202,7 @@ ggplot(reads_stats, aes(x=V2, y=V1, fill=V3)) +
 
 
 ```{r cluster}
-clus <- read.table(file.path(root_path, files[1,"clusters"]),header=T,sep="\t",row.names=1, check.names = FALSE)
+clus <- read.table(file.path(root_path, "../seqcluster/cluster/counts.tsv"),header=T,sep="\t",row.names=1, check.names = FALSE)
 ann <- clus[,2]
 toomany <- clus[,1]
 clus_ma <- clus[,3:ncol(clus)]
@@ -459,31 +460,31 @@ We should only see those miRNAs in those samples and not in anywhere else.
 
 ```{r detection-serum-ms2, results="asis"}
 
-kable(isoSelect(obj, mirna="hsa-let-7a-5p", minc=1)[,grepl("MS", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-let-7a-5p", minc=1)[,grepl("MS", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-let-7b-5p", minc=1)[,grepl("MS", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-let-7b-5p", minc=1)[,grepl("MS", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-let-7c-5p", minc=1)[,grepl("MS", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-let-7c-5p", minc=1)[,grepl("MS", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-let-7d-5p", minc=1)[,grepl("MS", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-let-7d-5p", minc=1)[,grepl("MS", rownames(design_other))])
 
 mirnas = c("hsa-let-7a-5p", "hsa-let-7b-5p", "hsa-let-7c-5p", "hsa-let-7d-5p")
-ma = log2(counts(obj)[mirnas, grepl("MS", rownames(design_other))] + 0.25)
+ma = log2(counts(obj_other)[mirnas, grepl("MS", rownames(design_other))] + 0.25)
 pheatmap(ma)
 ```
 
 ```{r detection-serum-liver, results="asis"}
 
-kable(isoSelect(obj, mirna="hsa-miR-302a-3p", minc=1)[,grepl("liver", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-miR-302a-3p", minc=1)[,grepl("liver", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-miR-302b-3p", minc=1)[,grepl("liver", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-miR-302b-3p", minc=1)[,grepl("liver", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-miR-302c-3p", minc=1)[,grepl("liver", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-miR-302c-3p", minc=1)[,grepl("liver", rownames(design_other))])
 
-kable(isoSelect(obj, mirna="hsa-miR-302d-3p", minc=1)[,grepl("liver", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-miR-302d-3p", minc=1)[,grepl("liver", rownames(design_other))])
 
 mirnas = c("hsa-miR-302a-3p", "hsa-miR-302b-3p", "hsa-miR-302c-3p", "hsa-miR-302d-3p")
-ma = log2(counts(obj)[mirnas, grepl("liver", rownames(design_other))] + 0.25)
+ma = log2(counts(obj_other)[mirnas, grepl("liver", rownames(design_other))] + 0.25)
 pheatmap(ma)
 ```
 
