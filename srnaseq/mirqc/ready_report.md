@@ -10,7 +10,7 @@ output:
     highlight: zenburn
 ---
 
-last update Mon Sep 21 17:50:44 2015 by @lopantano
+last update Mon Sep 21 17:55:54 2015 by @lopantano
 
 
 
@@ -32,7 +32,7 @@ samples overview:
 
 > Universal Human miRNA reference RNA (Agilent Technologies, #750700), human brain total RNA (Life Technologies, #AM6050), human liver total RNA (Life Technologies, #AM7960) and MS2-phage RNA (Roche, #10165948001) were diluted to a platform-specific concentration. RNA integrity and purity were evaluated using the Experion automated gel electrophoresis system (Bio-Rad) and Nanodrop spectrophotometer. All RNA samples were of high quality (miRQC A: RNA quality index (RQI, scale from 0 to 10) = 9.0; miRQC B: RQI = 8.7; human liver RNA: RQI = 9.2) and high purity (data not shown). RNA was isolated from serum prepared from three healthy donors using the miRNeasy mini kit (Qiagen) according to the manufacturer's instructions, and RNA samples were pooled. Informed consent was obtained from all donors (Ghent University Ethical Committee). Different kits for isolation of serum RNA are available; addressing their impact was outside the scope of this work. Synthetic miRNA templates for let-7a-5p, let-7b-5p, let-7c, let-7d-5p, miR-302a-3p, miR-302b-3p, miR-302c-3p, miR-302d-3p, miR-133a and miR-10a-5p were synthesized by Integrated DNA Technologies and 5′ phosphorylated. Synthetic let-7 and miR-302 miRNAs were spiked into MS2-phage RNA and total human liver RNA, respectively, at 5 × 106 copies/μg RNA. These samples do not contain endogenous miR-302 or let-7 miRNAs, which allowed unbiased analysis of cross-reactivity between the individual miR-302 and let-7 miRNAs measured by the platform and the different miR-302 and let-7 synthetic templates in a complex RNA background. Synthetic miRNA templates for miR-10a-5p, let-7a-5p, miR-302a-3p and miR-133a were spiked in human serum RNA at 6 × 103 copies per microliter of serum RNA or at 5-times higher, 2-times higher, 2-times lower and 5-times lower concentrations, respectively. All vendors received 10 μl of each serum RNA sample.
 
-[samples](figures/nmeth.3014-F1.jpg)
+![samples](figures/nmeth.3014-F1.jpg)
 
 
 
@@ -310,7 +310,7 @@ We should only see those miRNAs in those samples and not in anywhere else.
 
 According to the text they saw cross-mapping between these miRNAs, but here we are seeing perfect annotation for miR-302 family and some amplification of the reference miRNA in the MS-let-7c sample, where the let-7a is in low concentration (10 counts, compared to the TP=450 counts). A little more noise appears in the paper, maybe due to diffent tools for quantification.
 
-[Figure-e](figures/nmeth.3014-F4.jpg)
+![Figure-e](figure/nmeth.3014-F4.jpg)
 
 ### Accuracy
 
