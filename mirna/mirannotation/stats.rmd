@@ -53,9 +53,12 @@ data$TPmirna<-apply(data[,c(2,4)],1,function(x){
 Proportion of mapped and no-mapped sequences
 ```{r mapped-mir}
 library(ggplot2)
-ggplot(data,aes(V8,fill=V3))+
-  geom_bar()+
-  theme_bw()+ labs(x="")+
+library(dplyr)
+dt = data %>% group_by(V8,V3) %>% summarise(total=n()) %>% as_data_frame()
+ggplot(dt,aes(x=V8,y=total,fill=V3))+
+  geom_bar(stat = 'identity')+
+  geom_text(aes(label=total),vjust=-1) +
+  theme_bw()+ labs(x="")+ ylim(0,max(dt$total)+2000)+
   scale_fill_brewer("mapped",palette="Set1")+
     facet_wrap(~V3,scales = "free_y", ncol=1) + theme(axis.text.x = element_text(angle = 90))
 ```
@@ -82,12 +85,14 @@ ggplot(data,aes(V8,fill=changes))+
 
 
 # Specificity at precursor level
-How many were assigned to only the correct miRNA. Normally miRNA can map to other miRNAs that are from the same family. "Red" will be sequences mapping to multiple miRNAs.
+How many were assigned to only the correct miRNA. Normally miRNA can map to other miRNAs that are from the same family/precursor. "Red" will be sequences mapping to multiple miRNAs.
 ```{r sp-precursor}
-ggplot(data[data$V3=="yes",],aes(V8,fill=factor(TP)))+
-  geom_bar()+
-  theme_bw()+ labs(x="")+
-  scale_fill_brewer("correct",palette="Set1") + theme(axis.text.x = element_text(angle = 90))+
+dt = data %>% filter(V3=="yes") %>% group_by(V8,TP) %>% summarise(total=n()) %>% as_data_frame()
+ggplot(dt,aes(x=V8,y=total,fill=factor(TP)))+
+  geom_bar(stat = "identity")+
+  geom_text(aes(label=total),vjust=-1,size=3) +
+  theme_bw()+ labs(x="")+ ylim(0,max(dt$total)+200)+
+  scale_fill_brewer(guide=FALSE,"correct",palette="Set1") + theme(axis.text.x = element_text(angle = 90))+
     facet_wrap(~TP,scales = "free_y")
 ```
 
@@ -95,10 +100,12 @@ ggplot(data[data$V3=="yes",],aes(V8,fill=factor(TP)))+
 # Specificity at miRNA level
 
 ```{r sp-mir}
-ggplot(data[data$V3=="yes",],aes(V8,fill=factor(TPmirna)))+
-  geom_bar()+
-  theme_bw()+ labs(x="")+
-  scale_fill_brewer("correct",palette="Set1") + theme(axis.text.x = element_text(angle = 90))+
+dt = data %>% filter(V3=="yes") %>% group_by(V8,TPmirna) %>% summarise(total=n()) %>% as_data_frame()
+ggplot(dt,aes(x=V8,y=total,fill=factor(TPmirna)))+
+  geom_bar(stat = "identity")+
+  geom_text(aes(label=total),vjust=-1,size=3) +
+  theme_bw()+ labs(x="")+ ylim(0,max(dt$total)+200)+
+  scale_fill_brewer(guide=FALSE,"correct",palette="Set1") + theme(axis.text.x = element_text(angle = 90))+
     facet_wrap(~TPmirna,scales = "free_y")
 ```
 
