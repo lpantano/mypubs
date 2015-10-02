@@ -18,7 +18,7 @@ output:
 library(knitr)
 library(rmarkdown)
 library(knitrBootstrap)
-
+options(bitmapType = "cairo")
 opts_chunk$set(tidy = TRUE, highlight = T, figalign = "center", fig.height = 6, 
     fig.width = 10, message = F, error = F, warning = F, bootstrap.show.code = FALSE)
 ```
