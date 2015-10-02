@@ -1,7 +1,7 @@
 ---
 title: "miRNA annotation"
 author: "Lorena Pantano"
-date: "18/02/2015"
+date: "10/02/2015"
 output:
   knitrBootstrap::bootstrap_document:
     theme: readable
@@ -17,8 +17,8 @@ output:
 library(knitr)
 library(rmarkdown)
 library(knitrBootstrap)
-
-opts_chunk$set(tidy=TRUE, highlight=T, figalign="center", cache=T,
+options(bitmapType = "cairo")
+opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
                fig.height=6, fig.width=10, message=F, error=F, warning=F, bootstrap.show.code=FALSE)
 ```
 
