@@ -11,14 +11,19 @@ RNAB_DB="../tools/sRNAbenchDB"
 RNAB="../tools/"
 
 echo "download miRBase files"
-wget -q ftp://mirbase.org/pub/mirbase/CURRENT/hairpin.fa.gz
-wget -q ftp://mirbase.org/pub/mirbase/CURRENT/miRNA.str.gz
+wget -q ftp://mirbase.org/pub/mirbase/CURRENT/hairpin.fa.gz -O hairpin.fa.gz
+wget -q ftp://mirbase.org/pub/mirbase/CURRENT/miRNA.str.gz -O miRNA.str.gz
 
-gunzip hairpin.fa.gz miRNA.str.gz
+gunzip -f hairpin.fa.gz miRNA.str.gz
 
-# awk '{if ($0~/>/){print name"\t"seq;name=$1;seq=""}else{seq=seq$0}}' hairpin.fa | grep "^>hsa" | sed "s/U/T/g" | sed 's/\t/\n/' > hairpin.hsa.fa
+awk '{if ($0~/>/){print name"\t"seq;name=$1;seq=""}else{seq=seq$0}}' hairpin.fa | grep "^>hsa" | sed "s/U/T/g" | sed 's/\t/\n/' > hairpin.hsa.fa
 
-# python "$SB_HOME"/misc/miRNA.simulator.py -f hairpin.hsa.fa -m miRNA.str -n 10 -s hsa > sim.20.hsa.fa
+if [ ! -e sim.20.hsa.fa ] ; then
+
+    wget https://raw.githubusercontent.com/lpantano/seqcluster/master/scripts/miRNA.simulator.py
+    python miRNA.simulator.py -f hairpin.hsa.fa -m miRNA.str -n 10 -s hsa > sim.20.hsa.fa
+
+fi
 
 mkdir -p miraligner
 cd miraligner
@@ -67,16 +72,23 @@ razers3 -dr 0 -i 80 -rr 90 -f -o sim.20.hsa.sam ../hairpin.hsa.fa ../sim.20.hsa.
 cd ..
 
 mkdir -p mirexpress
+cd mirexpress
 awk '{if ($0!~/^>/){print 1"\t"$0}}' ../sim.20.hsa.fa > sim.20.hsa.trim
-mkdir out
-alignmentSIMD -r ../tools/miRExpress/data_v2/hsa_precursor.txt -i sim.20.hsa.trim -o out
-analysis -r ../tools/miRExpress/data_v2/hsa_precursor.txt -m ../tools/miRExpress/data_v2/hsa_miRNA.txt -d out -o /hsa.sim.20 -t hsa.sim.20.profile
+mkdir -p out
+alignmentSIMD -r ../tools/miRExpress/data_miRBase_19/hsa_precursor.txt -i sim.20.hsa.trim -o out
+analysis -r ../tools/miRExpress/data_miRBase_19/hsa_precursor.txt -m ../tools/miRExpress/data_miRBase_19/hsa_miRNA.txt -d out -o /hsa.sim.20 -t hsa.sim.20.profile
+cd ..
 
 mkdir -p star
 cd star
 mkdir -p genome
 STAR --runMode genomeGenerate --genomeDir genome --genomeFastaFiles ../hairpin.hsa.fa
 STAR --genomeDir genome --readFilesIn ../sim.20.hsa.fa --alignIntronMax 1  --outFilterMultimapNmax 1000 --outSAMattributes NH HI NM --outSAMtype SAM SortedByCoordinate
+cd ..
+
+mkdir -p miraligner-python
+cd miraligner-python
+seqcluster seqbuster --mirna ../miRNA.str --hairpin ../hairpin.hsa.fa --sps hsa -o res ../sim.20.hsa.fa
 cd ..
 
 python check.align.py > stats
