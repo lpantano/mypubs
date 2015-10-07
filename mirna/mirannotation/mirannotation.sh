@@ -20,7 +20,7 @@ awk '{if ($0~/>/){print name"\t"seq;name=$1;seq=""}else{seq=seq$0}}' hairpin.fa 
 
 if [ ! -e sim.20.hsa.fa ] ; then
 
-    wget https://raw.githubusercontent.com/lpantano/seqcluster/master/scripts/miRNA.simulator.py
+    wget https://raw.githubusercontent.com/lpantano/seqcluster/master/scripts/miRNA.simulator.py -O miRNA.simulator.py
     python miRNA.simulator.py -f hairpin.hsa.fa -m miRNA.str -n 10 -s hsa > sim.20.hsa.fa
 
 fi
