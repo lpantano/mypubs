@@ -23,7 +23,11 @@ output:
 +     fig.width = 10, message = F, error = F, warning = F, bootstrap.show.code = FALSE)
 ```
 
+# Method
 
+ * scoring: in case the tool gives a score, the best score will be used. If not the first hit is the one used. If score is the same, the first hit is used. Tools that can be scored are: bowtie, bowtie2, chimira_blast, GEM, microzer, miraligner, miraligner-python, novoaling, razer3, STAR
+ * only miraligner* and srnabench gives miRNA annotation, so these tools should have an advantage since they are parsing the hits to get the best annotation Anyway, I am trying to get the best of all of them when comparing which annotates better using precursor names.
+ 
 
 ```r
 > data <- read.table("stats", skip = 1)
@@ -81,7 +85,7 @@ How size affects the alignments
 ![](figure/size-mir-1.png) 
 
 # Isomirs effect
-How changes affect the alignment
+How changes in the mature miRNA affect the alignment
 
 ```r
 > ggplot(data, aes(V8, fill = changes)) + geom_bar() + theme_bw() + labs(x = "") + 
@@ -92,7 +96,8 @@ How changes affect the alignment
 
 
 # Specificity at precursor level
-How many were assigned to only the correct miRNA. Normally miRNA can map to other miRNAs that are from the same family/precursor. "Red" will be sequences mapping to multiple miRNAs.
+How many were assigned to the correct miRNA using the precursor name as the true positive.
+Red would be "not correct" and blue "correct". This is only considering mapped sequences.
 
 ```r
 > dt = data %>% filter(V3 == "yes") %>% group_by(V8, TP) %>% summarise(total = n()) %>% 
@@ -101,14 +106,14 @@ How many were assigned to only the correct miRNA. Normally miRNA can map to othe
 +     geom_text(aes(label = total), vjust = -1, size = 3) + theme_bw() + labs(x = "") + 
 +     ylim(0, max(dt$total) + 200) + scale_fill_brewer(guide = FALSE, "correct", 
 +     palette = "Set1") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~TP, 
-+     scales = "free_y")
++     scales = "free_y") + ggtitle("Specificity at precursor level")
 ```
 
 ![](figure/sp-precursor-1.png) 
 
 
 # Specificity at miRNA level
-
+Same logic than before but with the miRNA names in case the tool gives the miRNA names, if not, only the three first field in the name are used as annotation (i.e hsa-let-7a-1 will ignore any character beyond 7a). This will increase the number of TP, since many miRNAs has multiple precursors being the same mature miRNA at the end.
 
 ```r
 > dt = data %>% filter(V3 == "yes") %>% group_by(V8, TPmirna) %>% summarise(total = n()) %>% 
@@ -117,7 +122,7 @@ How many were assigned to only the correct miRNA. Normally miRNA can map to othe
 +     geom_text(aes(label = total), vjust = -1, size = 3) + theme_bw() + labs(x = "") + 
 +     ylim(0, max(dt$total) + 200) + scale_fill_brewer(guide = FALSE, "correct", 
 +     palette = "Set1") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~TPmirna, 
-+     scales = "free_y")
++     scales = "free_y") + ggtitle("Specificity at mature miRNA level")
 ```
 
 ![](figure/sp-mir-1.png) 

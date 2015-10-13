@@ -61,10 +61,10 @@ for line in mir:
     mut=line.find("mut:null")
     score=len(cols[5]) - (len(cols[5]) - 1) + len(cols[6]) - (len(cols[6]) - 1)
     name = cols[0]
-    if name not in check:
-        check[name] = 100
-    if (line.find("hsa")>=0):
-        check[name]=score
+    # if name not in check:
+    #    check[name] = 100
+    if (line.find("hsa")>=0) and name not in check:
+        check[name] = score
         save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner-python" %(name,cols[4],name.split("_")[1],add,mut,lendata[name])
 mir.close()
 
@@ -78,6 +78,32 @@ for k in data.keys():
         mut=k.find("mut:null")
         print "%s\t%s\tno\tNA\t%s\t%s\t%s\tmiraligner-python" % (k,data[k],add,mut,lendata[k])
 
+#load chimira_blast results
+check, save = {}, {}
+mir=open('chimira_blast/sim.hsa.blast_out.txt')
+for line in mir:
+    cols=line.split("\t")
+    slot=cols[1].split("-")
+    add=line.find("add:null")
+    mut=line.find("mut:null")
+    score=float(cols[-2])
+    name = cols[0]
+    if name not in check:
+        check[name] = 100
+    if (line.find("hsa")>=0) and score < check[name]:
+        check[name]=score
+        save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tchimira_blast" %(name,cols[1],name.split("_")[1],add,mut,lendata[name])
+mir.close()
+
+for k in save:
+    print save[k]
+
+#if not aligned, print them here
+for k in data.keys():
+    if not check.has_key(k):
+        add=k.find("add:null")
+        mut=k.find("mut:null")
+        print "%s\t%s\tno\tNA\t%s\t%s\t%s\tchimira_blast" % (k,data[k],add,mut,lendata[k])
 
 
 def _sam(fn, tool):

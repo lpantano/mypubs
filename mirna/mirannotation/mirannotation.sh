@@ -7,6 +7,8 @@ set -v
 set -x
 export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 
+. update_path.bash
+
 RNAB_DB="../tools/sRNAbenchDB"
 RNAB="../tools/"
 
@@ -75,8 +77,8 @@ mkdir -p mirexpress
 cd mirexpress
 awk '{if ($0!~/^>/){print 1"\t"$0}}' ../sim.20.hsa.fa > sim.20.hsa.trim
 mkdir -p out
-alignmentSIMD -r ../tools/miRExpress/data_miRBase_19/hsa_precursor.txt -i sim.20.hsa.trim -o out
-analysis -r ../tools/miRExpress/data_miRBase_19/hsa_precursor.txt -m ../tools/miRExpress/data_miRBase_19/hsa_miRNA.txt -d out -o /hsa.sim.20 -t hsa.sim.20.profile
+alignmentSIMD -r ../data_v2/hsa_precursor.txt -i sim.20.hsa.trim -o out
+analysis -r ../data_v2/hsa_precursor.txt -m ../data_v2/hsa_miRNA.txt -d out -o /hsa.sim.20 -t hsa.sim.20.profile
 cd ..
 
 mkdir -p star
@@ -89,6 +91,13 @@ cd ..
 mkdir -p miraligner-python
 cd miraligner-python
 seqcluster seqbuster --mirna ../miRNA.str --hairpin ../hairpin.hsa.fa --sps hsa -o res ../sim.20.hsa.fa
+cd ..
+
+mkdir -p chimira_blast
+cd chimira_blast
+ln -fs ../hairpin.hsa.fa .
+formatdb -p F -i hairpin.hsa.fa
+blastall -p blastn -e 0.001 -d hairpin.hsa.fa -i ../sim.20.hsa.fa -m 8 -o chimira_input.gz.blast_out.txt -v 1 -b 3 -F F -W 7 
 cd ..
 
 python check.align.py > stats
