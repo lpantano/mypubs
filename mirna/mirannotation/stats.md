@@ -24,9 +24,10 @@ output:
 ```
 
 # Method
+ * isomiRs are simulated with script inside `seqcsluter`. see `mirannotation.sh`.
  * To see reproducibility, please check: `mirannotation.sh` script. `installer.sh` helps with some specific tools that are less likely you have installed.
  * scoring: in case the tool gives a score, the best score will be used. If not the first hit is the one used. If score is the same, the first hit is used. Tools that can be scored are: bowtie, bowtie2, chimira_blast, GEM, microzer, miraligner, miraligner-python, novoaling, razer3, STAR
- * only miraligner* and srnabench gives miRNA annotation, so these tools should have an advantage since they are parsing the hits to get the best annotation Anyway, I am trying to get the best of all of them when comparing which annotates better using precursor names.
+ * only miraligner* and srnabench gives miRNA annotation, so these tools should have an advantage since they are parsing the hits to get the best annotation. Anyway, I am trying to get the best of all of them when comparing which annotates better using precursor names.
  
 
 ```r
@@ -85,7 +86,13 @@ How size affects the alignments
 ![](figure/size-mir-1.png) 
 
 # Isomirs effect
-How changes in the mature miRNA affect the alignment
+How changes in the mature miRNA affect the alignment:
+
+* red: addition + mutation
+* blue: addition
+* green: mutation
+* purple: just trimming precursor at different position
+
 
 ```r
 > ggplot(data, aes(V8, fill = changes)) + geom_bar() + theme_bw() + labs(x = "") + 

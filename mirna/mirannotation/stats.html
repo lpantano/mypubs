@@ -885,8 +885,10 @@ opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
 </div>
 <h1>Method</h1>
 <ul>
+<li>isomiRs are simulated with script inside <code>seqcsluter</code>. see <code>mirannotation.sh</code>.</li>
+<li>To see reproducibility, please check: <code>mirannotation.sh</code> script. <code>installer.sh</code> helps with some specific tools that are less likely you have installed.</li>
 <li>scoring: in case the tool gives a score, the best score will be used. If not the first hit is the one used. If score is the same, the first hit is used. Tools that can be scored are: bowtie, bowtie2, chimira_blast, GEM, microzer, miraligner, miraligner-python, novoaling, razer3, STAR</li>
-<li>only miraligner* and srnabench gives miRNA annotation, so these tools should have an advantage since they are parsing the hits to get the best annotation Anyway, I am trying to get the best of all of them when comparing which annotates better using precursor names.</li>
+<li>only miraligner* and srnabench gives miRNA annotation, so these tools should have an advantage since they are parsing the hits to get the best annotation. Anyway, I am trying to get the best of all of them when comparing which annotates better using precursor names.</li>
 </ul>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
@@ -953,7 +955,13 @@ How size affects the alignments
 </div>
 </div>
 <h1>Isomirs effect</h1>
-How changes in the mature miRNA affect the alignment
+<p>How changes in the mature miRNA affect the alignment:</p>
+<ul>
+<li>red: addition + mutation</li>
+<li>blue: addition</li>
+<li>green: mutation</li>
+<li>purple: just trimming precursor at different position</li>
+</ul>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-up"></span> R source
