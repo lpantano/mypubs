@@ -130,7 +130,7 @@ ggplot(tab, aes(x=V1,y=V2,group=sample)) +
 mi_files = file.path(root_path, files[,"miraligner"])
 row.names(design) = samples
 
-obj <- IsomirDataSeqFromFiles(files = mi_files, design = design ,header = T, cov = 1)
+obj <- IsomirDataSeqFromFiles(files = mi_files, design = design ,header = T)
 ```
 
 
@@ -447,7 +447,7 @@ that is the same that is in the GEO data set description file.
 
 mi_files = file.path(root_other_path, files_other[,"miraligner"])
 
-obj_other <- IsomirDataSeqFromFiles(files = mi_files, design = design_other ,header = T, cov = 1)
+obj_other <- IsomirDataSeqFromFiles(files = mi_files, design = design_other ,header = T)
 obj_other = isoCounts(obj_other)
 mirna_c_other = counts(obj_other)
 
@@ -489,13 +489,13 @@ pheatmap(ma)
 ```
 
 
-According to the text they saw cross-mapping between these miRNAs, but here we are seeing perfect annotation for miR-302 family and some amplification of the reference miRNA in the MS-let-7c sample, where the let-7a is in low concentration (10 counts, compared to the TP=450 counts). A little more noise appears in the paper, maybe due to diffent tools for quantification.
+According to the text they saw cross-mapping between these miRNAs. Here we are seeing almost perfect annotation for miR-302 family and some amplification of the let-7a reference miRNA in the MS-let-7c sample, where the let-7a is in low concentration (10 counts, compared to the expected expression -450 counts-).
 
 ![Figure-e](figure/nmeth.3014-F4.jpg)
 
 ### Accuracy
 
-```{r serum-accuracy}
+```{r serum-accuracy, results='asis'}
 target = c("hsa-miR-10a-5p", "hsa-let-7a-5p", "hsa-miR-302a-3p", "hsa-miR-133a-3p")
 keep = grepl("serum", colnames(mirna_c_other))
 keep_d = grepl("serum", rownames(design_other))
@@ -503,7 +503,8 @@ dge = DGEList(mirna_c_other[,keep])
 dge = calcNormFactors(dge,method = 'TMM')
 serum_n = cpm(dge, normalized.lib.sizes = T, log = T)
 
-serum_n[target,]
+kable(serum_n[target,])
+
 ```
 
 For miR10 and let-7a the changes are clear although not proportional.
@@ -513,9 +514,11 @@ I cannot detect sequences for miR-302 and miR-133 (< 5 reads). I checked directl
 I think they weren't captured by the sequencing at all. The text shows the same for miR-302, and not 
 detection in changes for miR-133 ( I guess for the same reason).
 
-```{r show-mir302}
-isoSelect(obj_other, "hsa-miR-302a-3p", minc=1)[, grepl("serum", rownames(design_other))]
-isoSelect(obj_other, "hsa-miR-133a-3p", minc=1)[, grepl("serum", rownames(design_other))]
+```{r show-mir302, results='asis'}
+kable(isoSelect(obj_other, "hsa-miR-302a-3p", minc=1)[, grepl("serum", rownames(design_other))])
+
+kable(isoSelect(obj_other, "hsa-miR-133a-3p", minc=1)[, grepl("serum", rownames(design_other))])
+
 ```
 
 These two miRNAs were the ones that supposed to be down by 2 and 5 times in the serum with variable []. Since, these miRNAs are not detected in the samples with higher [] (serum with constant []) it would be imposible to detecte them in the other two. I would say there is a bias when the platform capture the sequences, and these two are not being detected, meanwhile there is less problems for let-7a and miR-10a
@@ -539,6 +542,15 @@ It seems there are some nt-changes for serum and MS2 samples at position 13/14,
 and at position 9-11 for miRQC and liver samples. These are just
 exploratory figures and could lead to a differential
 expression analysis of isomiRs.
+
+We can explore the porsition 11 better.
+
+```{r isomir-position-example}
+isoPlotPosition(obj, position=11)
+```
+
+This shows that the main change is from A > G (maybe A > I) changes that are common
+in human brain reigons.
 
 ## Clusters
  

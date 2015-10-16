@@ -10,7 +10,7 @@ output:
     highlight: zenburn
 ---
 
-last update Mon Sep 21 17:57:56 2015 by @lopantano
+last update Fri Oct 16 18:31:14 2015 by @lopantano
 
 
 
@@ -166,8 +166,8 @@ Characteristics 	biomaterial: Mixture of 75% UHRR and 25% HuBr Total RNA
 
 
 
-miRNAs which mirqca > mirqcd > mrqcc are 111 out of 111
-miRNAs which mirqcb > mirqcc > mrqcd are 174 out of 181
+miRNAs which mirqca > mirqcd > mrqcc are 108 out of 108
+miRNAs which mirqcb > mirqcc > mrqcd are 176 out of 185
 
 
 ratio expression summary of A/D
@@ -175,7 +175,7 @@ ratio expression summary of A/D
 
 |   Min.| 1st Qu.| Median|   Mean| 3rd Qu.|   Max.|
 |------:|-------:|------:|------:|-------:|------:|
-| 0.2856|  0.4861| 0.5816| 0.5789|  0.6748| 0.9794|
+| 0.2708|  0.5009| 0.5736| 0.5729|   0.664| 0.9645|
 
 the average logFC is 0.5 that is similar to the expected FC = log2(1/0.75) = 0.5
 
@@ -183,25 +183,25 @@ the average logFC is 0.5 that is similar to the expected FC = log2(1/0.75) = 0.5
 ratio expression summary of A/C
 
 
-|   Min.| 1st Qu.| Median|  Mean| 3rd Qu.|  Max.|
-|------:|-------:|------:|-----:|-------:|-----:|
-| 0.3806|   1.071|  2.007| 1.667|   2.156| 2.891|
+|   Min.| 1st Qu.| Median| Mean| 3rd Qu.|  Max.|
+|------:|-------:|------:|----:|-------:|-----:|
+| 0.4674|   1.158|  1.967| 1.66|   2.109| 2.836|
 
 the average logFC is 1.6 that is similar to the expected FC = log2(1/0.25) = 2
 
 Same happens when comparing B vs D 
 
 
-|   Min.| 1st Qu.| Median|  Mean| 3rd Qu.|  Max.|
-|------:|-------:|------:|-----:|-------:|-----:|
-| 0.3703|  0.9992|  1.389| 1.409|   1.822| 2.544|
+|   Min.| 1st Qu.| Median| Mean| 3rd Qu.|  Max.|
+|------:|-------:|------:|----:|-------:|-----:|
+| 0.3931|   1.101|  1.487|  1.5|   1.923| 2.659|
 
 and B vs C
 
 
-|  Min.| 1st Qu.| Median|   Mean| 3rd Qu.|  Max.|
-|-----:|-------:|------:|------:|-------:|-----:|
-| 0.268|  0.6431| 0.7505| 0.7431|  0.8395| 1.044|
+|   Min.| 1st Qu.| Median|   Mean| 3rd Qu.|  Max.|
+|------:|-------:|------:|------:|-------:|-----:|
+| 0.3427|  0.7091| 0.8248| 0.8114|  0.9113| 1.119|
 
 according to this: 
 
@@ -308,35 +308,19 @@ We should only see those miRNAs in those samples and not in anywhere else.
 ![](figure/detection-serum-liver-1.png) 
 
 
-According to the text they saw cross-mapping between these miRNAs, but here we are seeing perfect annotation for miR-302 family and some amplification of the reference miRNA in the MS-let-7c sample, where the let-7a is in low concentration (10 counts, compared to the TP=450 counts). A little more noise appears in the paper, maybe due to diffent tools for quantification.
+According to the text they saw cross-mapping between these miRNAs. Here we are seeing almost perfect annotation for miR-302 family and some amplification of the let-7a reference miRNA in the MS-let-7c sample, where the let-7a is in low concentration (10 counts, compared to the expected expression -450 counts-).
 
 ![Figure-e](figure/nmeth.3014-F4.jpg)
 
 ### Accuracy
 
 
-```
-                serum_spiked_miRs_constant
-hsa-miR-10a-5p                   17.425105
-hsa-let-7a-5p                    11.522471
-hsa-miR-302a-3p                   5.064326
-hsa-miR-133a-3p                   5.064326
-                serum_spiked_miRs_constant_repeat
-hsa-miR-10a-5p                          17.756547
-hsa-let-7a-5p                           11.783871
-hsa-miR-302a-3p                          5.064326
-hsa-miR-133a-3p                          5.064326
-                serum_spiked_miRs_variable
-hsa-miR-10a-5p                   20.094337
-hsa-let-7a-5p                    12.857259
-hsa-miR-302a-3p                   5.064326
-hsa-miR-133a-3p                   5.064326
-                serum_spiked_miRs_variable_repeat
-hsa-miR-10a-5p                          19.709548
-hsa-let-7a-5p                           13.195950
-hsa-miR-302a-3p                          5.064326
-hsa-miR-133a-3p                          5.064326
-```
+|                | serum_spiked_miRs_constant| serum_spiked_miRs_constant_repeat| serum_spiked_miRs_variable| serum_spiked_miRs_variable_repeat|
+|:---------------|--------------------------:|---------------------------------:|--------------------------:|---------------------------------:|
+|hsa-miR-10a-5p  |                  17.504793|                         17.781645|                  19.924425|                         19.626753|
+|hsa-let-7a-5p   |                  11.600941|                         11.808433|                  12.687988|                         13.113333|
+|hsa-miR-302a-3p |                   5.030905|                          5.030905|                   5.030905|                          5.030905|
+|hsa-miR-133a-3p |                   8.981687|                          8.416735|                   5.030905|                          5.030905|
 
 For miR10 and let-7a the changes are clear although not proportional.
 
@@ -346,57 +330,20 @@ I think they weren't captured by the sequencing at all. The text shows the same 
 detection in changes for miR-133 ( I guess for the same reason).
 
 
-```
-DataFrame with 3 rows and 4 columns
-                                                    serum_spiked_miRs_constant
-                                                                     <numeric>
-hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-A.ad:u-G.mm:0                           0
-hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-GA.ad:u-A.mm:0                          0
-hsa-miR-302a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0                               0
-                                                    serum_spiked_miRs_constant_repeat
-                                                                            <numeric>
-hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-A.ad:u-G.mm:0                                  0
-hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-GA.ad:u-A.mm:0                                 0
-hsa-miR-302a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0                                      0
-                                                    serum_spiked_miRs_variable
-                                                                     <numeric>
-hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-A.ad:u-G.mm:0                           0
-hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-GA.ad:u-A.mm:0                          0
-hsa-miR-302a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0                               0
-                                                    serum_spiked_miRs_variable_repeat
-                                                                            <numeric>
-hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-A.ad:u-G.mm:0                                  0
-hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-GA.ad:u-A.mm:0                                 0
-hsa-miR-302a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0                                      0
-```
+|                                                    | serum_spiked_miRs_constant| serum_spiked_miRs_constant_repeat| serum_spiked_miRs_variable| serum_spiked_miRs_variable_repeat|
+|:---------------------------------------------------|--------------------------:|---------------------------------:|--------------------------:|---------------------------------:|
+|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-A.ad:u-G.mm:0  |                          0|                                 0|                          0|                                 0|
+|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-GA.ad:u-A.mm:0 |                          0|                                 0|                          0|                                 0|
+|hsa-miR-302a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0      |                          0|                                 0|                          0|                                 0|
 
-```
-DataFrame with 4 rows and 4 columns
-                                                       serum_spiked_miRs_constant
-                                                                        <numeric>
-hsa-miR-133a-3p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0                                0
-hsa-miR-133a-3p.iso.t5:d-T.seed:0.t3:d-T.ad:0.mm:0                              0
-hsa-miR-133a-3p.iso.t5:d-TT.seed:0.t3:d-T.ad:u-GT.mm:0                          0
-hsa-miR-133a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0                                  3
-                                                       serum_spiked_miRs_constant_repeat
-                                                                               <numeric>
-hsa-miR-133a-3p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0                                       0
-hsa-miR-133a-3p.iso.t5:d-T.seed:0.t3:d-T.ad:0.mm:0                                     0
-hsa-miR-133a-3p.iso.t5:d-TT.seed:0.t3:d-T.ad:u-GT.mm:0                                 0
-hsa-miR-133a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0                                         2
-                                                       serum_spiked_miRs_variable
-                                                                        <numeric>
-hsa-miR-133a-3p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0                                0
-hsa-miR-133a-3p.iso.t5:d-T.seed:0.t3:d-T.ad:0.mm:0                              0
-hsa-miR-133a-3p.iso.t5:d-TT.seed:0.t3:d-T.ad:u-GT.mm:0                          0
-hsa-miR-133a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0                                  0
-                                                       serum_spiked_miRs_variable_repeat
-                                                                               <numeric>
-hsa-miR-133a-3p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0                                       0
-hsa-miR-133a-3p.iso.t5:d-T.seed:0.t3:d-T.ad:0.mm:0                                     0
-hsa-miR-133a-3p.iso.t5:d-TT.seed:0.t3:d-T.ad:u-GT.mm:0                                 0
-hsa-miR-133a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0                                         0
-```
+
+
+|                                                       | serum_spiked_miRs_constant| serum_spiked_miRs_constant_repeat| serum_spiked_miRs_variable| serum_spiked_miRs_variable_repeat|
+|:------------------------------------------------------|--------------------------:|---------------------------------:|--------------------------:|---------------------------------:|
+|hsa-miR-133a-3p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0       |                          0|                                 0|                          0|                                 0|
+|hsa-miR-133a-3p.iso.t5:d-T.seed:0.t3:d-T.ad:0.mm:0     |                          0|                                 0|                          0|                                 0|
+|hsa-miR-133a-3p.iso.t5:d-TT.seed:0.t3:d-T.ad:u-GT.mm:0 |                          0|                                 0|                          0|                                 0|
+|hsa-miR-133a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0         |                          3|                                 2|                          0|                                 0|
 
 These two miRNAs were the ones that supposed to be down by 2 and 5 times in the serum with variable []. Since, these miRNAs are not detected in the samples with higher [] (serum with constant []) it would be imposible to detecte them in the other two. I would say there is a bias when the platform capture the sequences, and these two are not being detected, meanwhile there is less problems for let-7a and miR-10a
 
@@ -414,6 +361,13 @@ It seems there are some nt-changes for serum and MS2 samples at position 13/14,
 and at position 9-11 for miRQC and liver samples. These are just
 exploratory figures and could lead to a differential
 expression analysis of isomiRs.
+
+We can explore the porsition 11 better.
+
+![](figure/isomir-position-example-1.png) 
+
+This shows that the main change is from A > G (maybe A > I) changes that are common
+in human brain reigons.
 
 ## Clusters
  
