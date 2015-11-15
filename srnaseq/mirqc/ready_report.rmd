@@ -20,7 +20,7 @@ knitr::opts_chunk$set(tidy=TRUE, highlight=TRUE, dev="png", fig.width=9,fig.heig
                message=FALSE, prompt=TRUE, comment='', fig.cap='', bootstrap.show.code=FALSE)
 
 root_path = "~/orch/scratch/simulator/mirqc/bcbio/config/work2/report"
-root_other_path = "~/orch/scratch/simulator/mirqc/bcbio/non_mirqc_bcbio/work/report"
+root_other_path = "~/orch/scratch/simulator/mirqc/bcbio/non_mirqc_bcbio/latest/report"
 
 ```
 
@@ -47,7 +47,7 @@ library(pheatmap)
 ```{r render,eval=FALSE, echo=FALSE}
 library(rmarkdown)
 library(knitrBootstrap)
-render("ready_report.rmd")
+#render("ready_report.rmd")
 ```
 
 ```{r setpath}
@@ -460,31 +460,35 @@ We should only see those miRNAs in those samples and not in anywhere else.
 
 ```{r detection-serum-ms2, results="asis"}
 
-kable(isoSelect(obj_other, mirna="hsa-let-7a-5p", minc=1)[,grepl("MS", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-let-7a-5p", minc=2)[,grepl("MS", rownames(design_other))])
 
-kable(isoSelect(obj_other, mirna="hsa-let-7b-5p", minc=1)[,grepl("MS", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-let-7b-5p", minc=2)[,grepl("MS", rownames(design_other))])
 
-kable(isoSelect(obj_other, mirna="hsa-let-7c-5p", minc=1)[,grepl("MS", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-let-7c-5p", minc=2)[,grepl("MS", rownames(design_other))])
 
-kable(isoSelect(obj_other, mirna="hsa-let-7d-5p", minc=1)[,grepl("MS", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-let-7d-5p", minc=2)[,grepl("MS", rownames(design_other))])
 
 mirnas = c("hsa-let-7a-5p", "hsa-let-7b-5p", "hsa-let-7c-5p", "hsa-let-7d-5p")
-ma = log2(counts(obj_other)[mirnas, grepl("MS", rownames(design_other))] + 0.25)
+ma_sub = counts(obj_other)[mirnas, grepl("MS", rownames(design_other))]
+ma_sub[ma_sub<=2] = 0
+ma = log2( ma_sub + 0.25 )
 pheatmap(ma)
 ```
 
 ```{r detection-serum-liver, results="asis"}
 
-kable(isoSelect(obj_other, mirna="hsa-miR-302a-3p", minc=1)[,grepl("liver", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-miR-302a-3p", minc=2)[,grepl("liver", rownames(design_other))])
 
-kable(isoSelect(obj_other, mirna="hsa-miR-302b-3p", minc=1)[,grepl("liver", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-miR-302b-3p", minc=2)[,grepl("liver", rownames(design_other))])
 
-kable(isoSelect(obj_other, mirna="hsa-miR-302c-3p", minc=1)[,grepl("liver", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-miR-302c-3p", minc=2)[,grepl("liver", rownames(design_other))])
 
-kable(isoSelect(obj_other, mirna="hsa-miR-302d-3p", minc=1)[,grepl("liver", rownames(design_other))])
+kable(isoSelect(obj_other, mirna="hsa-miR-302d-3p", minc=2)[,grepl("liver", rownames(design_other))])
 
 mirnas = c("hsa-miR-302a-3p", "hsa-miR-302b-3p", "hsa-miR-302c-3p", "hsa-miR-302d-3p")
-ma = log2(counts(obj_other)[mirnas, grepl("liver", rownames(design_other))] + 0.25)
+ma_sub = counts(obj_other)[mirnas, grepl("liver", rownames(design_other))]
+ma_sub[ma_sub<=2] = 0
+ma = log2( ma_sub + 0.25 )
 pheatmap(ma)
 ```
 

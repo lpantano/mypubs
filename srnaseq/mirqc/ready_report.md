@@ -10,7 +10,7 @@ output:
     highlight: zenburn
 ---
 
-last update Fri Oct 16 18:31:14 2015 by @lopantano
+last update Thu Nov 12 15:51:24 2015 by @lopantano
 
 
 
@@ -222,38 +222,37 @@ that is the same that is in the GEO data set description file.
 We should only see those miRNAs in those samples and not in anywhere else.
 
 
-|                                                     | MS2_let.7a.5p| MS2_let.7b.5p| MS2_let.7c| MS2_let.7d.5p|
-|:----------------------------------------------------|-------------:|-------------:|----------:|-------------:|
-|hsa-let-7a-5p.iso.t5:0.seed:0.t3:0.ad:0.mm:1NT       |             5|             0|          0|             0|
-|hsa-let-7a-5p.iso.t5:0.seed:0.t3:0.ad:u-A.mm:0       |             0|             0|          0|             0|
-|hsa-let-7a-5p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0       |             0|             0|          0|             0|
-|hsa-let-7a-5p.iso.t5:0.seed:0.t3:u-GTT.ad:u-ATT.mm:0 |            14|             0|          0|             0|
-|hsa-let-7a-5p.iso.t5:0.seed:0.t3:u-T.ad:0.mm:0       |             0|             3|          0|             0|
-|hsa-let-7a-5p.iso.t5:0.seed:0.t3:u-T.ad:u-G.mm:0     |             0|             0|          0|             0|
-|hsa-let-7a-5p.iso.t5:0.seed:0.t3:u-TT.ad:u-A.mm:0    |             0|             0|          0|             0|
-|hsa-let-7a-5p.ref.t5:0.seed:0.t3:0.ad:0.mm:0         |           453|             3|         10|             5|
-
-
-
 |                                                 | MS2_let.7a.5p| MS2_let.7b.5p| MS2_let.7c| MS2_let.7d.5p|
 |:------------------------------------------------|-------------:|-------------:|----------:|-------------:|
-|hsa-let-7b-5p.iso.t5:0.seed:0.t3:0.ad:u-A.mm:0   |             0|             0|          0|             0|
-|hsa-let-7b-5p.iso.t5:0.seed:0.t3:0.ad:u-AT.mm:0  |             0|             0|          0|             0|
-|hsa-let-7b-5p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0   |             0|             0|          0|             0|
-|hsa-let-7b-5p.iso.t5:0.seed:0.t3:d-T.ad:u-T.mm:0 |             0|             0|          0|             0|
-|hsa-let-7b-5p.iso.t5:0.seed:0.t3:u-T.ad:0.mm:0   |             0|             0|          0|             0|
-|hsa-let-7b-5p.iso.t5:0.seed:0.t3:u-T.ad:u-A.mm:0 |             0|             0|          0|             0|
-|hsa-let-7b-5p.iso.t5:0.seed:0.t3:u-TT.ad:0.mm:0  |             0|             0|          0|             0|
-|hsa-let-7b-5p.ref.t5:0.seed:0.t3:0.ad:0.mm:0     |             0|           753|          0|             0|
+|hsa-let-7a-5p.iso.t5:0.seed:0.t3:0.ad:0.mm:1NT   |             5|             0|          0|             0|
+|hsa-let-7a-5p.iso.t5:0.seed:0.t3:0.ad:A.mm:0     |             0|             0|          0|             0|
+|hsa-let-7a-5p.iso.t5:0.seed:0.t3:GTT.ad:ATT.mm:0 |            14|             0|          0|             0|
+|hsa-let-7a-5p.iso.t5:0.seed:0.t3:T.ad:0.mm:0     |             0|             3|          0|             0|
+|hsa-let-7a-5p.iso.t5:0.seed:0.t3:TT.ad:A.mm:0    |             0|             0|          0|             0|
+|hsa-let-7a-5p.ref.t5:0.seed:0.t3:0.ad:0.mm:0     |           453|             3|         10|             5|
+|hsa-let-7a-5p.ref.t5:0.seed:0.t3:t.ad:0.mm:0     |             0|             0|          0|             0|
 
 
 
-|                                               | MS2_let.7a.5p| MS2_let.7b.5p| MS2_let.7c| MS2_let.7d.5p|
-|:----------------------------------------------|-------------:|-------------:|----------:|-------------:|
-|hsa-let-7c-5p.iso.t5:0.seed:0.t3:0.ad:u-A.mm:0 |             0|             0|          0|             0|
-|hsa-let-7c-5p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0 |             0|             0|          0|             0|
-|hsa-let-7c-5p.iso.t5:0.seed:0.t3:u-T.ad:0.mm:0 |             0|             0|          0|             0|
-|hsa-let-7c-5p.ref.t5:0.seed:0.t3:0.ad:0.mm:0   |             0|             0|       1150|             0|
+|                                              | MS2_let.7a.5p| MS2_let.7b.5p| MS2_let.7c| MS2_let.7d.5p|
+|:---------------------------------------------|-------------:|-------------:|----------:|-------------:|
+|hsa-let-7b-5p.iso.t5:0.seed:0.t3:0.ad:A.mm:0  |             0|             0|          0|             0|
+|hsa-let-7b-5p.iso.t5:0.seed:0.t3:0.ad:AT.mm:0 |             0|             0|          0|             0|
+|hsa-let-7b-5p.iso.t5:0.seed:0.t3:T.ad:0.mm:0  |             0|             0|          0|             0|
+|hsa-let-7b-5p.iso.t5:0.seed:0.t3:T.ad:A.mm:0  |             0|             0|          0|             0|
+|hsa-let-7b-5p.iso.t5:0.seed:0.t3:t.ad:T.mm:0  |             0|             0|          0|             0|
+|hsa-let-7b-5p.iso.t5:0.seed:0.t3:TT.ad:0.mm:0 |             0|             0|          0|             0|
+|hsa-let-7b-5p.ref.t5:0.seed:0.t3:0.ad:0.mm:0  |             0|           753|          0|             0|
+|hsa-let-7b-5p.ref.t5:0.seed:0.t3:t.ad:0.mm:0  |             0|             0|          0|             0|
+
+
+
+|                                             | MS2_let.7a.5p| MS2_let.7b.5p| MS2_let.7c| MS2_let.7d.5p|
+|:--------------------------------------------|-------------:|-------------:|----------:|-------------:|
+|hsa-let-7c-5p.iso.t5:0.seed:0.t3:0.ad:A.mm:0 |             0|             0|          0|             0|
+|hsa-let-7c-5p.iso.t5:0.seed:0.t3:T.ad:0.mm:0 |             0|             0|          0|             0|
+|hsa-let-7c-5p.ref.t5:0.seed:0.t3:0.ad:0.mm:0 |             0|             0|       1150|             0|
+|hsa-let-7c-5p.ref.t5:0.seed:0.t3:t.ad:0.mm:0 |             0|             0|          0|             0|
 
 
 
@@ -263,47 +262,41 @@ We should only see those miRNAs in those samples and not in anywhere else.
 |hsa-let-7d-5p.iso.t5:0.seed:0.t3:0.ad:0.mm:15AG |             0|             0|          0|             3|
 |hsa-let-7d-5p.iso.t5:0.seed:0.t3:0.ad:0.mm:1NA  |             0|             0|          0|             4|
 |hsa-let-7d-5p.iso.t5:0.seed:0.t3:0.ad:0.mm:1TA  |             0|             0|          0|             0|
-|hsa-let-7d-5p.iso.t5:0.seed:0.t3:0.ad:u-A.mm:0  |             0|             0|          0|             0|
-|hsa-let-7d-5p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0  |             0|             0|          0|             0|
-|hsa-let-7d-5p.iso.t5:0.seed:0.t3:u-T.ad:0.mm:0  |             0|             0|          0|             0|
-|hsa-let-7d-5p.iso.t5:0.seed:0.t3:u-TT.ad:0.mm:0 |             0|             0|          0|             0|
+|hsa-let-7d-5p.iso.t5:0.seed:0.t3:0.ad:A.mm:0    |             0|             0|          0|             0|
+|hsa-let-7d-5p.iso.t5:0.seed:0.t3:T.ad:0.mm:0    |             0|             0|          0|             0|
+|hsa-let-7d-5p.iso.t5:0.seed:0.t3:TT.ad:0.mm:0   |             0|             0|          0|             0|
 |hsa-let-7d-5p.ref.t5:0.seed:0.t3:0.ad:0.mm:0    |             0|             0|          0|           262|
+|hsa-let-7d-5p.ref.t5:0.seed:0.t3:t.ad:0.mm:0    |             0|             0|          0|             0|
 
 ![](figure/detection-serum-ms2-1.png) 
 
 
-|                                                    | liver_miR.302a| liver_miR.302b| liver_miR.302c| liver_miR.302d|
-|:---------------------------------------------------|--------------:|--------------:|--------------:|--------------:|
-|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-A.ad:u-G.mm:0  |              3|              0|              0|              0|
-|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-GA.ad:u-A.mm:0 |              3|              0|              0|              0|
-|hsa-miR-302a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0      |             41|              0|              0|              0|
+|                                                | liver_miR.302a| liver_miR.302b| liver_miR.302c| liver_miR.302d|
+|:-----------------------------------------------|--------------:|--------------:|--------------:|--------------:|
+|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:A.ad:G.mm:0  |              3|              0|              0|              0|
+|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:GA.ad:A.mm:0 |              3|              0|              0|              0|
+|hsa-miR-302a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0  |             41|              0|              0|              0|
 
 
 
-|                                                    | liver_miR.302a| liver_miR.302b| liver_miR.302c| liver_miR.302d|
-|:---------------------------------------------------|--------------:|--------------:|--------------:|--------------:|
-|hsa-miR-302b-3p.iso.t5:0.seed:0.t3:u-G.ad:0.mm:19GA |              3|              0|              0|              0|
-|hsa-miR-302b-3p.iso.t5:0.seed:0.t3:u-TAG.ad:0.mm:0  |              0|              2|              0|              0|
-|hsa-miR-302b-3p.iso.t5:d-TA.seed:0.t3:0.ad:0.mm:0   |              0|              2|              0|              0|
-|hsa-miR-302b-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0      |              0|             72|              0|              0|
+|                                                  | liver_miR.302a| liver_miR.302b| liver_miR.302c| liver_miR.302d|
+|:-------------------------------------------------|--------------:|--------------:|--------------:|--------------:|
+|hsa-miR-302b-3p.iso.t5:0.seed:0.t3:G.ad:0.mm:19GA |              3|              0|              0|              0|
+|hsa-miR-302b-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0    |              0|             72|              0|              0|
 
 
 
-|                                                   | liver_miR.302c| liver_miR.302d| MS2_let.7a.5p| MS2_let.7b.5p|
-|:--------------------------------------------------|--------------:|--------------:|-------------:|-------------:|
-|hsa-miR-302c-3p.iso.t5:0.seed:0.t3:0.ad:0.mm:18GC  |              0|              2|             0|             0|
-|hsa-miR-302c-3p.iso.t5:0.seed:0.t3:0.ad:0.mm:1NT   |              2|              0|             0|             0|
-|hsa-miR-302c-3p.iso.t5:0.seed:0.t3:u-TGG.ad:0.mm:0 |              9|              0|             0|             0|
-|hsa-miR-302c-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0     |             85|              0|             0|             0|
+|                                                 | liver_miR.302c| liver_miR.302d| MS2_let.7a.5p| MS2_let.7b.5p|
+|:------------------------------------------------|--------------:|--------------:|-------------:|-------------:|
+|hsa-miR-302c-3p.iso.t5:0.seed:0.t3:TGG.ad:0.mm:0 |              9|              0|             0|             0|
+|hsa-miR-302c-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0   |             85|              0|             0|             0|
 
 
 
-|                                                   | liver_miR.302d| MS2_let.7a.5p| MS2_let.7b.5p| MS2_let.7c|
-|:--------------------------------------------------|--------------:|-------------:|-------------:|----------:|
-|hsa-miR-302d-3p.iso.t5:0.seed:0.t3:u-T.ad:0.mm:0   |              6|             0|             0|          0|
-|hsa-miR-302d-3p.iso.t5:0.seed:0.t3:u-T.ad:u-G.mm:0 |              2|             0|             0|          0|
-|hsa-miR-302d-3p.iso.t5:d-TA.seed:0.t3:0.ad:0.mm:0  |              2|             0|             0|          0|
-|hsa-miR-302d-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0     |            178|             0|             0|          0|
+|                                               | liver_miR.302d| MS2_let.7a.5p| MS2_let.7b.5p| MS2_let.7c|
+|:----------------------------------------------|--------------:|-------------:|-------------:|----------:|
+|hsa-miR-302d-3p.iso.t5:0.seed:0.t3:T.ad:0.mm:0 |              6|             0|             0|          0|
+|hsa-miR-302d-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0 |            178|             0|             0|          0|
 
 ![](figure/detection-serum-liver-1.png) 
 
@@ -330,20 +323,20 @@ I think they weren't captured by the sequencing at all. The text shows the same 
 detection in changes for miR-133 ( I guess for the same reason).
 
 
-|                                                    | serum_spiked_miRs_constant| serum_spiked_miRs_constant_repeat| serum_spiked_miRs_variable| serum_spiked_miRs_variable_repeat|
-|:---------------------------------------------------|--------------------------:|---------------------------------:|--------------------------:|---------------------------------:|
-|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-A.ad:u-G.mm:0  |                          0|                                 0|                          0|                                 0|
-|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:u-GA.ad:u-A.mm:0 |                          0|                                 0|                          0|                                 0|
-|hsa-miR-302a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0      |                          0|                                 0|                          0|                                 0|
+|                                                | serum_spiked_miRs_constant| serum_spiked_miRs_constant_repeat| serum_spiked_miRs_variable| serum_spiked_miRs_variable_repeat|
+|:-----------------------------------------------|--------------------------:|---------------------------------:|--------------------------:|---------------------------------:|
+|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:A.ad:G.mm:0  |                          0|                                 0|                          0|                                 0|
+|hsa-miR-302a-3p.iso.t5:0.seed:0.t3:GA.ad:A.mm:0 |                          0|                                 0|                          0|                                 0|
+|hsa-miR-302a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0  |                          0|                                 0|                          0|                                 0|
 
 
 
-|                                                       | serum_spiked_miRs_constant| serum_spiked_miRs_constant_repeat| serum_spiked_miRs_variable| serum_spiked_miRs_variable_repeat|
-|:------------------------------------------------------|--------------------------:|---------------------------------:|--------------------------:|---------------------------------:|
-|hsa-miR-133a-3p.iso.t5:0.seed:0.t3:d-T.ad:0.mm:0       |                          0|                                 0|                          0|                                 0|
-|hsa-miR-133a-3p.iso.t5:d-T.seed:0.t3:d-T.ad:0.mm:0     |                          0|                                 0|                          0|                                 0|
-|hsa-miR-133a-3p.iso.t5:d-TT.seed:0.t3:d-T.ad:u-GT.mm:0 |                          0|                                 0|                          0|                                 0|
-|hsa-miR-133a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0         |                          3|                                 2|                          0|                                 0|
+|                                                 | serum_spiked_miRs_constant| serum_spiked_miRs_constant_repeat| serum_spiked_miRs_variable| serum_spiked_miRs_variable_repeat|
+|:------------------------------------------------|--------------------------:|---------------------------------:|--------------------------:|---------------------------------:|
+|hsa-miR-133a-3p.iso.t5:tt.seed:0.t3:t.ad:GT.mm:0 |                          0|                                 0|                          0|                                 0|
+|hsa-miR-133a-3p.ref.t5:0.seed:0.t3:0.ad:0.mm:0   |                          3|                                 2|                          0|                                 0|
+|hsa-miR-133a-3p.ref.t5:0.seed:0.t3:t.ad:0.mm:0   |                          0|                                 0|                          0|                                 0|
+|hsa-miR-133a-3p.ref.t5:t.seed:0.t3:t.ad:0.mm:0   |                          0|                                 0|                          0|                                 0|
 
 These two miRNAs were the ones that supposed to be down by 2 and 5 times in the serum with variable []. Since, these miRNAs are not detected in the samples with higher [] (serum with constant []) it would be imposible to detecte them in the other two. I would say there is a bias when the platform capture the sequences, and these two are not being detected, meanwhile there is less problems for let-7a and miR-10a
 
