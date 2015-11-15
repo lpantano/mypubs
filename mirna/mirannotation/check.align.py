@@ -23,21 +23,21 @@ check, save = {}, {}
 mir=open('miraligner/sim.20.hsa.mirna')
 for line in mir:
     cols=line.split("\t")
-    slot=cols[2].split("-")
+    slot=cols[3].split("-")
     add=line.find("add:null")
     mut=line.find("mut:null")
-    score=len(cols[5]) - (len(cols[5]) - 1) + len(cols[6]) - (len(cols[6]) - 1)
+    score=len(cols[6]) - (len(cols[6]) - 1) + len(cols[7]) - (len(cols[7]) - 1)
     name = cols[1]
     if name not in check:
         check[name] = 100
     if (line.find("hsa")>=0):
         if line.find("miRNA") >=0 and score < check[name]:
                 check[name]=score
-                save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner" %(name,cols[2],name.split("_")[1],add,mut,lendata[name])
+                save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner" %(name,cols[3],name.split("_")[1],add,mut,lendata[name])
         elif (line.find("precursor")>=0) and score < check[name]:
                 check[name]=score
                 slot=cols[2].split("-")
-                save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner" %(name,cols[2],name.split("_")[0],add,mut,lendata[name])
+                save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner" %(name,cols[3],name.split("_")[0],add,mut,lendata[name])
 mir.close()
 
 for k in save:
@@ -54,18 +54,19 @@ for k in data.keys():
 #load miraligner-python results
 check, save = {}, {}
 mir=open('miraligner-python/res/sim.20.hsa.mirna')
+h = mir.next()
 for line in mir:
     cols=line.split("\t")
-    slot=cols[4].split("-")
+    slot=cols[3].split("-")
     add=line.find("add:null")
     mut=line.find("mut:null")
-    score=len(cols[5]) - (len(cols[5]) - 1) + len(cols[6]) - (len(cols[6]) - 1)
-    name = cols[0]
+    score=len(cols[6]) - (len(cols[6]) - 1) + len(cols[7]) - (len(cols[7]) - 1)
+    name = cols[1]
     # if name not in check:
     #    check[name] = 100
     if (line.find("hsa")>=0) and name not in check:
         check[name] = score
-        save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner-python" %(name,cols[4],name.split("_")[1],add,mut,lendata[name])
+        save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tmiraligner-python" %(name,cols[3],name.split("_")[1],add,mut,lendata[name])
 mir.close()
 
 for k in save:
@@ -92,7 +93,7 @@ for line in mir:
         check[name] = 100
     if (line.find("hsa")>=0) and score < check[name]:
         check[name]=score
-        save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tchimira_blast" %(name,cols[1],name.split("_")[1],add,mut,lendata[name])
+        save[name] = "%s\t%s\tyes\t%s\t%s\t%s\t%s\tblast" %(name,cols[1],name.split("_")[1],add,mut,lendata[name])
 mir.close()
 
 for k in save:
@@ -103,7 +104,7 @@ for k in data.keys():
     if not check.has_key(k):
         add=k.find("add:null")
         mut=k.find("mut:null")
-        print "%s\t%s\tno\tNA\t%s\t%s\t%s\tchimira_blast" % (k,data[k],add,mut,lendata[k])
+        print "%s\t%s\tno\tNA\t%s\t%s\t%s\tblast" % (k,data[k],add,mut,lendata[k])
 
 
 def _sam(fn, tool):
