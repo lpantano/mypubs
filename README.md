@@ -1,5 +1,5 @@
-# Some code comparing tools or analyzing public data
-creation of methods with the purpose of tools comparison
+Bunch of lines of code to compare tools or analyzing public data.
+The aim is not to judge tools but to find the best tools/parameters to get the best of the data.
 
 ### miRNA
 
