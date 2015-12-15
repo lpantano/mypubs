@@ -1,0 +1,2532 @@
+@HD	VN:1.4	SO:coordinate
+@PG	ID:razers3	VN:3.2 [af3f84e]	PN:razers3	CL:-dr 0 -i 80 -rr 90 -f -o hsa_let_7a.sam hairpin.hsa.fa hsa_let_7a.fa
+@SQ	SN:hsa-let-7a-1	LN:80
+@SQ	SN:hsa-let-7a-2	LN:72
+@SQ	SN:hsa-let-7a-3	LN:74
+@SQ	SN:hsa-let-7b	LN:83
+@SQ	SN:hsa-let-7c	LN:84
+@SQ	SN:hsa-let-7d	LN:87
+@SQ	SN:hsa-let-7e	LN:79
+@SQ	SN:hsa-let-7f-1	LN:87
+@SQ	SN:hsa-let-7f-2	LN:83
+@SQ	SN:hsa-mir-15a	LN:83
+@SQ	SN:hsa-mir-16-1	LN:89
+@SQ	SN:hsa-mir-17	LN:84
+@SQ	SN:hsa-mir-18a	LN:71
+@SQ	SN:hsa-mir-19a	LN:82
+@SQ	SN:hsa-mir-19b-1	LN:87
+@SQ	SN:hsa-mir-19b-2	LN:96
+@SQ	SN:hsa-mir-20a	LN:71
+@SQ	SN:hsa-mir-21	LN:72
+@SQ	SN:hsa-mir-22	LN:85
+@SQ	SN:hsa-mir-23a	LN:73
+@SQ	SN:hsa-mir-24-1	LN:68
+@SQ	SN:hsa-mir-24-2	LN:73
+@SQ	SN:hsa-mir-25	LN:84
+@SQ	SN:hsa-mir-26a-1	LN:77
+@SQ	SN:hsa-mir-26b	LN:77
+@SQ	SN:hsa-mir-27a	LN:78
+@SQ	SN:hsa-mir-28	LN:86
+@SQ	SN:hsa-mir-29a	LN:64
+@SQ	SN:hsa-mir-30a	LN:71
+@SQ	SN:hsa-mir-31	LN:71
+@SQ	SN:hsa-mir-32	LN:70
+@SQ	SN:hsa-mir-33a	LN:69
+@SQ	SN:hsa-mir-92a-1	LN:78
+@SQ	SN:hsa-mir-92a-2	LN:75
+@SQ	SN:hsa-mir-93	LN:80
+@SQ	SN:hsa-mir-95	LN:81
+@SQ	SN:hsa-mir-96	LN:78
+@SQ	SN:hsa-mir-98	LN:119
+@SQ	SN:hsa-mir-99a	LN:81
+@SQ	SN:hsa-mir-100	LN:80
+@SQ	SN:hsa-mir-101-1	LN:75
+@SQ	SN:hsa-mir-29b-1	LN:81
+@SQ	SN:hsa-mir-29b-2	LN:81
+@SQ	SN:hsa-mir-103a-2	LN:78
+@SQ	SN:hsa-mir-103a-1	LN:78
+@SQ	SN:hsa-mir-105-1	LN:81
+@SQ	SN:hsa-mir-105-2	LN:81
+@SQ	SN:hsa-mir-106a	LN:81
+@SQ	SN:hsa-mir-107	LN:81
+@SQ	SN:hsa-mir-16-2	LN:81
+@SQ	SN:hsa-mir-192	LN:110
+@SQ	SN:hsa-mir-196a-1	LN:70
+@SQ	SN:hsa-mir-197	LN:75
+@SQ	SN:hsa-mir-198	LN:62
+@SQ	SN:hsa-mir-199a-1	LN:71
+@SQ	SN:hsa-mir-208a	LN:71
+@SQ	SN:hsa-mir-129-1	LN:72
+@SQ	SN:hsa-mir-148a	LN:68
+@SQ	SN:hsa-mir-30c-2	LN:72
+@SQ	SN:hsa-mir-30d	LN:70
+@SQ	SN:hsa-mir-139	LN:68
+@SQ	SN:hsa-mir-147a	LN:72
+@SQ	SN:hsa-mir-7-1	LN:110
+@SQ	SN:hsa-mir-7-2	LN:110
+@SQ	SN:hsa-mir-7-3	LN:110
+@SQ	SN:hsa-mir-10a	LN:110
+@SQ	SN:hsa-mir-10b	LN:110
+@SQ	SN:hsa-mir-34a	LN:110
+@SQ	SN:hsa-mir-181a-2	LN:110
+@SQ	SN:hsa-mir-181b-1	LN:110
+@SQ	SN:hsa-mir-181c	LN:110
+@SQ	SN:hsa-mir-182	LN:110
+@SQ	SN:hsa-mir-183	LN:110
+@SQ	SN:hsa-mir-187	LN:109
+@SQ	SN:hsa-mir-196a-2	LN:110
+@SQ	SN:hsa-mir-199a-2	LN:110
+@SQ	SN:hsa-mir-199b	LN:110
+@SQ	SN:hsa-mir-203a	LN:110
+@SQ	SN:hsa-mir-204	LN:110
+@SQ	SN:hsa-mir-205	LN:110
+@SQ	SN:hsa-mir-210	LN:110
+@SQ	SN:hsa-mir-211	LN:110
+@SQ	SN:hsa-mir-212	LN:110
+@SQ	SN:hsa-mir-181a-1	LN:110
+@SQ	SN:hsa-mir-214	LN:110
+@SQ	SN:hsa-mir-215	LN:110
+@SQ	SN:hsa-mir-216a	LN:110
+@SQ	SN:hsa-mir-217	LN:110
+@SQ	SN:hsa-mir-218-1	LN:110
+@SQ	SN:hsa-mir-218-2	LN:110
+@SQ	SN:hsa-mir-219a-1	LN:110
+@SQ	SN:hsa-mir-221	LN:110
+@SQ	SN:hsa-mir-222	LN:110
+@SQ	SN:hsa-mir-223	LN:110
+@SQ	SN:hsa-mir-224	LN:81
+@SQ	SN:hsa-mir-200b	LN:95
+@SQ	SN:hsa-let-7g	LN:84
+@SQ	SN:hsa-let-7i	LN:84
+@SQ	SN:hsa-mir-1-2	LN:85
+@SQ	SN:hsa-mir-15b	LN:98
+@SQ	SN:hsa-mir-23b	LN:97
+@SQ	SN:hsa-mir-27b	LN:97
+@SQ	SN:hsa-mir-30b	LN:88
+@SQ	SN:hsa-mir-122	LN:85
+@SQ	SN:hsa-mir-124-1	LN:85
+@SQ	SN:hsa-mir-124-2	LN:109
+@SQ	SN:hsa-mir-124-3	LN:87
+@SQ	SN:hsa-mir-125b-1	LN:88
+@SQ	SN:hsa-mir-128-1	LN:82
+@SQ	SN:hsa-mir-130a	LN:89
+@SQ	SN:hsa-mir-132	LN:101
+@SQ	SN:hsa-mir-133a-1	LN:88
+@SQ	SN:hsa-mir-133a-2	LN:102
+@SQ	SN:hsa-mir-135a-1	LN:90
+@SQ	SN:hsa-mir-135a-2	LN:100
+@SQ	SN:hsa-mir-137	LN:102
+@SQ	SN:hsa-mir-138-2	LN:84
+@SQ	SN:hsa-mir-140	LN:100
+@SQ	SN:hsa-mir-141	LN:95
+@SQ	SN:hsa-mir-142	LN:87
+@SQ	SN:hsa-mir-143	LN:106
+@SQ	SN:hsa-mir-144	LN:86
+@SQ	SN:hsa-mir-145	LN:88
+@SQ	SN:hsa-mir-152	LN:87
+@SQ	SN:hsa-mir-153-1	LN:90
+@SQ	SN:hsa-mir-153-2	LN:87
+@SQ	SN:hsa-mir-191	LN:92
+@SQ	SN:hsa-mir-9-1	LN:89
+@SQ	SN:hsa-mir-9-2	LN:87
+@SQ	SN:hsa-mir-9-3	LN:90
+@SQ	SN:hsa-mir-125a	LN:86
+@SQ	SN:hsa-mir-125b-2	LN:89
+@SQ	SN:hsa-mir-126	LN:85
+@SQ	SN:hsa-mir-127	LN:97
+@SQ	SN:hsa-mir-129-2	LN:90
+@SQ	SN:hsa-mir-134	LN:73
+@SQ	SN:hsa-mir-136	LN:82
+@SQ	SN:hsa-mir-138-1	LN:99
+@SQ	SN:hsa-mir-146a	LN:99
+@SQ	SN:hsa-mir-149	LN:89
+@SQ	SN:hsa-mir-150	LN:84
+@SQ	SN:hsa-mir-154	LN:84
+@SQ	SN:hsa-mir-184	LN:84
+@SQ	SN:hsa-mir-185	LN:82
+@SQ	SN:hsa-mir-186	LN:86
+@SQ	SN:hsa-mir-188	LN:86
+@SQ	SN:hsa-mir-190a	LN:85
+@SQ	SN:hsa-mir-193a	LN:88
+@SQ	SN:hsa-mir-194-1	LN:85
+@SQ	SN:hsa-mir-195	LN:87
+@SQ	SN:hsa-mir-206	LN:86
+@SQ	SN:hsa-mir-320a	LN:82
+@SQ	SN:hsa-mir-200c	LN:68
+@SQ	SN:hsa-mir-1-1	LN:71
+@SQ	SN:hsa-mir-155	LN:65
+@SQ	SN:hsa-mir-181b-2	LN:89
+@SQ	SN:hsa-mir-128-2	LN:84
+@SQ	SN:hsa-mir-194-2	LN:85
+@SQ	SN:hsa-mir-106b	LN:82
+@SQ	SN:hsa-mir-29c	LN:88
+@SQ	SN:hsa-mir-30c-1	LN:89
+@SQ	SN:hsa-mir-200a	LN:90
+@SQ	SN:hsa-mir-302a	LN:69
+@SQ	SN:hsa-mir-101-2	LN:79
+@SQ	SN:hsa-mir-219a-2	LN:97
+@SQ	SN:hsa-mir-34b	LN:84
+@SQ	SN:hsa-mir-34c	LN:77
+@SQ	SN:hsa-mir-299	LN:63
+@SQ	SN:hsa-mir-301a	LN:86
+@SQ	SN:hsa-mir-99b	LN:70
+@SQ	SN:hsa-mir-296	LN:80
+@SQ	SN:hsa-mir-130b	LN:82
+@SQ	SN:hsa-mir-30e	LN:92
+@SQ	SN:hsa-mir-26a-2	LN:84
+@SQ	SN:hsa-mir-361	LN:72
+@SQ	SN:hsa-mir-362	LN:65
+@SQ	SN:hsa-mir-363	LN:75
+@SQ	SN:hsa-mir-365a	LN:87
+@SQ	SN:hsa-mir-365b	LN:111
+@SQ	SN:hsa-mir-302b	LN:73
+@SQ	SN:hsa-mir-302c	LN:68
+@SQ	SN:hsa-mir-302d	LN:68
+@SQ	SN:hsa-mir-367	LN:68
+@SQ	SN:hsa-mir-376c	LN:66
+@SQ	SN:hsa-mir-369	LN:70
+@SQ	SN:hsa-mir-370	LN:75
+@SQ	SN:hsa-mir-371a	LN:67
+@SQ	SN:hsa-mir-372	LN:67
+@SQ	SN:hsa-mir-373	LN:69
+@SQ	SN:hsa-mir-374a	LN:72
+@SQ	SN:hsa-mir-375	LN:64
+@SQ	SN:hsa-mir-376a-1	LN:68
+@SQ	SN:hsa-mir-377	LN:69
+@SQ	SN:hsa-mir-378a	LN:66
+@SQ	SN:hsa-mir-379	LN:67
+@SQ	SN:hsa-mir-380	LN:61
+@SQ	SN:hsa-mir-381	LN:75
+@SQ	SN:hsa-mir-382	LN:76
+@SQ	SN:hsa-mir-383	LN:73
+@SQ	SN:hsa-mir-340	LN:95
+@SQ	SN:hsa-mir-330	LN:94
+@SQ	SN:hsa-mir-328	LN:75
+@SQ	SN:hsa-mir-342	LN:99
+@SQ	SN:hsa-mir-337	LN:93
+@SQ	SN:hsa-mir-323a	LN:86
+@SQ	SN:hsa-mir-326	LN:95
+@SQ	SN:hsa-mir-151a	LN:90
+@SQ	SN:hsa-mir-135b	LN:97
+@SQ	SN:hsa-mir-148b	LN:99
+@SQ	SN:hsa-mir-331	LN:94
+@SQ	SN:hsa-mir-324	LN:83
+@SQ	SN:hsa-mir-338	LN:67
+@SQ	SN:hsa-mir-339	LN:94
+@SQ	SN:hsa-mir-335	LN:94
+@SQ	SN:hsa-mir-133b	LN:119
+@SQ	SN:hsa-mir-325	LN:98
+@SQ	SN:hsa-mir-345	LN:98
+@SQ	SN:hsa-mir-346	LN:95
+@SQ	SN:hsa-mir-384	LN:88
+@SQ	SN:hsa-mir-196b	LN:84
+@SQ	SN:hsa-mir-422a	LN:90
+@SQ	SN:hsa-mir-423	LN:94
+@SQ	SN:hsa-mir-424	LN:98
+@SQ	SN:hsa-mir-425	LN:87
+@SQ	SN:hsa-mir-18b	LN:71
+@SQ	SN:hsa-mir-20b	LN:69
+@SQ	SN:hsa-mir-448	LN:111
+@SQ	SN:hsa-mir-429	LN:83
+@SQ	SN:hsa-mir-449a	LN:91
+@SQ	SN:hsa-mir-450a-1	LN:91
+@SQ	SN:hsa-mir-431	LN:114
+@SQ	SN:hsa-mir-433	LN:93
+@SQ	SN:hsa-mir-329-1	LN:80
+@SQ	SN:hsa-mir-329-2	LN:84
+@SQ	SN:hsa-mir-451a	LN:72
+@SQ	SN:hsa-mir-452	LN:85
+@SQ	SN:hsa-mir-409	LN:79
+@SQ	SN:hsa-mir-412	LN:91
+@SQ	SN:hsa-mir-410	LN:80
+@SQ	SN:hsa-mir-376b	LN:100
+@SQ	SN:hsa-mir-483	LN:76
+@SQ	SN:hsa-mir-484	LN:79
+@SQ	SN:hsa-mir-485	LN:73
+@SQ	SN:hsa-mir-486-1	LN:68
+@SQ	SN:hsa-mir-487a	LN:80
+@SQ	SN:hsa-mir-488	LN:83
+@SQ	SN:hsa-mir-489	LN:84
+@SQ	SN:hsa-mir-490	LN:128
+@SQ	SN:hsa-mir-491	LN:84
+@SQ	SN:hsa-mir-511	LN:87
+@SQ	SN:hsa-mir-146b	LN:73
+@SQ	SN:hsa-mir-202	LN:110
+@SQ	SN:hsa-mir-492	LN:116
+@SQ	SN:hsa-mir-493	LN:89
+@SQ	SN:hsa-mir-432	LN:94
+@SQ	SN:hsa-mir-494	LN:81
+@SQ	SN:hsa-mir-495	LN:82
+@SQ	SN:hsa-mir-496	LN:102
+@SQ	SN:hsa-mir-193b	LN:83
+@SQ	SN:hsa-mir-497	LN:112
+@SQ	SN:hsa-mir-181d	LN:137
+@SQ	SN:hsa-mir-512-1	LN:84
+@SQ	SN:hsa-mir-512-2	LN:98
+@SQ	SN:hsa-mir-498	LN:124
+@SQ	SN:hsa-mir-520e	LN:87
+@SQ	SN:hsa-mir-515-1	LN:83
+@SQ	SN:hsa-mir-519e	LN:84
+@SQ	SN:hsa-mir-520f	LN:87
+@SQ	SN:hsa-mir-515-2	LN:83
+@SQ	SN:hsa-mir-519c	LN:87
+@SQ	SN:hsa-mir-520a	LN:85
+@SQ	SN:hsa-mir-526b	LN:83
+@SQ	SN:hsa-mir-519b	LN:81
+@SQ	SN:hsa-mir-525	LN:85
+@SQ	SN:hsa-mir-523	LN:87
+@SQ	SN:hsa-mir-518f	LN:87
+@SQ	SN:hsa-mir-520b	LN:61
+@SQ	SN:hsa-mir-518b	LN:83
+@SQ	SN:hsa-mir-526a-1	LN:85
+@SQ	SN:hsa-mir-520c	LN:87
+@SQ	SN:hsa-mir-518c	LN:101
+@SQ	SN:hsa-mir-524	LN:87
+@SQ	SN:hsa-mir-517a	LN:87
+@SQ	SN:hsa-mir-519d	LN:88
+@SQ	SN:hsa-mir-521-2	LN:87
+@SQ	SN:hsa-mir-520d	LN:87
+@SQ	SN:hsa-mir-517b	LN:67
+@SQ	SN:hsa-mir-520g	LN:90
+@SQ	SN:hsa-mir-516b-2	LN:85
+@SQ	SN:hsa-mir-526a-2	LN:65
+@SQ	SN:hsa-mir-518e	LN:88
+@SQ	SN:hsa-mir-518a-1	LN:85
+@SQ	SN:hsa-mir-518d	LN:87
+@SQ	SN:hsa-mir-516b-1	LN:90
+@SQ	SN:hsa-mir-518a-2	LN:87
+@SQ	SN:hsa-mir-517c	LN:95
+@SQ	SN:hsa-mir-520h	LN:88
+@SQ	SN:hsa-mir-521-1	LN:87
+@SQ	SN:hsa-mir-522	LN:87
+@SQ	SN:hsa-mir-519a-1	LN:85
+@SQ	SN:hsa-mir-527	LN:85
+@SQ	SN:hsa-mir-516a-1	LN:90
+@SQ	SN:hsa-mir-516a-2	LN:90
+@SQ	SN:hsa-mir-519a-2	LN:87
+@SQ	SN:hsa-mir-499a	LN:122
+@SQ	SN:hsa-mir-500a	LN:84
+@SQ	SN:hsa-mir-501	LN:84
+@SQ	SN:hsa-mir-502	LN:86
+@SQ	SN:hsa-mir-450a-2	LN:100
+@SQ	SN:hsa-mir-503	LN:71
+@SQ	SN:hsa-mir-504	LN:83
+@SQ	SN:hsa-mir-505	LN:84
+@SQ	SN:hsa-mir-513a-1	LN:129
+@SQ	SN:hsa-mir-513a-2	LN:127
+@SQ	SN:hsa-mir-506	LN:124
+@SQ	SN:hsa-mir-507	LN:94
+@SQ	SN:hsa-mir-508	LN:115
+@SQ	SN:hsa-mir-509-1	LN:94
+@SQ	SN:hsa-mir-510	LN:74
+@SQ	SN:hsa-mir-514a-1	LN:98
+@SQ	SN:hsa-mir-514a-2	LN:88
+@SQ	SN:hsa-mir-514a-3	LN:88
+@SQ	SN:hsa-mir-532	LN:91
+@SQ	SN:hsa-mir-455	LN:96
+@SQ	SN:hsa-mir-539	LN:78
+@SQ	SN:hsa-mir-544a	LN:91
+@SQ	SN:hsa-mir-545	LN:106
+@SQ	SN:hsa-mir-376a-2	LN:80
+@SQ	SN:hsa-mir-487b	LN:84
+@SQ	SN:hsa-mir-551a	LN:96
+@SQ	SN:hsa-mir-552	LN:96
+@SQ	SN:hsa-mir-553	LN:68
+@SQ	SN:hsa-mir-554	LN:96
+@SQ	SN:hsa-mir-92b	LN:96
+@SQ	SN:hsa-mir-555	LN:96
+@SQ	SN:hsa-mir-556	LN:95
+@SQ	SN:hsa-mir-557	LN:98
+@SQ	SN:hsa-mir-558	LN:94
+@SQ	SN:hsa-mir-559	LN:96
+@SQ	SN:hsa-mir-561	LN:97
+@SQ	SN:hsa-mir-562	LN:95
+@SQ	SN:hsa-mir-563	LN:79
+@SQ	SN:hsa-mir-564	LN:94
+@SQ	SN:hsa-mir-566	LN:94
+@SQ	SN:hsa-mir-567	LN:98
+@SQ	SN:hsa-mir-568	LN:95
+@SQ	SN:hsa-mir-551b	LN:96
+@SQ	SN:hsa-mir-569	LN:96
+@SQ	SN:hsa-mir-570	LN:97
+@SQ	SN:hsa-mir-571	LN:96
+@SQ	SN:hsa-mir-572	LN:95
+@SQ	SN:hsa-mir-573	LN:99
+@SQ	SN:hsa-mir-574	LN:96
+@SQ	SN:hsa-mir-575	LN:94
+@SQ	SN:hsa-mir-576	LN:98
+@SQ	SN:hsa-mir-577	LN:96
+@SQ	SN:hsa-mir-578	LN:96
+@SQ	SN:hsa-mir-579	LN:98
+@SQ	SN:hsa-mir-580	LN:97
+@SQ	SN:hsa-mir-581	LN:96
+@SQ	SN:hsa-mir-582	LN:98
+@SQ	SN:hsa-mir-583	LN:75
+@SQ	SN:hsa-mir-584	LN:97
+@SQ	SN:hsa-mir-585	LN:94
+@SQ	SN:hsa-mir-548a-1	LN:97
+@SQ	SN:hsa-mir-586	LN:97
+@SQ	SN:hsa-mir-587	LN:96
+@SQ	SN:hsa-mir-548b	LN:97
+@SQ	SN:hsa-mir-588	LN:83
+@SQ	SN:hsa-mir-548a-2	LN:97
+@SQ	SN:hsa-mir-589	LN:99
+@SQ	SN:hsa-mir-550a-1	LN:97
+@SQ	SN:hsa-mir-550a-2	LN:97
+@SQ	SN:hsa-mir-590	LN:97
+@SQ	SN:hsa-mir-591	LN:95
+@SQ	SN:hsa-mir-592	LN:97
+@SQ	SN:hsa-mir-593	LN:100
+@SQ	SN:hsa-mir-595	LN:96
+@SQ	SN:hsa-mir-596	LN:77
+@SQ	SN:hsa-mir-597	LN:97
+@SQ	SN:hsa-mir-598	LN:97
+@SQ	SN:hsa-mir-599	LN:95
+@SQ	SN:hsa-mir-548a-3	LN:97
+@SQ	SN:hsa-mir-600	LN:98
+@SQ	SN:hsa-mir-601	LN:79
+@SQ	SN:hsa-mir-602	LN:98
+@SQ	SN:hsa-mir-603	LN:97
+@SQ	SN:hsa-mir-604	LN:94
+@SQ	SN:hsa-mir-605	LN:83
+@SQ	SN:hsa-mir-606	LN:96
+@SQ	SN:hsa-mir-607	LN:96
+@SQ	SN:hsa-mir-608	LN:100
+@SQ	SN:hsa-mir-609	LN:95
+@SQ	SN:hsa-mir-610	LN:96
+@SQ	SN:hsa-mir-611	LN:67
+@SQ	SN:hsa-mir-612	LN:100
+@SQ	SN:hsa-mir-613	LN:95
+@SQ	SN:hsa-mir-614	LN:90
+@SQ	SN:hsa-mir-615	LN:96
+@SQ	SN:hsa-mir-616	LN:97
+@SQ	SN:hsa-mir-548c	LN:97
+@SQ	SN:hsa-mir-617	LN:97
+@SQ	SN:hsa-mir-618	LN:98
+@SQ	SN:hsa-mir-619	LN:99
+@SQ	SN:hsa-mir-620	LN:95
+@SQ	SN:hsa-mir-621	LN:96
+@SQ	SN:hsa-mir-622	LN:96
+@SQ	SN:hsa-mir-623	LN:98
+@SQ	SN:hsa-mir-624	LN:97
+@SQ	SN:hsa-mir-625	LN:85
+@SQ	SN:hsa-mir-626	LN:94
+@SQ	SN:hsa-mir-627	LN:97
+@SQ	SN:hsa-mir-628	LN:95
+@SQ	SN:hsa-mir-629	LN:97
+@SQ	SN:hsa-mir-630	LN:97
+@SQ	SN:hsa-mir-631	LN:75
+@SQ	SN:hsa-mir-33b	LN:96
+@SQ	SN:hsa-mir-632	LN:94
+@SQ	SN:hsa-mir-633	LN:98
+@SQ	SN:hsa-mir-634	LN:97
+@SQ	SN:hsa-mir-635	LN:98
+@SQ	SN:hsa-mir-636	LN:99
+@SQ	SN:hsa-mir-637	LN:99
+@SQ	SN:hsa-mir-638	LN:100
+@SQ	SN:hsa-mir-639	LN:98
+@SQ	SN:hsa-mir-640	LN:96
+@SQ	SN:hsa-mir-641	LN:99
+@SQ	SN:hsa-mir-642a	LN:97
+@SQ	SN:hsa-mir-643	LN:97
+@SQ	SN:hsa-mir-644a	LN:94
+@SQ	SN:hsa-mir-645	LN:94
+@SQ	SN:hsa-mir-646	LN:94
+@SQ	SN:hsa-mir-647	LN:96
+@SQ	SN:hsa-mir-648	LN:94
+@SQ	SN:hsa-mir-649	LN:97
+@SQ	SN:hsa-mir-650	LN:96
+@SQ	SN:hsa-mir-651	LN:97
+@SQ	SN:hsa-mir-652	LN:98
+@SQ	SN:hsa-mir-548d-1	LN:97
+@SQ	SN:hsa-mir-661	LN:89
+@SQ	SN:hsa-mir-662	LN:95
+@SQ	SN:hsa-mir-548d-2	LN:97
+@SQ	SN:hsa-mir-663a	LN:93
+@SQ	SN:hsa-mir-449b	LN:97
+@SQ	SN:hsa-mir-653	LN:96
+@SQ	SN:hsa-mir-411	LN:96
+@SQ	SN:hsa-mir-654	LN:81
+@SQ	SN:hsa-mir-655	LN:97
+@SQ	SN:hsa-mir-656	LN:78
+@SQ	SN:hsa-mir-549a	LN:96
+@SQ	SN:hsa-mir-657	LN:98
+@SQ	SN:hsa-mir-658	LN:100
+@SQ	SN:hsa-mir-659	LN:97
+@SQ	SN:hsa-mir-660	LN:97
+@SQ	SN:hsa-mir-421	LN:85
+@SQ	SN:hsa-mir-542	LN:97
+@SQ	SN:hsa-mir-758	LN:88
+@SQ	SN:hsa-mir-1264	LN:69
+@SQ	SN:hsa-mir-671	LN:118
+@SQ	SN:hsa-mir-668	LN:66
+@SQ	SN:hsa-mir-550a-3	LN:95
+@SQ	SN:hsa-mir-767	LN:109
+@SQ	SN:hsa-mir-1224	LN:85
+@SQ	SN:hsa-mir-151b	LN:96
+@SQ	SN:hsa-mir-320b-1	LN:79
+@SQ	SN:hsa-mir-320c-1	LN:88
+@SQ	SN:hsa-mir-1296	LN:92
+@SQ	SN:hsa-mir-1468	LN:86
+@SQ	SN:hsa-mir-1323	LN:73
+@SQ	SN:hsa-mir-1271	LN:86
+@SQ	SN:hsa-mir-1301	LN:82
+@SQ	SN:hsa-mir-454	LN:115
+@SQ	SN:hsa-mir-1185-2	LN:86
+@SQ	SN:hsa-mir-449c	LN:92
+@SQ	SN:hsa-mir-1283-1	LN:87
+@SQ	SN:hsa-mir-769	LN:118
+@SQ	SN:hsa-mir-766	LN:111
+@SQ	SN:hsa-mir-320b-2	LN:138
+@SQ	SN:hsa-mir-378d-2	LN:98
+@SQ	SN:hsa-mir-1185-1	LN:86
+@SQ	SN:hsa-mir-762	LN:83
+@SQ	SN:hsa-mir-802	LN:94
+@SQ	SN:hsa-mir-670	LN:98
+@SQ	SN:hsa-mir-1298	LN:112
+@SQ	SN:hsa-mir-2113	LN:91
+@SQ	SN:hsa-mir-761	LN:59
+@SQ	SN:hsa-mir-764	LN:85
+@SQ	SN:hsa-mir-759	LN:91
+@SQ	SN:hsa-mir-765	LN:114
+@SQ	SN:hsa-mir-770	LN:98
+@SQ	SN:hsa-mir-675	LN:73
+@SQ	SN:hsa-mir-298	LN:88
+@SQ	SN:hsa-mir-891a	LN:79
+@SQ	SN:hsa-mir-300	LN:83
+@SQ	SN:hsa-mir-892a	LN:75
+@SQ	SN:hsa-mir-509-2	LN:91
+@SQ	SN:hsa-mir-450b	LN:78
+@SQ	SN:hsa-mir-874	LN:78
+@SQ	SN:hsa-mir-890	LN:77
+@SQ	SN:hsa-mir-891b	LN:79
+@SQ	SN:hsa-mir-888	LN:77
+@SQ	SN:hsa-mir-892b	LN:77
+@SQ	SN:hsa-mir-541	LN:84
+@SQ	SN:hsa-mir-889	LN:79
+@SQ	SN:hsa-mir-875	LN:76
+@SQ	SN:hsa-mir-876	LN:81
+@SQ	SN:hsa-mir-708	LN:88
+@SQ	SN:hsa-mir-147b	LN:80
+@SQ	SN:hsa-mir-190b	LN:79
+@SQ	SN:hsa-mir-744	LN:98
+@SQ	SN:hsa-mir-885	LN:74
+@SQ	SN:hsa-mir-877	LN:86
+@SQ	SN:hsa-mir-887	LN:79
+@SQ	SN:hsa-mir-665	LN:72
+@SQ	SN:hsa-mir-873	LN:77
+@SQ	SN:hsa-mir-543	LN:78
+@SQ	SN:hsa-mir-374b	LN:72
+@SQ	SN:hsa-mir-760	LN:80
+@SQ	SN:hsa-mir-301b	LN:78
+@SQ	SN:hsa-mir-216b	LN:82
+@SQ	SN:hsa-mir-208b	LN:77
+@SQ	SN:hsa-mir-920	LN:75
+@SQ	SN:hsa-mir-921	LN:56
+@SQ	SN:hsa-mir-922	LN:81
+@SQ	SN:hsa-mir-924	LN:53
+@SQ	SN:hsa-mir-509-3	LN:75
+@SQ	SN:hsa-mir-933	LN:77
+@SQ	SN:hsa-mir-934	LN:83
+@SQ	SN:hsa-mir-935	LN:91
+@SQ	SN:hsa-mir-936	LN:98
+@SQ	SN:hsa-mir-937	LN:86
+@SQ	SN:hsa-mir-938	LN:83
+@SQ	SN:hsa-mir-939	LN:82
+@SQ	SN:hsa-mir-940	LN:94
+@SQ	SN:hsa-mir-941-1	LN:72
+@SQ	SN:hsa-mir-941-2	LN:72
+@SQ	SN:hsa-mir-941-3	LN:72
+@SQ	SN:hsa-mir-941-4	LN:72
+@SQ	SN:hsa-mir-942	LN:86
+@SQ	SN:hsa-mir-943	LN:94
+@SQ	SN:hsa-mir-944	LN:88
+@SQ	SN:hsa-mir-297	LN:66
+@SQ	SN:hsa-mir-1178	LN:91
+@SQ	SN:hsa-mir-1179	LN:91
+@SQ	SN:hsa-mir-1180	LN:69
+@SQ	SN:hsa-mir-1181	LN:81
+@SQ	SN:hsa-mir-1182	LN:97
+@SQ	SN:hsa-mir-1183	LN:89
+@SQ	SN:hsa-mir-1184-1	LN:99
+@SQ	SN:hsa-mir-1225	LN:90
+@SQ	SN:hsa-mir-1226	LN:75
+@SQ	SN:hsa-mir-1227	LN:88
+@SQ	SN:hsa-mir-1228	LN:73
+@SQ	SN:hsa-mir-1229	LN:69
+@SQ	SN:hsa-mir-1231	LN:92
+@SQ	SN:hsa-mir-1233-1	LN:82
+@SQ	SN:hsa-mir-1234	LN:80
+@SQ	SN:hsa-mir-1236	LN:102
+@SQ	SN:hsa-mir-1237	LN:102
+@SQ	SN:hsa-mir-1238	LN:83
+@SQ	SN:hsa-mir-1200	LN:76
+@SQ	SN:hsa-mir-1202	LN:83
+@SQ	SN:hsa-mir-1203	LN:85
+@SQ	SN:hsa-mir-663b	LN:115
+@SQ	SN:hsa-mir-1204	LN:67
+@SQ	SN:hsa-mir-1205	LN:63
+@SQ	SN:hsa-mir-1206	LN:59
+@SQ	SN:hsa-mir-1207	LN:87
+@SQ	SN:hsa-mir-1208	LN:73
+@SQ	SN:hsa-mir-548e	LN:88
+@SQ	SN:hsa-mir-548j	LN:112
+@SQ	SN:hsa-mir-1285-1	LN:84
+@SQ	SN:hsa-mir-1285-2	LN:88
+@SQ	SN:hsa-mir-1286	LN:78
+@SQ	SN:hsa-mir-1287	LN:90
+@SQ	SN:hsa-mir-1289-1	LN:144
+@SQ	SN:hsa-mir-1289-2	LN:111
+@SQ	SN:hsa-mir-1290	LN:78
+@SQ	SN:hsa-mir-1291	LN:87
+@SQ	SN:hsa-mir-548k	LN:116
+@SQ	SN:hsa-mir-1293	LN:71
+@SQ	SN:hsa-mir-1294	LN:142
+@SQ	SN:hsa-mir-1295a	LN:79
+@SQ	SN:hsa-mir-1297	LN:77
+@SQ	SN:hsa-mir-1299	LN:83
+@SQ	SN:hsa-mir-548l	LN:86
+@SQ	SN:hsa-mir-1302-1	LN:143
+@SQ	SN:hsa-mir-1302-2	LN:138
+@SQ	SN:hsa-mir-1302-3	LN:138
+@SQ	SN:hsa-mir-1302-4	LN:150
+@SQ	SN:hsa-mir-1302-5	LN:150
+@SQ	SN:hsa-mir-1302-6	LN:90
+@SQ	SN:hsa-mir-1302-7	LN:72
+@SQ	SN:hsa-mir-1302-8	LN:128
+@SQ	SN:hsa-mir-1303	LN:86
+@SQ	SN:hsa-mir-1304	LN:91
+@SQ	SN:hsa-mir-1305	LN:86
+@SQ	SN:hsa-mir-1243	LN:93
+@SQ	SN:hsa-mir-548f-1	LN:84
+@SQ	SN:hsa-mir-548f-2	LN:98
+@SQ	SN:hsa-mir-548f-3	LN:87
+@SQ	SN:hsa-mir-548f-4	LN:105
+@SQ	SN:hsa-mir-548f-5	LN:86
+@SQ	SN:hsa-mir-1244-1	LN:85
+@SQ	SN:hsa-mir-1245a	LN:70
+@SQ	SN:hsa-mir-1246	LN:73
+@SQ	SN:hsa-mir-1247	LN:136
+@SQ	SN:hsa-mir-1248	LN:106
+@SQ	SN:hsa-mir-1249	LN:66
+@SQ	SN:hsa-mir-1250	LN:113
+@SQ	SN:hsa-mir-1251	LN:70
+@SQ	SN:hsa-mir-1253	LN:105
+@SQ	SN:hsa-mir-1254-1	LN:97
+@SQ	SN:hsa-mir-1255a	LN:113
+@SQ	SN:hsa-mir-1256	LN:119
+@SQ	SN:hsa-mir-1257	LN:117
+@SQ	SN:hsa-mir-1258	LN:73
+@SQ	SN:hsa-mir-1260a	LN:73
+@SQ	SN:hsa-mir-548g	LN:89
+@SQ	SN:hsa-mir-1261	LN:82
+@SQ	SN:hsa-mir-1262	LN:93
+@SQ	SN:hsa-mir-1263	LN:86
+@SQ	SN:hsa-mir-548n	LN:75
+@SQ	SN:hsa-mir-548m	LN:86
+@SQ	SN:hsa-mir-1265	LN:86
+@SQ	SN:hsa-mir-548o	LN:114
+@SQ	SN:hsa-mir-1266	LN:84
+@SQ	SN:hsa-mir-1267	LN:78
+@SQ	SN:hsa-mir-1268a	LN:52
+@SQ	SN:hsa-mir-1269a	LN:105
+@SQ	SN:hsa-mir-1270	LN:83
+@SQ	SN:hsa-mir-1272	LN:129
+@SQ	SN:hsa-mir-1273a	LN:103
+@SQ	SN:hsa-mir-548h-1	LN:102
+@SQ	SN:hsa-mir-548h-2	LN:88
+@SQ	SN:hsa-mir-548h-3	LN:118
+@SQ	SN:hsa-mir-548h-4	LN:111
+@SQ	SN:hsa-mir-1275	LN:80
+@SQ	SN:hsa-mir-1276	LN:83
+@SQ	SN:hsa-mir-302e	LN:72
+@SQ	SN:hsa-mir-302f	LN:51
+@SQ	SN:hsa-mir-1277	LN:78
+@SQ	SN:hsa-mir-548p	LN:84
+@SQ	SN:hsa-mir-548i-1	LN:149
+@SQ	SN:hsa-mir-548i-2	LN:149
+@SQ	SN:hsa-mir-548i-3	LN:149
+@SQ	SN:hsa-mir-548i-4	LN:77
+@SQ	SN:hsa-mir-1278	LN:81
+@SQ	SN:hsa-mir-1279	LN:62
+@SQ	SN:hsa-mir-1281	LN:54
+@SQ	SN:hsa-mir-1282	LN:101
+@SQ	SN:hsa-mir-1283-2	LN:87
+@SQ	SN:hsa-mir-1284	LN:120
+@SQ	SN:hsa-mir-1288	LN:75
+@SQ	SN:hsa-mir-1292	LN:66
+@SQ	SN:hsa-mir-1252	LN:65
+@SQ	SN:hsa-mir-1255b-1	LN:63
+@SQ	SN:hsa-mir-1255b-2	LN:67
+@SQ	SN:hsa-mir-664a	LN:82
+@SQ	SN:hsa-mir-1306	LN:85
+@SQ	SN:hsa-mir-1307	LN:149
+@SQ	SN:hsa-mir-513b	LN:84
+@SQ	SN:hsa-mir-513c	LN:84
+@SQ	SN:hsa-mir-1321	LN:79
+@SQ	SN:hsa-mir-1322	LN:71
+@SQ	SN:hsa-mir-1197	LN:88
+@SQ	SN:hsa-mir-1324	LN:96
+@SQ	SN:hsa-mir-1469	LN:47
+@SQ	SN:hsa-mir-1470	LN:61
+@SQ	SN:hsa-mir-1471	LN:57
+@SQ	SN:hsa-mir-1537	LN:61
+@SQ	SN:hsa-mir-1538	LN:61
+@SQ	SN:hsa-mir-1539	LN:50
+@SQ	SN:hsa-mir-103b-1	LN:62
+@SQ	SN:hsa-mir-103b-2	LN:62
+@SQ	SN:hsa-mir-320d-1	LN:48
+@SQ	SN:hsa-mir-320c-2	LN:50
+@SQ	SN:hsa-mir-320d-2	LN:48
+@SQ	SN:hsa-mir-1825	LN:53
+@SQ	SN:hsa-mir-1827	LN:66
+@SQ	SN:hsa-mir-1908	LN:80
+@SQ	SN:hsa-mir-1909	LN:80
+@SQ	SN:hsa-mir-1910	LN:80
+@SQ	SN:hsa-mir-1911	LN:80
+@SQ	SN:hsa-mir-1912	LN:80
+@SQ	SN:hsa-mir-1913	LN:80
+@SQ	SN:hsa-mir-1914	LN:80
+@SQ	SN:hsa-mir-1915	LN:80
+@SQ	SN:hsa-mir-1972-1	LN:77
+@SQ	SN:hsa-mir-1973	LN:44
+@SQ	SN:hsa-mir-1976	LN:52
+@SQ	SN:hsa-mir-2052	LN:55
+@SQ	SN:hsa-mir-2053	LN:91
+@SQ	SN:hsa-mir-2054	LN:49
+@SQ	SN:hsa-mir-2110	LN:75
+@SQ	SN:hsa-mir-2114	LN:80
+@SQ	SN:hsa-mir-2115	LN:100
+@SQ	SN:hsa-mir-2116	LN:80
+@SQ	SN:hsa-mir-2117	LN:80
+@SQ	SN:hsa-mir-548q	LN:100
+@SQ	SN:hsa-mir-2276	LN:89
+@SQ	SN:hsa-mir-2277	LN:93
+@SQ	SN:hsa-mir-2278	LN:96
+@SQ	SN:hsa-mir-2681	LN:105
+@SQ	SN:hsa-mir-2682	LN:110
+@SQ	SN:hsa-mir-711	LN:76
+@SQ	SN:hsa-mir-718	LN:70
+@SQ	SN:hsa-mir-2861	LN:90
+@SQ	SN:hsa-mir-2909	LN:69
+@SQ	SN:hsa-mir-3115	LN:68
+@SQ	SN:hsa-mir-3116-1	LN:74
+@SQ	SN:hsa-mir-3116-2	LN:68
+@SQ	SN:hsa-mir-3117	LN:78
+@SQ	SN:hsa-mir-3118-1	LN:76
+@SQ	SN:hsa-mir-3118-2	LN:75
+@SQ	SN:hsa-mir-3118-3	LN:75
+@SQ	SN:hsa-mir-3119-1	LN:85
+@SQ	SN:hsa-mir-3119-2	LN:85
+@SQ	SN:hsa-mir-3120	LN:81
+@SQ	SN:hsa-mir-3121	LN:77
+@SQ	SN:hsa-mir-3122	LN:73
+@SQ	SN:hsa-mir-3123	LN:75
+@SQ	SN:hsa-mir-3124	LN:67
+@SQ	SN:hsa-mir-548s	LN:82
+@SQ	SN:hsa-mir-3125	LN:78
+@SQ	SN:hsa-mir-3126	LN:74
+@SQ	SN:hsa-mir-3127	LN:76
+@SQ	SN:hsa-mir-3128	LN:66
+@SQ	SN:hsa-mir-3129	LN:76
+@SQ	SN:hsa-mir-3130-1	LN:75
+@SQ	SN:hsa-mir-3130-2	LN:75
+@SQ	SN:hsa-mir-3131	LN:63
+@SQ	SN:hsa-mir-3132	LN:75
+@SQ	SN:hsa-mir-3133	LN:78
+@SQ	SN:hsa-mir-378b	LN:57
+@SQ	SN:hsa-mir-3134	LN:74
+@SQ	SN:hsa-mir-3135a	LN:77
+@SQ	SN:hsa-mir-466	LN:84
+@SQ	SN:hsa-mir-3136	LN:78
+@SQ	SN:hsa-mir-544b	LN:78
+@SQ	SN:hsa-mir-3137	LN:75
+@SQ	SN:hsa-mir-3138	LN:82
+@SQ	SN:hsa-mir-3139	LN:76
+@SQ	SN:hsa-mir-3140	LN:90
+@SQ	SN:hsa-mir-548t	LN:74
+@SQ	SN:hsa-mir-3141	LN:61
+@SQ	SN:hsa-mir-3142	LN:82
+@SQ	SN:hsa-mir-3143	LN:63
+@SQ	SN:hsa-mir-548u	LN:81
+@SQ	SN:hsa-mir-3144	LN:79
+@SQ	SN:hsa-mir-3145	LN:82
+@SQ	SN:hsa-mir-1273c	LN:77
+@SQ	SN:hsa-mir-3146	LN:79
+@SQ	SN:hsa-mir-3147	LN:66
+@SQ	SN:hsa-mir-548v	LN:80
+@SQ	SN:hsa-mir-3148	LN:77
+@SQ	SN:hsa-mir-3149	LN:83
+@SQ	SN:hsa-mir-3150a	LN:80
+@SQ	SN:hsa-mir-3151	LN:76
+@SQ	SN:hsa-mir-3152	LN:74
+@SQ	SN:hsa-mir-3153	LN:82
+@SQ	SN:hsa-mir-3074	LN:81
+@SQ	SN:hsa-mir-3154	LN:84
+@SQ	SN:hsa-mir-3155a	LN:82
+@SQ	SN:hsa-mir-3156-1	LN:75
+@SQ	SN:hsa-mir-3157	LN:85
+@SQ	SN:hsa-mir-3158-1	LN:81
+@SQ	SN:hsa-mir-3158-2	LN:81
+@SQ	SN:hsa-mir-3159	LN:74
+@SQ	SN:hsa-mir-3160-1	LN:85
+@SQ	SN:hsa-mir-3160-2	LN:81
+@SQ	SN:hsa-mir-3161	LN:77
+@SQ	SN:hsa-mir-3162	LN:82
+@SQ	SN:hsa-mir-3163	LN:73
+@SQ	SN:hsa-mir-3164	LN:83
+@SQ	SN:hsa-mir-3165	LN:75
+@SQ	SN:hsa-mir-3166	LN:92
+@SQ	SN:hsa-mir-1260b	LN:89
+@SQ	SN:hsa-mir-3167	LN:85
+@SQ	SN:hsa-mir-3168	LN:82
+@SQ	SN:hsa-mir-3169	LN:83
+@SQ	SN:hsa-mir-3170	LN:77
+@SQ	SN:hsa-mir-3171	LN:74
+@SQ	SN:hsa-mir-3173	LN:68
+@SQ	SN:hsa-mir-1193	LN:78
+@SQ	SN:hsa-mir-323b	LN:82
+@SQ	SN:hsa-mir-3118-4	LN:75
+@SQ	SN:hsa-mir-3174	LN:87
+@SQ	SN:hsa-mir-3175	LN:77
+@SQ	SN:hsa-mir-3176	LN:90
+@SQ	SN:hsa-mir-3177	LN:82
+@SQ	SN:hsa-mir-3178	LN:84
+@SQ	SN:hsa-mir-3179-1	LN:84
+@SQ	SN:hsa-mir-3180-1	LN:94
+@SQ	SN:hsa-mir-3180-2	LN:88
+@SQ	SN:hsa-mir-3179-2	LN:84
+@SQ	SN:hsa-mir-3180-3	LN:94
+@SQ	SN:hsa-mir-3179-3	LN:84
+@SQ	SN:hsa-mir-548w	LN:74
+@SQ	SN:hsa-mir-3181	LN:73
+@SQ	SN:hsa-mir-3182	LN:63
+@SQ	SN:hsa-mir-3183	LN:84
+@SQ	SN:hsa-mir-3184	LN:75
+@SQ	SN:hsa-mir-3185	LN:68
+@SQ	SN:hsa-mir-3065	LN:79
+@SQ	SN:hsa-mir-3186	LN:85
+@SQ	SN:hsa-mir-3156-2	LN:77
+@SQ	SN:hsa-mir-3187	LN:70
+@SQ	SN:hsa-mir-3188	LN:85
+@SQ	SN:hsa-mir-3189	LN:73
+@SQ	SN:hsa-mir-320e	LN:53
+@SQ	SN:hsa-mir-3190	LN:80
+@SQ	SN:hsa-mir-3191	LN:76
+@SQ	SN:hsa-mir-3192	LN:77
+@SQ	SN:hsa-mir-3193	LN:55
+@SQ	SN:hsa-mir-3194	LN:73
+@SQ	SN:hsa-mir-3195	LN:84
+@SQ	SN:hsa-mir-3196	LN:64
+@SQ	SN:hsa-mir-3156-3	LN:77
+@SQ	SN:hsa-mir-548x	LN:75
+@SQ	SN:hsa-mir-3197	LN:73
+@SQ	SN:hsa-mir-3198-1	LN:80
+@SQ	SN:hsa-mir-3199-1	LN:88
+@SQ	SN:hsa-mir-3199-2	LN:86
+@SQ	SN:hsa-mir-3200	LN:85
+@SQ	SN:hsa-mir-3201	LN:52
+@SQ	SN:hsa-mir-514b	LN:80
+@SQ	SN:hsa-mir-3202-1	LN:81
+@SQ	SN:hsa-mir-3202-2	LN:79
+@SQ	SN:hsa-mir-1273d	LN:86
+@SQ	SN:hsa-mir-4295	LN:85
+@SQ	SN:hsa-mir-4296	LN:88
+@SQ	SN:hsa-mir-4297	LN:76
+@SQ	SN:hsa-mir-378c	LN:81
+@SQ	SN:hsa-mir-4293	LN:78
+@SQ	SN:hsa-mir-4294	LN:76
+@SQ	SN:hsa-mir-4301	LN:66
+@SQ	SN:hsa-mir-4299	LN:72
+@SQ	SN:hsa-mir-4298	LN:73
+@SQ	SN:hsa-mir-4300	LN:96
+@SQ	SN:hsa-mir-4304	LN:62
+@SQ	SN:hsa-mir-4302	LN:60
+@SQ	SN:hsa-mir-4303	LN:66
+@SQ	SN:hsa-mir-4305	LN:102
+@SQ	SN:hsa-mir-4306	LN:91
+@SQ	SN:hsa-mir-4309	LN:83
+@SQ	SN:hsa-mir-4307	LN:84
+@SQ	SN:hsa-mir-4308	LN:81
+@SQ	SN:hsa-mir-4310	LN:57
+@SQ	SN:hsa-mir-4311	LN:100
+@SQ	SN:hsa-mir-4312	LN:76
+@SQ	SN:hsa-mir-4313	LN:101
+@SQ	SN:hsa-mir-4315-1	LN:73
+@SQ	SN:hsa-mir-4316	LN:71
+@SQ	SN:hsa-mir-4314	LN:92
+@SQ	SN:hsa-mir-4318	LN:81
+@SQ	SN:hsa-mir-4319	LN:85
+@SQ	SN:hsa-mir-4320	LN:65
+@SQ	SN:hsa-mir-4317	LN:65
+@SQ	SN:hsa-mir-4322	LN:73
+@SQ	SN:hsa-mir-4321	LN:80
+@SQ	SN:hsa-mir-4323	LN:69
+@SQ	SN:hsa-mir-4324	LN:72
+@SQ	SN:hsa-mir-4256	LN:64
+@SQ	SN:hsa-mir-4257	LN:86
+@SQ	SN:hsa-mir-4258	LN:91
+@SQ	SN:hsa-mir-4259	LN:101
+@SQ	SN:hsa-mir-4260	LN:67
+@SQ	SN:hsa-mir-4253	LN:68
+@SQ	SN:hsa-mir-4251	LN:61
+@SQ	SN:hsa-mir-4254	LN:76
+@SQ	SN:hsa-mir-4255	LN:72
+@SQ	SN:hsa-mir-4252	LN:63
+@SQ	SN:hsa-mir-4325	LN:90
+@SQ	SN:hsa-mir-4326	LN:59
+@SQ	SN:hsa-mir-4327	LN:85
+@SQ	SN:hsa-mir-4261	LN:58
+@SQ	SN:hsa-mir-4265	LN:99
+@SQ	SN:hsa-mir-4266	LN:55
+@SQ	SN:hsa-mir-4267	LN:82
+@SQ	SN:hsa-mir-4262	LN:54
+@SQ	SN:hsa-mir-2355	LN:87
+@SQ	SN:hsa-mir-4268	LN:64
+@SQ	SN:hsa-mir-4269	LN:84
+@SQ	SN:hsa-mir-4263	LN:83
+@SQ	SN:hsa-mir-4264	LN:66
+@SQ	SN:hsa-mir-4270	LN:70
+@SQ	SN:hsa-mir-4271	LN:67
+@SQ	SN:hsa-mir-4272	LN:64
+@SQ	SN:hsa-mir-4273	LN:84
+@SQ	SN:hsa-mir-4276	LN:70
+@SQ	SN:hsa-mir-4275	LN:87
+@SQ	SN:hsa-mir-4274	LN:91
+@SQ	SN:hsa-mir-4281	LN:62
+@SQ	SN:hsa-mir-4277	LN:84
+@SQ	SN:hsa-mir-4279	LN:58
+@SQ	SN:hsa-mir-4278	LN:69
+@SQ	SN:hsa-mir-4280	LN:76
+@SQ	SN:hsa-mir-4282	LN:67
+@SQ	SN:hsa-mir-4285	LN:85
+@SQ	SN:hsa-mir-4283-1	LN:80
+@SQ	SN:hsa-mir-4284	LN:81
+@SQ	SN:hsa-mir-4286	LN:93
+@SQ	SN:hsa-mir-4287	LN:78
+@SQ	SN:hsa-mir-4288	LN:67
+@SQ	SN:hsa-mir-4292	LN:67
+@SQ	SN:hsa-mir-4289	LN:70
+@SQ	SN:hsa-mir-4290	LN:95
+@SQ	SN:hsa-mir-4291	LN:65
+@SQ	SN:hsa-mir-4329	LN:71
+@SQ	SN:hsa-mir-4330	LN:105
+@SQ	SN:hsa-mir-500b	LN:79
+@SQ	SN:hsa-mir-4328	LN:56
+@SQ	SN:hsa-mir-1184-2	LN:99
+@SQ	SN:hsa-mir-1184-3	LN:99
+@SQ	SN:hsa-mir-1233-2	LN:82
+@SQ	SN:hsa-mir-1244-2	LN:85
+@SQ	SN:hsa-mir-1244-3	LN:85
+@SQ	SN:hsa-mir-1972-2	LN:77
+@SQ	SN:hsa-mir-1302-9	LN:138
+@SQ	SN:hsa-mir-1302-10	LN:138
+@SQ	SN:hsa-mir-1302-11	LN:138
+@SQ	SN:hsa-mir-4283-2	LN:80
+@SQ	SN:hsa-mir-4315-2	LN:73
+@SQ	SN:hsa-mir-3605	LN:100
+@SQ	SN:hsa-mir-3606	LN:63
+@SQ	SN:hsa-mir-3607	LN:79
+@SQ	SN:hsa-mir-3609	LN:80
+@SQ	SN:hsa-mir-3610	LN:73
+@SQ	SN:hsa-mir-3611	LN:83
+@SQ	SN:hsa-mir-3612	LN:87
+@SQ	SN:hsa-mir-3613	LN:87
+@SQ	SN:hsa-mir-3614	LN:86
+@SQ	SN:hsa-mir-3615	LN:87
+@SQ	SN:hsa-mir-3616	LN:92
+@SQ	SN:hsa-mir-3617	LN:79
+@SQ	SN:hsa-mir-3618	LN:88
+@SQ	SN:hsa-mir-3619	LN:83
+@SQ	SN:hsa-mir-23c	LN:100
+@SQ	SN:hsa-mir-3620	LN:79
+@SQ	SN:hsa-mir-3621	LN:85
+@SQ	SN:hsa-mir-3622a	LN:83
+@SQ	SN:hsa-mir-3622b	LN:95
+@SQ	SN:hsa-mir-3646	LN:84
+@SQ	SN:hsa-mir-3648-1	LN:180
+@SQ	SN:hsa-mir-3649	LN:66
+@SQ	SN:hsa-mir-3650	LN:60
+@SQ	SN:hsa-mir-3651	LN:90
+@SQ	SN:hsa-mir-3652	LN:131
+@SQ	SN:hsa-mir-3653	LN:110
+@SQ	SN:hsa-mir-3654	LN:56
+@SQ	SN:hsa-mir-3655	LN:83
+@SQ	SN:hsa-mir-3656	LN:69
+@SQ	SN:hsa-mir-3657	LN:117
+@SQ	SN:hsa-mir-3658	LN:56
+@SQ	SN:hsa-mir-1273e	LN:102
+@SQ	SN:hsa-mir-3659	LN:99
+@SQ	SN:hsa-mir-3660	LN:100
+@SQ	SN:hsa-mir-3661	LN:96
+@SQ	SN:hsa-mir-3662	LN:95
+@SQ	SN:hsa-mir-3663	LN:97
+@SQ	SN:hsa-mir-3664	LN:99
+@SQ	SN:hsa-mir-3665	LN:105
+@SQ	SN:hsa-mir-3666	LN:111
+@SQ	SN:hsa-mir-3667	LN:74
+@SQ	SN:hsa-mir-3668	LN:75
+@SQ	SN:hsa-mir-3670-1	LN:65
+@SQ	SN:hsa-mir-3671	LN:88
+@SQ	SN:hsa-mir-3672	LN:82
+@SQ	SN:hsa-mir-3674	LN:68
+@SQ	SN:hsa-mir-3675	LN:73
+@SQ	SN:hsa-mir-3677	LN:60
+@SQ	SN:hsa-mir-3678	LN:94
+@SQ	SN:hsa-mir-3679	LN:68
+@SQ	SN:hsa-mir-3680-1	LN:87
+@SQ	SN:hsa-mir-3681	LN:72
+@SQ	SN:hsa-mir-3682	LN:84
+@SQ	SN:hsa-mir-3683	LN:82
+@SQ	SN:hsa-mir-3684	LN:74
+@SQ	SN:hsa-mir-3685	LN:62
+@SQ	SN:hsa-mir-3686	LN:86
+@SQ	SN:hsa-mir-3687-1	LN:61
+@SQ	SN:hsa-mir-3688-1	LN:93
+@SQ	SN:hsa-mir-3689a	LN:78
+@SQ	SN:hsa-mir-3690-1	LN:75
+@SQ	SN:hsa-mir-3691	LN:90
+@SQ	SN:hsa-mir-3692	LN:69
+@SQ	SN:hsa-mir-3713	LN:45
+@SQ	SN:hsa-mir-3714	LN:65
+@SQ	SN:hsa-mir-3180-4	LN:153
+@SQ	SN:hsa-mir-3180-5	LN:153
+@SQ	SN:hsa-mir-3907	LN:151
+@SQ	SN:hsa-mir-3689b	LN:148
+@SQ	SN:hsa-mir-3908	LN:126
+@SQ	SN:hsa-mir-3909	LN:119
+@SQ	SN:hsa-mir-3910-1	LN:111
+@SQ	SN:hsa-mir-3911	LN:109
+@SQ	SN:hsa-mir-3912	LN:105
+@SQ	SN:hsa-mir-3913-1	LN:102
+@SQ	SN:hsa-mir-3913-2	LN:100
+@SQ	SN:hsa-mir-3914-1	LN:99
+@SQ	SN:hsa-mir-3915	LN:97
+@SQ	SN:hsa-mir-3914-2	LN:95
+@SQ	SN:hsa-mir-3916	LN:94
+@SQ	SN:hsa-mir-3917	LN:93
+@SQ	SN:hsa-mir-3918	LN:93
+@SQ	SN:hsa-mir-3919	LN:89
+@SQ	SN:hsa-mir-3150b	LN:86
+@SQ	SN:hsa-mir-3920	LN:86
+@SQ	SN:hsa-mir-3921	LN:85
+@SQ	SN:hsa-mir-3922	LN:84
+@SQ	SN:hsa-mir-3923	LN:83
+@SQ	SN:hsa-mir-3910-2	LN:82
+@SQ	SN:hsa-mir-3924	LN:81
+@SQ	SN:hsa-mir-3925	LN:77
+@SQ	SN:hsa-mir-3926-1	LN:73
+@SQ	SN:hsa-mir-3927	LN:71
+@SQ	SN:hsa-mir-676	LN:67
+@SQ	SN:hsa-mir-3926-2	LN:63
+@SQ	SN:hsa-mir-3928	LN:58
+@SQ	SN:hsa-mir-3929	LN:55
+@SQ	SN:hsa-mir-3934	LN:107
+@SQ	SN:hsa-mir-3935	LN:104
+@SQ	SN:hsa-mir-3936	LN:110
+@SQ	SN:hsa-mir-3937	LN:106
+@SQ	SN:hsa-mir-3938	LN:103
+@SQ	SN:hsa-mir-548y	LN:110
+@SQ	SN:hsa-mir-3939	LN:106
+@SQ	SN:hsa-mir-3940	LN:102
+@SQ	SN:hsa-mir-3941	LN:103
+@SQ	SN:hsa-mir-3942	LN:109
+@SQ	SN:hsa-mir-3943	LN:100
+@SQ	SN:hsa-mir-3944	LN:108
+@SQ	SN:hsa-mir-3945	LN:98
+@SQ	SN:hsa-mir-374c	LN:70
+@SQ	SN:hsa-mir-642b	LN:77
+@SQ	SN:hsa-mir-550b-1	LN:97
+@SQ	SN:hsa-mir-550b-2	LN:97
+@SQ	SN:hsa-mir-548z	LN:97
+@SQ	SN:hsa-mir-548aa-1	LN:97
+@SQ	SN:hsa-mir-548aa-2	LN:97
+@SQ	SN:hsa-mir-548o-2	LN:70
+@SQ	SN:hsa-mir-1254-2	LN:63
+@SQ	SN:hsa-mir-1268b	LN:50
+@SQ	SN:hsa-mir-378d-1	LN:54
+@SQ	SN:hsa-mir-378e	LN:79
+@SQ	SN:hsa-mir-548h-5	LN:60
+@SQ	SN:hsa-mir-548ab	LN:84
+@SQ	SN:hsa-mir-4417	LN:73
+@SQ	SN:hsa-mir-4418	LN:62
+@SQ	SN:hsa-mir-4419a	LN:77
+@SQ	SN:hsa-mir-378f	LN:78
+@SQ	SN:hsa-mir-4420	LN:77
+@SQ	SN:hsa-mir-4421	LN:69
+@SQ	SN:hsa-mir-4422	LN:83
+@SQ	SN:hsa-mir-4423	LN:80
+@SQ	SN:hsa-mir-378g	LN:41
+@SQ	SN:hsa-mir-548ac	LN:88
+@SQ	SN:hsa-mir-4424	LN:86
+@SQ	SN:hsa-mir-4425	LN:84
+@SQ	SN:hsa-mir-4426	LN:63
+@SQ	SN:hsa-mir-4427	LN:68
+@SQ	SN:hsa-mir-4428	LN:73
+@SQ	SN:hsa-mir-4429	LN:73
+@SQ	SN:hsa-mir-4430	LN:49
+@SQ	SN:hsa-mir-548ad	LN:82
+@SQ	SN:hsa-mir-4431	LN:94
+@SQ	SN:hsa-mir-4432	LN:84
+@SQ	SN:hsa-mir-4433a	LN:81
+@SQ	SN:hsa-mir-4434	LN:53
+@SQ	SN:hsa-mir-4435-1	LN:80
+@SQ	SN:hsa-mir-4436a	LN:85
+@SQ	SN:hsa-mir-4435-2	LN:74
+@SQ	SN:hsa-mir-4437	LN:60
+@SQ	SN:hsa-mir-548ae-1	LN:70
+@SQ	SN:hsa-mir-548ae-2	LN:67
+@SQ	SN:hsa-mir-4438	LN:93
+@SQ	SN:hsa-mir-4439	LN:80
+@SQ	SN:hsa-mir-4440	LN:98
+@SQ	SN:hsa-mir-4441	LN:100
+@SQ	SN:hsa-mir-4442	LN:67
+@SQ	SN:hsa-mir-4443	LN:53
+@SQ	SN:hsa-mir-4444-1	LN:74
+@SQ	SN:hsa-mir-4445	LN:70
+@SQ	SN:hsa-mir-4446	LN:67
+@SQ	SN:hsa-mir-4447	LN:91
+@SQ	SN:hsa-mir-4448	LN:86
+@SQ	SN:hsa-mir-4449	LN:66
+@SQ	SN:hsa-mir-548ag-1	LN:66
+@SQ	SN:hsa-mir-548ag-2	LN:64
+@SQ	SN:hsa-mir-4450	LN:65
+@SQ	SN:hsa-mir-548ah	LN:76
+@SQ	SN:hsa-mir-4451	LN:66
+@SQ	SN:hsa-mir-4452	LN:71
+@SQ	SN:hsa-mir-4453	LN:89
+@SQ	SN:hsa-mir-4454	LN:55
+@SQ	SN:hsa-mir-4455	LN:58
+@SQ	SN:hsa-mir-4456	LN:43
+@SQ	SN:hsa-mir-4457	LN:68
+@SQ	SN:hsa-mir-4458	LN:75
+@SQ	SN:hsa-mir-4459	LN:66
+@SQ	SN:hsa-mir-4460	LN:86
+@SQ	SN:hsa-mir-4461	LN:74
+@SQ	SN:hsa-mir-378h	LN:83
+@SQ	SN:hsa-mir-3135b	LN:68
+@SQ	SN:hsa-mir-4462	LN:58
+@SQ	SN:hsa-mir-4463	LN:67
+@SQ	SN:hsa-mir-4464	LN:92
+@SQ	SN:hsa-mir-548ai	LN:88
+@SQ	SN:hsa-mir-548aj-1	LN:72
+@SQ	SN:hsa-mir-548aj-2	LN:92
+@SQ	SN:hsa-mir-4465	LN:70
+@SQ	SN:hsa-mir-4466	LN:54
+@SQ	SN:hsa-mir-4467	LN:63
+@SQ	SN:hsa-mir-4468	LN:64
+@SQ	SN:hsa-mir-4469	LN:79
+@SQ	SN:hsa-mir-4470	LN:72
+@SQ	SN:hsa-mir-4471	LN:83
+@SQ	SN:hsa-mir-4472-1	LN:80
+@SQ	SN:hsa-mir-4472-2	LN:67
+@SQ	SN:hsa-mir-4473	LN:91
+@SQ	SN:hsa-mir-4474	LN:78
+@SQ	SN:hsa-mir-4475	LN:61
+@SQ	SN:hsa-mir-4476	LN:70
+@SQ	SN:hsa-mir-4477a	LN:81
+@SQ	SN:hsa-mir-4477b	LN:81
+@SQ	SN:hsa-mir-4478	LN:86
+@SQ	SN:hsa-mir-3689c	LN:72
+@SQ	SN:hsa-mir-548x-2	LN:100
+@SQ	SN:hsa-mir-3689d-1	LN:74
+@SQ	SN:hsa-mir-3689d-2	LN:80
+@SQ	SN:hsa-mir-3689e	LN:72
+@SQ	SN:hsa-mir-3689f	LN:66
+@SQ	SN:hsa-mir-4479	LN:71
+@SQ	SN:hsa-mir-3155b	LN:56
+@SQ	SN:hsa-mir-548ak	LN:57
+@SQ	SN:hsa-mir-4480	LN:71
+@SQ	SN:hsa-mir-4481	LN:60
+@SQ	SN:hsa-mir-4482	LN:70
+@SQ	SN:hsa-mir-4483	LN:62
+@SQ	SN:hsa-mir-4484	LN:83
+@SQ	SN:hsa-mir-4485	LN:57
+@SQ	SN:hsa-mir-4486	LN:63
+@SQ	SN:hsa-mir-4487	LN:73
+@SQ	SN:hsa-mir-4488	LN:62
+@SQ	SN:hsa-mir-4489	LN:62
+@SQ	SN:hsa-mir-548al	LN:97
+@SQ	SN:hsa-mir-4490	LN:84
+@SQ	SN:hsa-mir-4491	LN:68
+@SQ	SN:hsa-mir-4492	LN:80
+@SQ	SN:hsa-mir-4493	LN:73
+@SQ	SN:hsa-mir-4494	LN:84
+@SQ	SN:hsa-mir-4495	LN:66
+@SQ	SN:hsa-mir-4496	LN:61
+@SQ	SN:hsa-mir-4497	LN:89
+@SQ	SN:hsa-mir-4498	LN:66
+@SQ	SN:hsa-mir-4419b	LN:68
+@SQ	SN:hsa-mir-4499	LN:69
+@SQ	SN:hsa-mir-4500	LN:76
+@SQ	SN:hsa-mir-4501	LN:64
+@SQ	SN:hsa-mir-4502	LN:81
+@SQ	SN:hsa-mir-4503	LN:83
+@SQ	SN:hsa-mir-4504	LN:92
+@SQ	SN:hsa-mir-4505	LN:73
+@SQ	SN:hsa-mir-4506	LN:77
+@SQ	SN:hsa-mir-2392	LN:84
+@SQ	SN:hsa-mir-4507	LN:52
+@SQ	SN:hsa-mir-4508	LN:70
+@SQ	SN:hsa-mir-4509-1	LN:94
+@SQ	SN:hsa-mir-4509-2	LN:94
+@SQ	SN:hsa-mir-4509-3	LN:94
+@SQ	SN:hsa-mir-4510	LN:68
+@SQ	SN:hsa-mir-4511	LN:87
+@SQ	SN:hsa-mir-4512	LN:77
+@SQ	SN:hsa-mir-4513	LN:86
+@SQ	SN:hsa-mir-4514	LN:57
+@SQ	SN:hsa-mir-4515	LN:81
+@SQ	SN:hsa-mir-4516	LN:86
+@SQ	SN:hsa-mir-4517	LN:79
+@SQ	SN:hsa-mir-4518	LN:83
+@SQ	SN:hsa-mir-4519	LN:58
+@SQ	SN:hsa-mir-4520-1	LN:70
+@SQ	SN:hsa-mir-4521	LN:60
+@SQ	SN:hsa-mir-1269b	LN:75
+@SQ	SN:hsa-mir-4522	LN:87
+@SQ	SN:hsa-mir-4523	LN:69
+@SQ	SN:hsa-mir-4524a	LN:69
+@SQ	SN:hsa-mir-4525	LN:75
+@SQ	SN:hsa-mir-4526	LN:87
+@SQ	SN:hsa-mir-4527	LN:70
+@SQ	SN:hsa-mir-4528	LN:90
+@SQ	SN:hsa-mir-4529	LN:78
+@SQ	SN:hsa-mir-4530	LN:56
+@SQ	SN:hsa-mir-4531	LN:47
+@SQ	SN:hsa-mir-4532	LN:51
+@SQ	SN:hsa-mir-4533	LN:71
+@SQ	SN:hsa-mir-4534	LN:60
+@SQ	SN:hsa-mir-378i	LN:76
+@SQ	SN:hsa-mir-4535	LN:59
+@SQ	SN:hsa-mir-548am	LN:74
+@SQ	SN:hsa-mir-1587	LN:53
+@SQ	SN:hsa-mir-4536-1	LN:88
+@SQ	SN:hsa-mir-548an	LN:83
+@SQ	SN:hsa-mir-4537	LN:70
+@SQ	SN:hsa-mir-4538	LN:78
+@SQ	SN:hsa-mir-4539	LN:60
+@SQ	SN:hsa-mir-4540	LN:55
+@SQ	SN:hsa-mir-3960	LN:91
+@SQ	SN:hsa-mir-3972	LN:87
+@SQ	SN:hsa-mir-3973	LN:107
+@SQ	SN:hsa-mir-3974	LN:96
+@SQ	SN:hsa-mir-3975	LN:70
+@SQ	SN:hsa-mir-3976	LN:139
+@SQ	SN:hsa-mir-3977	LN:70
+@SQ	SN:hsa-mir-3978	LN:101
+@SQ	SN:hsa-mir-4632	LN:61
+@SQ	SN:hsa-mir-4633	LN:79
+@SQ	SN:hsa-mir-4634	LN:54
+@SQ	SN:hsa-mir-4635	LN:79
+@SQ	SN:hsa-mir-4636	LN:80
+@SQ	SN:hsa-mir-4637	LN:84
+@SQ	SN:hsa-mir-4638	LN:68
+@SQ	SN:hsa-mir-4639	LN:69
+@SQ	SN:hsa-mir-4640	LN:90
+@SQ	SN:hsa-mir-4641	LN:66
+@SQ	SN:hsa-mir-4642	LN:82
+@SQ	SN:hsa-mir-4643	LN:78
+@SQ	SN:hsa-mir-4644	LN:84
+@SQ	SN:hsa-mir-4645	LN:77
+@SQ	SN:hsa-mir-4646	LN:63
+@SQ	SN:hsa-mir-4647	LN:80
+@SQ	SN:hsa-mir-4648	LN:72
+@SQ	SN:hsa-mir-4649	LN:64
+@SQ	SN:hsa-mir-4650-1	LN:76
+@SQ	SN:hsa-mir-4650-2	LN:76
+@SQ	SN:hsa-mir-4651	LN:73
+@SQ	SN:hsa-mir-4652	LN:78
+@SQ	SN:hsa-mir-4653	LN:83
+@SQ	SN:hsa-mir-4654	LN:76
+@SQ	SN:hsa-mir-4655	LN:74
+@SQ	SN:hsa-mir-4656	LN:75
+@SQ	SN:hsa-mir-4657	LN:53
+@SQ	SN:hsa-mir-4658	LN:65
+@SQ	SN:hsa-mir-4659a	LN:81
+@SQ	SN:hsa-mir-4660	LN:74
+@SQ	SN:hsa-mir-4661	LN:75
+@SQ	SN:hsa-mir-4662a	LN:67
+@SQ	SN:hsa-mir-4659b	LN:73
+@SQ	SN:hsa-mir-4663	LN:76
+@SQ	SN:hsa-mir-4662b	LN:81
+@SQ	SN:hsa-mir-4664	LN:71
+@SQ	SN:hsa-mir-4665	LN:79
+@SQ	SN:hsa-mir-4666a	LN:79
+@SQ	SN:hsa-mir-4667	LN:66
+@SQ	SN:hsa-mir-4668	LN:70
+@SQ	SN:hsa-mir-219b	LN:88
+@SQ	SN:hsa-mir-4669	LN:62
+@SQ	SN:hsa-mir-4670	LN:75
+@SQ	SN:hsa-mir-4671	LN:73
+@SQ	SN:hsa-mir-4672	LN:81
+@SQ	SN:hsa-mir-4673	LN:59
+@SQ	SN:hsa-mir-4674	LN:87
+@SQ	SN:hsa-mir-4675	LN:77
+@SQ	SN:hsa-mir-4676	LN:72
+@SQ	SN:hsa-mir-4677	LN:80
+@SQ	SN:hsa-mir-4678	LN:74
+@SQ	SN:hsa-mir-4679-1	LN:75
+@SQ	SN:hsa-mir-4679-2	LN:77
+@SQ	SN:hsa-mir-4680	LN:66
+@SQ	SN:hsa-mir-4681	LN:72
+@SQ	SN:hsa-mir-4682	LN:80
+@SQ	SN:hsa-mir-4683	LN:81
+@SQ	SN:hsa-mir-4684	LN:82
+@SQ	SN:hsa-mir-4685	LN:69
+@SQ	SN:hsa-mir-4686	LN:76
+@SQ	SN:hsa-mir-4687	LN:80
+@SQ	SN:hsa-mir-1343	LN:84
+@SQ	SN:hsa-mir-4688	LN:83
+@SQ	SN:hsa-mir-4689	LN:70
+@SQ	SN:hsa-mir-4690	LN:60
+@SQ	SN:hsa-mir-4691	LN:85
+@SQ	SN:hsa-mir-4692	LN:63
+@SQ	SN:hsa-mir-4693	LN:75
+@SQ	SN:hsa-mir-4694	LN:80
+@SQ	SN:hsa-mir-4695	LN:74
+@SQ	SN:hsa-mir-4696	LN:70
+@SQ	SN:hsa-mir-4697	LN:78
+@SQ	SN:hsa-mir-4698	LN:80
+@SQ	SN:hsa-mir-4699	LN:74
+@SQ	SN:hsa-mir-4700	LN:74
+@SQ	SN:hsa-mir-4701	LN:63
+@SQ	SN:hsa-mir-3198-2	LN:80
+@SQ	SN:hsa-mir-4703	LN:79
+@SQ	SN:hsa-mir-4704	LN:75
+@SQ	SN:hsa-mir-4705	LN:71
+@SQ	SN:hsa-mir-4706	LN:82
+@SQ	SN:hsa-mir-4707	LN:80
+@SQ	SN:hsa-mir-4708	LN:67
+@SQ	SN:hsa-mir-4709	LN:72
+@SQ	SN:hsa-mir-203b	LN:86
+@SQ	SN:hsa-mir-4710	LN:56
+@SQ	SN:hsa-mir-4711	LN:70
+@SQ	SN:hsa-mir-4712	LN:82
+@SQ	SN:hsa-mir-4713	LN:75
+@SQ	SN:hsa-mir-4714	LN:77
+@SQ	SN:hsa-mir-4715	LN:79
+@SQ	SN:hsa-mir-4716	LN:84
+@SQ	SN:hsa-mir-3529	LN:78
+@SQ	SN:hsa-mir-4717	LN:72
+@SQ	SN:hsa-mir-4718	LN:51
+@SQ	SN:hsa-mir-4719	LN:84
+@SQ	SN:hsa-mir-4720	LN:76
+@SQ	SN:hsa-mir-4721	LN:89
+@SQ	SN:hsa-mir-4722	LN:60
+@SQ	SN:hsa-mir-4520-2	LN:54
+@SQ	SN:hsa-mir-4723	LN:81
+@SQ	SN:hsa-mir-451b	LN:68
+@SQ	SN:hsa-mir-4724	LN:89
+@SQ	SN:hsa-mir-4725	LN:90
+@SQ	SN:hsa-mir-4726	LN:58
+@SQ	SN:hsa-mir-4727	LN:55
+@SQ	SN:hsa-mir-4728	LN:67
+@SQ	SN:hsa-mir-4729	LN:72
+@SQ	SN:hsa-mir-4730	LN:76
+@SQ	SN:hsa-mir-4731	LN:70
+@SQ	SN:hsa-mir-4732	LN:76
+@SQ	SN:hsa-mir-4733	LN:76
+@SQ	SN:hsa-mir-4734	LN:70
+@SQ	SN:hsa-mir-4735	LN:69
+@SQ	SN:hsa-mir-4736	LN:47
+@SQ	SN:hsa-mir-4737	LN:81
+@SQ	SN:hsa-mir-3064	LN:66
+@SQ	SN:hsa-mir-4738	LN:87
+@SQ	SN:hsa-mir-4739	LN:74
+@SQ	SN:hsa-mir-4740	LN:63
+@SQ	SN:hsa-mir-4741	LN:90
+@SQ	SN:hsa-mir-4742	LN:85
+@SQ	SN:hsa-mir-4743	LN:69
+@SQ	SN:hsa-mir-4744	LN:82
+@SQ	SN:hsa-mir-3591	LN:73
+@SQ	SN:hsa-mir-4745	LN:62
+@SQ	SN:hsa-mir-4746	LN:71
+@SQ	SN:hsa-mir-4747	LN:54
+@SQ	SN:hsa-mir-4748	LN:82
+@SQ	SN:hsa-mir-4749	LN:61
+@SQ	SN:hsa-mir-4750	LN:56
+@SQ	SN:hsa-mir-4751	LN:74
+@SQ	SN:hsa-mir-4752	LN:72
+@SQ	SN:hsa-mir-4753	LN:83
+@SQ	SN:hsa-mir-371b	LN:66
+@SQ	SN:hsa-mir-4754	LN:89
+@SQ	SN:hsa-mir-4755	LN:72
+@SQ	SN:hsa-mir-499b	LN:73
+@SQ	SN:hsa-mir-4756	LN:78
+@SQ	SN:hsa-mir-4757	LN:77
+@SQ	SN:hsa-mir-4758	LN:71
+@SQ	SN:hsa-mir-4759	LN:83
+@SQ	SN:hsa-mir-4760	LN:80
+@SQ	SN:hsa-mir-4761	LN:82
+@SQ	SN:hsa-mir-4762	LN:75
+@SQ	SN:hsa-mir-4763	LN:92
+@SQ	SN:hsa-mir-4764	LN:88
+@SQ	SN:hsa-mir-4765	LN:77
+@SQ	SN:hsa-mir-4766	LN:76
+@SQ	SN:hsa-mir-4767	LN:78
+@SQ	SN:hsa-mir-4768	LN:74
+@SQ	SN:hsa-mir-4769	LN:77
+@SQ	SN:hsa-mir-4770	LN:58
+@SQ	SN:hsa-mir-4771-1	LN:74
+@SQ	SN:hsa-mir-4771-2	LN:74
+@SQ	SN:hsa-mir-4772	LN:78
+@SQ	SN:hsa-mir-4773-1	LN:78
+@SQ	SN:hsa-mir-4773-2	LN:78
+@SQ	SN:hsa-mir-4774	LN:76
+@SQ	SN:hsa-mir-4775	LN:75
+@SQ	SN:hsa-mir-4776-1	LN:80
+@SQ	SN:hsa-mir-4776-2	LN:80
+@SQ	SN:hsa-mir-4777	LN:86
+@SQ	SN:hsa-mir-4778	LN:80
+@SQ	SN:hsa-mir-4779	LN:83
+@SQ	SN:hsa-mir-4780	LN:81
+@SQ	SN:hsa-mir-4436b-1	LN:91
+@SQ	SN:hsa-mir-4781	LN:76
+@SQ	SN:hsa-mir-4782	LN:79
+@SQ	SN:hsa-mir-4783	LN:82
+@SQ	SN:hsa-mir-4784	LN:77
+@SQ	SN:hsa-mir-4785	LN:73
+@SQ	SN:hsa-mir-1245b	LN:69
+@SQ	SN:hsa-mir-2467	LN:81
+@SQ	SN:hsa-mir-4786	LN:80
+@SQ	SN:hsa-mir-4787	LN:84
+@SQ	SN:hsa-mir-4788	LN:80
+@SQ	SN:hsa-mir-4789	LN:82
+@SQ	SN:hsa-mir-4790	LN:79
+@SQ	SN:hsa-mir-4791	LN:84
+@SQ	SN:hsa-mir-4792	LN:74
+@SQ	SN:hsa-mir-4793	LN:87
+@SQ	SN:hsa-mir-4794	LN:77
+@SQ	SN:hsa-mir-4795	LN:89
+@SQ	SN:hsa-mir-4796	LN:81
+@SQ	SN:hsa-mir-4797	LN:71
+@SQ	SN:hsa-mir-4798	LN:75
+@SQ	SN:hsa-mir-4799	LN:74
+@SQ	SN:hsa-mir-3688-2	LN:87
+@SQ	SN:hsa-mir-4800	LN:80
+@SQ	SN:hsa-mir-4801	LN:82
+@SQ	SN:hsa-mir-4802	LN:80
+@SQ	SN:hsa-mir-4803	LN:74
+@SQ	SN:hsa-mir-4804	LN:73
+@SQ	SN:hsa-mir-4999	LN:91
+@SQ	SN:hsa-mir-5000	LN:103
+@SQ	SN:hsa-mir-5001	LN:100
+@SQ	SN:hsa-mir-5002	LN:97
+@SQ	SN:hsa-mir-5003	LN:99
+@SQ	SN:hsa-mir-5004	LN:107
+@SQ	SN:hsa-mir-548ao	LN:96
+@SQ	SN:hsa-mir-5006	LN:110
+@SQ	SN:hsa-mir-5007	LN:95
+@SQ	SN:hsa-mir-548ap	LN:96
+@SQ	SN:hsa-mir-5008	LN:94
+@SQ	SN:hsa-mir-5009	LN:100
+@SQ	SN:hsa-mir-5010	LN:120
+@SQ	SN:hsa-mir-5011	LN:103
+@SQ	SN:hsa-mir-5047	LN:100
+@SQ	SN:hsa-mir-5087	LN:76
+@SQ	SN:hsa-mir-5088	LN:79
+@SQ	SN:hsa-mir-5089	LN:84
+@SQ	SN:hsa-mir-5090	LN:85
+@SQ	SN:hsa-mir-5091	LN:93
+@SQ	SN:hsa-mir-5092	LN:88
+@SQ	SN:hsa-mir-5093	LN:100
+@SQ	SN:hsa-mir-5094	LN:85
+@SQ	SN:hsa-mir-5095	LN:88
+@SQ	SN:hsa-mir-1273f	LN:99
+@SQ	SN:hsa-mir-1273g	LN:100
+@SQ	SN:hsa-mir-5096	LN:70
+@SQ	SN:hsa-mir-5186	LN:120
+@SQ	SN:hsa-mir-5187	LN:76
+@SQ	SN:hsa-mir-5188	LN:113
+@SQ	SN:hsa-mir-5189	LN:114
+@SQ	SN:hsa-mir-5190	LN:80
+@SQ	SN:hsa-mir-5191	LN:120
+@SQ	SN:hsa-mir-5192	LN:92
+@SQ	SN:hsa-mir-5193	LN:109
+@SQ	SN:hsa-mir-5194	LN:120
+@SQ	SN:hsa-mir-5195	LN:115
+@SQ	SN:hsa-mir-5196	LN:115
+@SQ	SN:hsa-mir-5197	LN:112
+@SQ	SN:hsa-mir-4436b-2	LN:91
+@SQ	SN:hsa-mir-4444-2	LN:74
+@SQ	SN:hsa-mir-3670-2	LN:65
+@SQ	SN:hsa-mir-3680-2	LN:87
+@SQ	SN:hsa-mir-4524b	LN:115
+@SQ	SN:hsa-mir-5571	LN:113
+@SQ	SN:hsa-mir-5100	LN:119
+@SQ	SN:hsa-mir-5572	LN:137
+@SQ	SN:hsa-mir-548aq	LN:58
+@SQ	SN:hsa-mir-548ar	LN:57
+@SQ	SN:hsa-mir-548as	LN:58
+@SQ	SN:hsa-mir-5579	LN:58
+@SQ	SN:hsa-mir-664b	LN:61
+@SQ	SN:hsa-mir-5580	LN:58
+@SQ	SN:hsa-mir-5581	LN:60
+@SQ	SN:hsa-mir-548at	LN:58
+@SQ	SN:hsa-mir-5582	LN:68
+@SQ	SN:hsa-mir-5583-1	LN:59
+@SQ	SN:hsa-mir-5583-2	LN:59
+@SQ	SN:hsa-mir-5584	LN:60
+@SQ	SN:hsa-mir-5585	LN:59
+@SQ	SN:hsa-mir-5586	LN:59
+@SQ	SN:hsa-mir-5587	LN:53
+@SQ	SN:hsa-mir-548au	LN:54
+@SQ	SN:hsa-mir-1295b	LN:60
+@SQ	SN:hsa-mir-5588	LN:63
+@SQ	SN:hsa-mir-5589	LN:60
+@SQ	SN:hsa-mir-4536-2	LN:88
+@SQ	SN:hsa-mir-5590	LN:54
+@SQ	SN:hsa-mir-5591	LN:65
+@SQ	SN:hsa-mir-548av	LN:62
+@SQ	SN:hsa-mir-5680	LN:84
+@SQ	SN:hsa-mir-5681a	LN:75
+@SQ	SN:hsa-mir-5682	LN:76
+@SQ	SN:hsa-mir-548aw	LN:65
+@SQ	SN:hsa-mir-5683	LN:76
+@SQ	SN:hsa-mir-5684	LN:65
+@SQ	SN:hsa-mir-548ax	LN:73
+@SQ	SN:hsa-mir-5685	LN:79
+@SQ	SN:hsa-mir-5692c-1	LN:91
+@SQ	SN:hsa-mir-5692c-2	LN:77
+@SQ	SN:hsa-mir-5687	LN:77
+@SQ	SN:hsa-mir-5688	LN:83
+@SQ	SN:hsa-mir-5681b	LN:60
+@SQ	SN:hsa-mir-5689	LN:78
+@SQ	SN:hsa-mir-5690	LN:73
+@SQ	SN:hsa-mir-5691	LN:68
+@SQ	SN:hsa-mir-5692a-1	LN:69
+@SQ	SN:hsa-mir-5692a-2	LN:59
+@SQ	SN:hsa-mir-4666b	LN:81
+@SQ	SN:hsa-mir-5693	LN:73
+@SQ	SN:hsa-mir-5694	LN:76
+@SQ	SN:hsa-mir-5695	LN:85
+@SQ	SN:hsa-mir-5696	LN:85
+@SQ	SN:hsa-mir-5697	LN:78
+@SQ	SN:hsa-mir-5698	LN:72
+@SQ	SN:hsa-mir-5699	LN:90
+@SQ	SN:hsa-mir-5700	LN:71
+@SQ	SN:hsa-mir-5701-1	LN:82
+@SQ	SN:hsa-mir-5702	LN:84
+@SQ	SN:hsa-mir-5703	LN:56
+@SQ	SN:hsa-mir-5692b	LN:87
+@SQ	SN:hsa-mir-5704	LN:77
+@SQ	SN:hsa-mir-5705	LN:89
+@SQ	SN:hsa-mir-5706	LN:80
+@SQ	SN:hsa-mir-5707	LN:81
+@SQ	SN:hsa-mir-5708	LN:85
+@SQ	SN:hsa-mir-5739	LN:80
+@SQ	SN:hsa-mir-5701-2	LN:82
+@SQ	SN:hsa-mir-5787	LN:55
+@SQ	SN:hsa-mir-1199	LN:119
+@SQ	SN:hsa-mir-6068	LN:60
+@SQ	SN:hsa-mir-6069	LN:79
+@SQ	SN:hsa-mir-6070	LN:103
+@SQ	SN:hsa-mir-6071	LN:78
+@SQ	SN:hsa-mir-6072	LN:71
+@SQ	SN:hsa-mir-6073	LN:89
+@SQ	SN:hsa-mir-6074	LN:107
+@SQ	SN:hsa-mir-6075	LN:95
+@SQ	SN:hsa-mir-6076	LN:113
+@SQ	SN:hsa-mir-6077	LN:82
+@SQ	SN:hsa-mir-6078	LN:100
+@SQ	SN:hsa-mir-6079	LN:62
+@SQ	SN:hsa-mir-6080	LN:66
+@SQ	SN:hsa-mir-6081	LN:97
+@SQ	SN:hsa-mir-6082	LN:109
+@SQ	SN:hsa-mir-6083	LN:106
+@SQ	SN:hsa-mir-6084	LN:110
+@SQ	SN:hsa-mir-6085	LN:110
+@SQ	SN:hsa-mir-6086	LN:55
+@SQ	SN:hsa-mir-6087	LN:49
+@SQ	SN:hsa-mir-6088	LN:51
+@SQ	SN:hsa-mir-6089-1	LN:64
+@SQ	SN:hsa-mir-6090	LN:60
+@SQ	SN:hsa-mir-6124	LN:85
+@SQ	SN:hsa-mir-6125	LN:96
+@SQ	SN:hsa-mir-6126	LN:89
+@SQ	SN:hsa-mir-6127	LN:109
+@SQ	SN:hsa-mir-6128	LN:109
+@SQ	SN:hsa-mir-378j	LN:109
+@SQ	SN:hsa-mir-6129	LN:109
+@SQ	SN:hsa-mir-6130	LN:109
+@SQ	SN:hsa-mir-6131	LN:109
+@SQ	SN:hsa-mir-6132	LN:109
+@SQ	SN:hsa-mir-6133	LN:108
+@SQ	SN:hsa-mir-6134	LN:109
+@SQ	SN:hsa-mir-6165	LN:84
+@SQ	SN:hsa-mir-6499	LN:62
+@SQ	SN:hsa-mir-548ay	LN:107
+@SQ	SN:hsa-mir-6500	LN:86
+@SQ	SN:hsa-mir-548az	LN:95
+@SQ	SN:hsa-mir-6501	LN:67
+@SQ	SN:hsa-mir-6502	LN:76
+@SQ	SN:hsa-mir-6503	LN:86
+@SQ	SN:hsa-mir-6504	LN:61
+@SQ	SN:hsa-mir-6505	LN:71
+@SQ	SN:hsa-mir-6506	LN:66
+@SQ	SN:hsa-mir-6507	LN:70
+@SQ	SN:hsa-mir-6508	LN:60
+@SQ	SN:hsa-mir-6509	LN:85
+@SQ	SN:hsa-mir-6510	LN:54
+@SQ	SN:hsa-mir-6511a-1	LN:67
+@SQ	SN:hsa-mir-6512	LN:77
+@SQ	SN:hsa-mir-6513	LN:64
+@SQ	SN:hsa-mir-6514	LN:70
+@SQ	SN:hsa-mir-6515	LN:57
+@SQ	SN:hsa-mir-6715a	LN:79
+@SQ	SN:hsa-mir-6715b	LN:77
+@SQ	SN:hsa-mir-6716	LN:80
+@SQ	SN:hsa-mir-6717	LN:73
+@SQ	SN:hsa-mir-6511b-1	LN:85
+@SQ	SN:hsa-mir-6718	LN:80
+@SQ	SN:hsa-mir-6719	LN:87
+@SQ	SN:hsa-mir-6720	LN:98
+@SQ	SN:hsa-mir-6721	LN:87
+@SQ	SN:hsa-mir-6722	LN:78
+@SQ	SN:hsa-mir-6723	LN:89
+@SQ	SN:hsa-mir-6724-1	LN:92
+@SQ	SN:hsa-mir-892c	LN:77
+@SQ	SN:hsa-mir-6726	LN:61
+@SQ	SN:hsa-mir-6727	LN:65
+@SQ	SN:hsa-mir-6728	LN:89
+@SQ	SN:hsa-mir-6729	LN:65
+@SQ	SN:hsa-mir-6730	LN:67
+@SQ	SN:hsa-mir-6731	LN:72
+@SQ	SN:hsa-mir-6732	LN:60
+@SQ	SN:hsa-mir-6733	LN:61
+@SQ	SN:hsa-mir-6734	LN:68
+@SQ	SN:hsa-mir-6735	LN:73
+@SQ	SN:hsa-mir-6736	LN:59
+@SQ	SN:hsa-mir-6737	LN:70
+@SQ	SN:hsa-mir-6738	LN:64
+@SQ	SN:hsa-mir-6739	LN:75
+@SQ	SN:hsa-mir-6740	LN:113
+@SQ	SN:hsa-mir-6741	LN:63
+@SQ	SN:hsa-mir-6742	LN:62
+@SQ	SN:hsa-mir-6743	LN:71
+@SQ	SN:hsa-mir-6744	LN:66
+@SQ	SN:hsa-mir-6745	LN:127
+@SQ	SN:hsa-mir-6746	LN:63
+@SQ	SN:hsa-mir-6747	LN:61
+@SQ	SN:hsa-mir-6748	LN:71
+@SQ	SN:hsa-mir-6749	LN:69
+@SQ	SN:hsa-mir-6750	LN:75
+@SQ	SN:hsa-mir-6751	LN:63
+@SQ	SN:hsa-mir-6752	LN:71
+@SQ	SN:hsa-mir-6753	LN:164
+@SQ	SN:hsa-mir-6754	LN:66
+@SQ	SN:hsa-mir-6755	LN:66
+@SQ	SN:hsa-mir-6756	LN:63
+@SQ	SN:hsa-mir-6757	LN:69
+@SQ	SN:hsa-mir-6758	LN:63
+@SQ	SN:hsa-mir-6759	LN:65
+@SQ	SN:hsa-mir-6760	LN:68
+@SQ	SN:hsa-mir-6761	LN:72
+@SQ	SN:hsa-mir-6762	LN:86
+@SQ	SN:hsa-mir-6763	LN:65
+@SQ	SN:hsa-mir-6764	LN:61
+@SQ	SN:hsa-mir-6765	LN:87
+@SQ	SN:hsa-mir-6766	LN:72
+@SQ	SN:hsa-mir-6767	LN:66
+@SQ	SN:hsa-mir-6768	LN:72
+@SQ	SN:hsa-mir-6769a	LN:73
+@SQ	SN:hsa-mir-6770-1	LN:60
+@SQ	SN:hsa-mir-6771	LN:60
+@SQ	SN:hsa-mir-6772	LN:64
+@SQ	SN:hsa-mir-6773	LN:74
+@SQ	SN:hsa-mir-6774	LN:70
+@SQ	SN:hsa-mir-6775	LN:69
+@SQ	SN:hsa-mir-6776	LN:59
+@SQ	SN:hsa-mir-6777	LN:66
+@SQ	SN:hsa-mir-6778	LN:73
+@SQ	SN:hsa-mir-6779	LN:64
+@SQ	SN:hsa-mir-6780a	LN:68
+@SQ	SN:hsa-mir-6781	LN:64
+@SQ	SN:hsa-mir-6782	LN:69
+@SQ	SN:hsa-mir-6783	LN:64
+@SQ	SN:hsa-mir-6784	LN:67
+@SQ	SN:hsa-mir-6785	LN:81
+@SQ	SN:hsa-mir-6786	LN:113
+@SQ	SN:hsa-mir-6787	LN:61
+@SQ	SN:hsa-mir-6788	LN:66
+@SQ	SN:hsa-mir-6789	LN:98
+@SQ	SN:hsa-mir-6790	LN:63
+@SQ	SN:hsa-mir-6791	LN:67
+@SQ	SN:hsa-mir-6792	LN:67
+@SQ	SN:hsa-mir-6793	LN:63
+@SQ	SN:hsa-mir-6794	LN:68
+@SQ	SN:hsa-mir-6795	LN:68
+@SQ	SN:hsa-mir-6796	LN:62
+@SQ	SN:hsa-mir-6797	LN:72
+@SQ	SN:hsa-mir-6798	LN:67
+@SQ	SN:hsa-mir-6799	LN:69
+@SQ	SN:hsa-mir-6800	LN:82
+@SQ	SN:hsa-mir-6801	LN:79
+@SQ	SN:hsa-mir-6802	LN:65
+@SQ	SN:hsa-mir-6803	LN:65
+@SQ	SN:hsa-mir-6804	LN:68
+@SQ	SN:hsa-mir-6805	LN:62
+@SQ	SN:hsa-mir-6806	LN:64
+@SQ	SN:hsa-mir-6807	LN:92
+@SQ	SN:hsa-mir-6808	LN:59
+@SQ	SN:hsa-mir-6809	LN:116
+@SQ	SN:hsa-mir-6810	LN:70
+@SQ	SN:hsa-mir-6811	LN:58
+@SQ	SN:hsa-mir-6812	LN:64
+@SQ	SN:hsa-mir-6813	LN:56
+@SQ	SN:hsa-mir-6814	LN:70
+@SQ	SN:hsa-mir-6815	LN:61
+@SQ	SN:hsa-mir-6816	LN:66
+@SQ	SN:hsa-mir-6817	LN:66
+@SQ	SN:hsa-mir-6818	LN:65
+@SQ	SN:hsa-mir-6819	LN:61
+@SQ	SN:hsa-mir-6820	LN:62
+@SQ	SN:hsa-mir-6821	LN:74
+@SQ	SN:hsa-mir-6822	LN:61
+@SQ	SN:hsa-mir-6823	LN:61
+@SQ	SN:hsa-mir-6824	LN:63
+@SQ	SN:hsa-mir-6825	LN:66
+@SQ	SN:hsa-mir-6826	LN:98
+@SQ	SN:hsa-mir-6827	LN:59
+@SQ	SN:hsa-mir-6828	LN:60
+@SQ	SN:hsa-mir-6829	LN:67
+@SQ	SN:hsa-mir-6830	LN:70
+@SQ	SN:hsa-mir-6831	LN:81
+@SQ	SN:hsa-mir-6832	LN:72
+@SQ	SN:hsa-mir-6833	LN:61
+@SQ	SN:hsa-mir-6834	LN:81
+@SQ	SN:hsa-mir-6835	LN:64
+@SQ	SN:hsa-mir-6780b	LN:79
+@SQ	SN:hsa-mir-6836	LN:63
+@SQ	SN:hsa-mir-6837	LN:64
+@SQ	SN:hsa-mir-6838	LN:56
+@SQ	SN:hsa-mir-6839	LN:113
+@SQ	SN:hsa-mir-6840	LN:71
+@SQ	SN:hsa-mir-6841	LN:72
+@SQ	SN:hsa-mir-6842	LN:65
+@SQ	SN:hsa-mir-6843	LN:151
+@SQ	SN:hsa-mir-6844	LN:62
+@SQ	SN:hsa-mir-6845	LN:61
+@SQ	SN:hsa-mir-6846	LN:60
+@SQ	SN:hsa-mir-6847	LN:69
+@SQ	SN:hsa-mir-6848	LN:70
+@SQ	SN:hsa-mir-6849	LN:69
+@SQ	SN:hsa-mir-6850	LN:61
+@SQ	SN:hsa-mir-6851	LN:67
+@SQ	SN:hsa-mir-6852	LN:66
+@SQ	SN:hsa-mir-6853	LN:74
+@SQ	SN:hsa-mir-6854	LN:69
+@SQ	SN:hsa-mir-6855	LN:67
+@SQ	SN:hsa-mir-6856	LN:67
+@SQ	SN:hsa-mir-6857	LN:93
+@SQ	SN:hsa-mir-6858	LN:67
+@SQ	SN:hsa-mir-6859-1	LN:68
+@SQ	SN:hsa-mir-6769b	LN:62
+@SQ	SN:hsa-mir-6860	LN:66
+@SQ	SN:hsa-mir-6861	LN:64
+@SQ	SN:hsa-mir-6862-1	LN:70
+@SQ	SN:hsa-mir-6863	LN:90
+@SQ	SN:hsa-mir-6864	LN:70
+@SQ	SN:hsa-mir-6865	LN:65
+@SQ	SN:hsa-mir-6866	LN:69
+@SQ	SN:hsa-mir-6867	LN:67
+@SQ	SN:hsa-mir-6868	LN:58
+@SQ	SN:hsa-mir-6869	LN:62
+@SQ	SN:hsa-mir-6870	LN:60
+@SQ	SN:hsa-mir-6871	LN:56
+@SQ	SN:hsa-mir-6872	LN:62
+@SQ	SN:hsa-mir-6873	LN:63
+@SQ	SN:hsa-mir-6874	LN:71
+@SQ	SN:hsa-mir-6875	LN:72
+@SQ	SN:hsa-mir-6876	LN:73
+@SQ	SN:hsa-mir-6877	LN:64
+@SQ	SN:hsa-mir-6878	LN:66
+@SQ	SN:hsa-mir-6879	LN:66
+@SQ	SN:hsa-mir-6880	LN:62
+@SQ	SN:hsa-mir-6881	LN:76
+@SQ	SN:hsa-mir-6882	LN:66
+@SQ	SN:hsa-mir-6883	LN:78
+@SQ	SN:hsa-mir-6884	LN:78
+@SQ	SN:hsa-mir-6885	LN:66
+@SQ	SN:hsa-mir-6886	LN:61
+@SQ	SN:hsa-mir-6887	LN:65
+@SQ	SN:hsa-mir-6888	LN:67
+@SQ	SN:hsa-mir-6889	LN:59
+@SQ	SN:hsa-mir-6890	LN:61
+@SQ	SN:hsa-mir-6891	LN:93
+@SQ	SN:hsa-mir-6892	LN:115
+@SQ	SN:hsa-mir-6893	LN:69
+@SQ	SN:hsa-mir-6894	LN:57
+@SQ	SN:hsa-mir-6895	LN:78
+@SQ	SN:hsa-mir-7106	LN:65
+@SQ	SN:hsa-mir-7107	LN:80
+@SQ	SN:hsa-mir-7108	LN:87
+@SQ	SN:hsa-mir-7109	LN:65
+@SQ	SN:hsa-mir-7110	LN:86
+@SQ	SN:hsa-mir-7111	LN:72
+@SQ	SN:hsa-mir-7112	LN:65
+@SQ	SN:hsa-mir-7113	LN:59
+@SQ	SN:hsa-mir-7114	LN:61
+@SQ	SN:hsa-mir-6511b-2	LN:71
+@SQ	SN:hsa-mir-3690-2	LN:75
+@SQ	SN:hsa-mir-6089-2	LN:64
+@SQ	SN:hsa-mir-6511a-2	LN:67
+@SQ	SN:hsa-mir-6511a-3	LN:67
+@SQ	SN:hsa-mir-6511a-4	LN:67
+@SQ	SN:hsa-mir-7150	LN:94
+@SQ	SN:hsa-mir-7151	LN:60
+@SQ	SN:hsa-mir-7152	LN:54
+@SQ	SN:hsa-mir-7153	LN:57
+@SQ	SN:hsa-mir-7154	LN:73
+@SQ	SN:hsa-mir-7155	LN:56
+@SQ	SN:hsa-mir-7156	LN:60
+@SQ	SN:hsa-mir-7157	LN:60
+@SQ	SN:hsa-mir-7158	LN:71
+@SQ	SN:hsa-mir-7161	LN:84
+@SQ	SN:hsa-mir-7159	LN:66
+@SQ	SN:hsa-mir-7160	LN:52
+@SQ	SN:hsa-mir-486-2	LN:64
+@SQ	SN:hsa-mir-7162	LN:69
+@SQ	SN:hsa-mir-7515	LN:67
+@SQ	SN:hsa-mir-7641-1	LN:61
+@SQ	SN:hsa-mir-7641-2	LN:53
+@SQ	SN:hsa-mir-7702	LN:59
+@SQ	SN:hsa-mir-7703	LN:77
+@SQ	SN:hsa-mir-7704	LN:59
+@SQ	SN:hsa-mir-7705	LN:57
+@SQ	SN:hsa-mir-7706	LN:67
+@SQ	SN:hsa-mir-7843	LN:79
+@SQ	SN:hsa-mir-4433b	LN:102
+@SQ	SN:hsa-mir-1273h	LN:116
+@SQ	SN:hsa-mir-6516	LN:81
+@SQ	SN:hsa-mir-7844	LN:122
+@SQ	SN:hsa-mir-7845	LN:99
+@SQ	SN:hsa-mir-7846	LN:96
+@SQ	SN:hsa-mir-7847	LN:103
+@SQ	SN:hsa-mir-7848	LN:101
+@SQ	SN:hsa-mir-7849	LN:106
+@SQ	SN:hsa-mir-7850	LN:79
+@SQ	SN:hsa-mir-7851	LN:160
+@SQ	SN:hsa-mir-7852	LN:82
+@SQ	SN:hsa-mir-7853	LN:132
+@SQ	SN:hsa-mir-7854	LN:65
+@SQ	SN:hsa-mir-7855	LN:61
+@SQ	SN:hsa-mir-7856	LN:56
+@SQ	SN:hsa-mir-548ba	LN:56
+@SQ	SN:hsa-mir-7973-1	LN:76
+@SQ	SN:hsa-mir-7973-2	LN:76
+@SQ	SN:hsa-mir-7974	LN:79
+@SQ	SN:hsa-mir-7975	LN:68
+@SQ	SN:hsa-mir-7976	LN:66
+@SQ	SN:hsa-mir-7977	LN:49
+@SQ	SN:hsa-mir-7978	LN:59
+@SQ	SN:hsa-mir-8052	LN:69
+@SQ	SN:hsa-mir-8053	LN:75
+@SQ	SN:hsa-mir-8054	LN:86
+@SQ	SN:hsa-mir-8055	LN:97
+@SQ	SN:hsa-mir-8056	LN:82
+@SQ	SN:hsa-mir-8057	LN:69
+@SQ	SN:hsa-mir-8058	LN:89
+@SQ	SN:hsa-mir-8059	LN:81
+@SQ	SN:hsa-mir-8060	LN:76
+@SQ	SN:hsa-mir-8061	LN:75
+@SQ	SN:hsa-mir-8062	LN:85
+@SQ	SN:hsa-mir-8063	LN:81
+@SQ	SN:hsa-mir-8064	LN:90
+@SQ	SN:hsa-mir-8065	LN:100
+@SQ	SN:hsa-mir-8066	LN:78
+@SQ	SN:hsa-mir-8067	LN:77
+@SQ	SN:hsa-mir-8068	LN:68
+@SQ	SN:hsa-mir-8069-1	LN:86
+@SQ	SN:hsa-mir-8070	LN:88
+@SQ	SN:hsa-mir-8071-1	LN:65
+@SQ	SN:hsa-mir-8072	LN:80
+@SQ	SN:hsa-mir-8073	LN:72
+@SQ	SN:hsa-mir-8074	LN:81
+@SQ	SN:hsa-mir-8075	LN:80
+@SQ	SN:hsa-mir-8076	LN:83
+@SQ	SN:hsa-mir-8077	LN:75
+@SQ	SN:hsa-mir-8078	LN:84
+@SQ	SN:hsa-mir-8079	LN:72
+@SQ	SN:hsa-mir-8080	LN:89
+@SQ	SN:hsa-mir-8081	LN:95
+@SQ	SN:hsa-mir-8082	LN:81
+@SQ	SN:hsa-mir-8083	LN:89
+@SQ	SN:hsa-mir-8084	LN:89
+@SQ	SN:hsa-mir-8085	LN:65
+@SQ	SN:hsa-mir-8086	LN:93
+@SQ	SN:hsa-mir-8087	LN:78
+@SQ	SN:hsa-mir-8088	LN:86
+@SQ	SN:hsa-mir-8089	LN:82
+@SQ	SN:hsa-mir-6862-2	LN:70
+@SQ	SN:hsa-mir-8071-2	LN:65
+@SQ	SN:hsa-mir-6770-2	LN:60
+@SQ	SN:hsa-mir-6770-3	LN:60
+@SQ	SN:hsa-mir-6859-2	LN:68
+@SQ	SN:hsa-mir-6859-3	LN:68
+@SQ	SN:hsa-mir-8485	LN:91
+@SQ	SN:hsa-mir-9500	LN:65
+@SQ	SN:hsa-mir-548bb	LN:66
+@SQ	SN:hsa-mir-3179-4	LN:84
+@SQ	SN:hsa-mir-1244-4	LN:85
+@SQ	SN:hsa-mir-3648-2	LN:180
+@SQ	SN:hsa-mir-3670-3	LN:65
+@SQ	SN:hsa-mir-3670-4	LN:65
+@SQ	SN:hsa-mir-3687-2	LN:61
+@SQ	SN:hsa-mir-6724-2	LN:92
+@SQ	SN:hsa-mir-6724-3	LN:92
+@SQ	SN:hsa-mir-6724-4	LN:92
+@SQ	SN:hsa-mir-8069-2	LN:86
+@SQ	SN:hsa-mir-941-5	LN:72
+@SQ	SN:hsa-mir-6859-4	LN:68
+@SQ	SN:hsa-mir-5701-3	LN:82
+seq_100142_x33	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTGGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:9A12
+seq_100142_x33	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:9A12
+seq_100142_x33	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:9A12
+seq_103154_x19	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTAAAAA	]]]]]]]]]]]]]]]]]]]]]	NM:i:3	MD:Z:17T1GT
+seq_103154_x19	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:3	MD:Z:17T1GT
+seq_103154_x19	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:3	MD:Z:17T1GT
+seq_103166_x4	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTAAAAT	]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:17T1G1
+seq_103166_x4	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:2	MD:Z:17T1G1
+seq_103166_x4	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:2	MD:Z:17T1G1
+seq_106168_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTACGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:10G11T
+seq_106168_x3	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:10G11TA
+seq_106168_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:10G11T
+seq_106355_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAATAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:7G13
+seq_106355_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:7G13
+seq_106355_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:7G13
+seq_112015_x2	0	hsa-let-7a-1	59	255	21M	*	0	0	ATACAATCTACTGTCTTTCCT	]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:21
+seq_112015_x2	256	hsa-let-7a-3	54	255	21M	*	0	0	*	*	NM:i:0	MD:Z:21
+seq_116414_x10	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGCAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:5T15
+seq_116414_x10	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:5T15
+seq_116414_x10	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:5T15
+seq_116771_x4	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGCTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:12T8
+seq_116771_x4	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:12T8
+seq_116771_x4	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:12T8
+seq_116995_x3	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGCATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:15T5
+seq_116995_x3	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:15T5
+seq_116995_x3	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:15T5
+seq_116995_x3	256	hsa-let-7d	8	255	21M	*	0	0	*	*	NM:i:1	MD:Z:A20
+seq_117641_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGGGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:2A18
+seq_117641_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:2A18
+seq_117641_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:2A18
+seq_123004_x18	0	hsa-let-7a-1	6	255	22M	*	0	0	CGAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:T21
+seq_123004_x18	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:T21
+seq_123004_x18	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:T21
+seq_123031_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGTGA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:21TT
+seq_123031_x2	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:21TTA
+seq_123031_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:21TT
+seq_123031_x2	256	hsa-let-7e	8	255	20M1D3M	*	0	0	*	*	NM:i:2	MD:Z:8G11T3
+seq_12405_x25	0	hsa-let-7a-3	3	255	22M	*	0	0	GTGAGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:22
+seq_126405_x11	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGGTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:12T9
+seq_126405_x11	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:12T9
+seq_126405_x11	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:12T9
+seq_130509_x11	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAATAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:7G14
+seq_130509_x11	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:7G14
+seq_130509_x11	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:7G14
+seq_13155_x2	0	hsa-let-7a-1	57	255	22M1D	*	0	0	NTATACAATCTACTGTCTTTCT	!]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:C20CT
+seq_13155_x2	256	hsa-let-7a-3	52	255	22M1D	*	0	0	*	*	NM:i:2	MD:Z:C20CT
+seq_135288_x17	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTNTAGT	]]]]]]]]]]]]]]]]!]]]]	NM:i:1	MD:Z:16A4
+seq_135288_x17	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:16A4
+seq_135288_x17	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:16A4
+seq_138601_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTAAAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:17T3
+seq_138601_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:17T3
+seq_138601_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:17T3
+seq_139158_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	TAAGGTAGTAGGTTGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G21
+seq_139158_x3	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:1G21
+seq_139158_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:1G21
+seq_143129_x10	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTCTAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:16A5
+seq_143129_x10	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:16A5
+seq_143129_x10	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:16A5
+seq_144040_x19	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTCGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:13T8
+seq_144040_x19	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:13T8
+seq_144040_x19	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:13T8
+seq_145871_x27	0	hsa-let-7a-1	6	255	22M	*	0	0	TCAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G20
+seq_145871_x27	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:1G20
+seq_145871_x27	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:1G20
+seq_14661_x3	0	hsa-let-7a-1	6	255	22M1I2M	*	0	0	TGAGGTAGTAGGTTGTATAGTTATT	]]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:24
+seq_157486_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGAAGTAGGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:5T16T
+seq_157486_x3	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:5T16TA
+seq_157486_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:5T16T
+seq_158397_x11	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTCTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:14G7
+seq_158397_x11	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:14G7
+seq_158397_x11	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:14G7
+seq_159236_x5	0	hsa-let-7a-1	5	255	23M	*	0	0	ATGAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:23
+seq_16037_x3	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTTTAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:16A4
+seq_16037_x3	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:16A4
+seq_16037_x3	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:16A4
+seq_166546_x2	0	hsa-let-7a-3	3	255	20M	*	0	0	GTGAGGTAGTAGGTTGTATA	]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:20
+seq_168595_x12	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTGGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:6A15
+seq_168595_x12	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:6A15
+seq_168595_x12	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:6A15
+seq_169461_x374	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGTTG	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:22T
+seq_169461_x374	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:22T
+seq_169461_x374	256	hsa-let-7a-3	4	255	23M1D	*	0	0	*	*	NM:i:1	MD:Z:22TG
+seq_169461_x374	256	hsa-let-7e	8	255	23M	*	0	0	*	*	NM:i:1	MD:Z:8G14
+seq_169461_x374	256	hsa-let-7f-1	7	255	23M	*	0	0	*	*	NM:i:1	MD:Z:11A11
+seq_169463_x3713	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:22T
+seq_169463_x3713	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:1	MD:Z:22TA
+seq_169463_x3713	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:22T
+seq_169470_x5355	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:23
+seq_169470_x5355	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:0	MD:Z:23
+seq_169470_x5355	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:0	MD:Z:23
+seq_170698_x15	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGAAA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:3	MD:Z:20TTT
+seq_170698_x15	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:3	MD:Z:20TTTA
+seq_170698_x15	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:3	MD:Z:20TTT
+seq_172637_x64	0	hsa-let-7a-1	6	255	24M	*	0	0	TGAGGTAGTAGGTTGTATAGTTAT	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:22T1
+seq_172637_x64	256	hsa-let-7a-2	5	255	22M1I1M	*	0	0	*	*	NM:i:1	MD:Z:23
+seq_172637_x64	256	hsa-let-7a-3	4	255	22M1I1M	*	0	0	*	*	NM:i:1	MD:Z:23
+seq_172645_x168	0	hsa-let-7a-2	5	255	24M	*	0	0	TGAGGTAGTAGGTTGTATAGTTAA	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:22T1
+seq_172647_x3	0	hsa-let-7a-1	6	255	24M	*	0	0	TGAGGTAGTAGGTTGTATAGTTAC	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:22TT
+seq_172647_x3	256	hsa-let-7a-2	5	255	24M1D	*	0	0	*	*	NM:i:2	MD:Z:22TAG
+seq_172647_x3	256	hsa-let-7a-3	4	255	24M	*	0	0	*	*	NM:i:2	MD:Z:22TG
+seq_174036_x92	0	hsa-let-7a-1	6	255	21M	*	0	0	NGAGGTAGTAGGTTGTATAGT	!]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:T20
+seq_174036_x92	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:T20
+seq_174036_x92	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:T20
+seq_174044_x3	0	hsa-let-7a-1	6	255	21M	*	0	0	NGAGGTAGTAGGTTGTATAGA	!]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:T19T
+seq_174044_x3	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:2	MD:Z:T19T
+seq_174044_x3	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:2	MD:Z:T19T
+seq_175355_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTATGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:10G10
+seq_175355_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:10G10
+seq_175355_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:10G10
+seq_176015_x5	0	hsa-let-7a-1	7	255	20M	*	0	0	GAGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:20
+seq_176015_x5	256	hsa-let-7a-2	6	255	20M	*	0	0	*	*	NM:i:0	MD:Z:20
+seq_176015_x5	256	hsa-let-7a-3	5	255	20M	*	0	0	*	*	NM:i:0	MD:Z:20
+seq_176864_x10	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTATAGC	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T
+seq_176864_x10	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:20T
+seq_176864_x10	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:20T
+seq_176942_x2	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGGA	]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:20TT
+seq_176942_x2	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:2	MD:Z:20TT
+seq_176942_x2	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:2	MD:Z:20TT
+seq_176942_x2	256	hsa-let-7c	11	255	18M1I3M	*	0	0	*	*	NM:i:2	MD:Z:20T
+seq_17844_x4	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGTAG	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:21TT
+seq_17844_x4	256	hsa-let-7a-2	5	255	23M2D	*	0	0	*	*	NM:i:2	MD:Z:21TTAG
+seq_17844_x4	256	hsa-let-7a-3	4	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:21TTG
+seq_17844_x4	256	hsa-let-7e	8	255	23M	*	0	0	*	*	NM:i:2	MD:Z:8G12T1
+seq_17844_x4	256	hsa-let-7f-1	7	255	23M	*	0	0	*	*	NM:i:2	MD:Z:11A9T1
+seq_17845_x156	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGTAA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:21TT
+seq_17845_x156	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:21TTA
+seq_17845_x156	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:21TT
+seq_17852_x68	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGTAT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:21T1
+seq_17852_x68	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:21T1
+seq_17852_x68	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:21T1
+seq_183932_x18	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGCATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:15T6
+seq_183932_x18	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:15T6
+seq_183932_x18	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:15T6
+seq_183932_x18	256	hsa-let-7d	8	255	22M	*	0	0	*	*	NM:i:1	MD:Z:A21
+seq_189065_x122867	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:22
+seq_189065_x122867	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:0	MD:Z:22
+seq_189065_x122867	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:0	MD:Z:22
+seq_192482_x5	0	hsa-let-7a-1	6	255	21M	*	0	0	TGCGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:2A18
+seq_192482_x5	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:2A18
+seq_192482_x5	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:2A18
+seq_19875_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGCTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:11G9
+seq_19875_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:11G9
+seq_19875_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:11G9
+seq_19875_x2	256	hsa-let-7f-1	7	255	21M	*	0	0	*	*	NM:i:1	MD:Z:11A9
+seq_19875_x2	256	hsa-let-7f-2	8	255	21M	*	0	0	*	*	NM:i:1	MD:Z:11A9
+seq_202212_x2	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTGGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:13T8
+seq_202212_x2	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:13T8
+seq_202212_x2	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:13T8
+seq_202717_x17	0	hsa-let-7a-1	6	255	21M	*	0	0	TTAGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G19
+seq_202717_x17	256	hsa-let-7a-2	4	255	1D21M	*	0	0	*	*	NM:i:1	MD:Z:T1G19
+seq_202717_x17	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:1G19
+seq_205280_x15	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATCGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:18A3
+seq_205280_x15	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:18A3
+seq_205280_x15	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:18A3
+seq_205280_x15	256	hsa-let-7c	11	255	22M	*	0	0	*	*	NM:i:1	MD:Z:18G3
+seq_205567_x10	0	hsa-let-7a-1	6	255	22M	*	0	0	TNAGGTAGTAGGTTGTATAGTT	]!]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G20
+seq_205567_x10	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:1G20
+seq_205567_x10	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:1G20
+seq_206276_x12	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTANGTTGTATAGT	]]]]]]]]]]!]]]]]]]]]]	NM:i:1	MD:Z:10G10
+seq_206276_x12	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:10G10
+seq_206276_x12	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:10G10
+seq_206948_x23	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGAATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:15T6
+seq_206948_x23	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:15T6
+seq_206948_x23	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:15T6
+seq_207865_x116	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTANGTTGTATAGTT	]]]]]]]]]]!]]]]]]]]]]]	NM:i:1	MD:Z:10G11
+seq_207865_x116	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:10G11
+seq_207865_x116	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:10G11
+seq_208445_x4	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAAGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:10G10
+seq_208445_x4	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:10G10
+seq_208445_x4	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:10G10
+seq_208445_x4	256	hsa-mir-98	22	255	21M	*	0	0	*	*	NM:i:1	MD:Z:18T2
+seq_210218_x2	0	hsa-let-7a-1	58	255	22M	*	0	0	NATACAATCTACTGTCTTTCCT	!]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:T21
+seq_210218_x2	256	hsa-let-7a-3	53	255	22M	*	0	0	*	*	NM:i:1	MD:Z:T21
+seq_21071_x18	0	hsa-let-7a-2	5	255	24M	*	0	0	TGAGGTAGTAGATTGTATAGTTTA	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:11G12
+seq_21071_x18	256	hsa-let-7f-2	8	255	24M1D	*	0	0	*	*	NM:i:1	MD:Z:23TA
+seq_211322_x5	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGCAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:8T12
+seq_211322_x5	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:8T12
+seq_211322_x5	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:8T12
+seq_211322_x5	256	hsa-let-7e	8	255	21M	*	0	0	*	*	NM:i:1	MD:Z:8G12
+seq_211587_x3	0	hsa-let-7a-1	57	255	18M	*	0	0	CTATACAATCTACTGTCT	]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:18
+seq_211587_x3	256	hsa-let-7a-3	52	255	18M	*	0	0	*	*	NM:i:0	MD:Z:18
+seq_215372_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGCTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:4G16
+seq_215372_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:4G16
+seq_215372_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:4G16
+seq_215888_x95	0	hsa-let-7a-1	57	255	22M1D	*	0	0	CTATACAATCTACTGTCTTTCT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:21CT
+seq_215888_x95	256	hsa-let-7a-3	52	255	22M1D	*	0	0	*	*	NM:i:1	MD:Z:21CT
+seq_215893_x7	0	hsa-let-7a-1	57	255	22M	*	0	0	CTATACAATCTACTGTCTTTCA	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:21C
+seq_215893_x7	256	hsa-let-7a-3	52	255	22M	*	0	0	*	*	NM:i:1	MD:Z:21C
+seq_215894_x39	0	hsa-let-7a-1	57	255	22M	*	0	0	CTATACAATCTACTGTCTTTCC	]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:22
+seq_215894_x39	256	hsa-let-7a-3	52	255	22M	*	0	0	*	*	NM:i:0	MD:Z:22
+seq_216398_x2	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTAAAATT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:17T1G2
+seq_216398_x2	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:2	MD:Z:17T1G2
+seq_216398_x2	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:2	MD:Z:17T1G2
+seq_216867_x4	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGATA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:20T1T
+seq_216867_x4	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:20T1TA
+seq_216867_x4	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:20T1T
+seq_216876_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGATT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T2
+seq_216876_x3	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:20T2
+seq_216876_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:20T2
+seq_2187_x43	0	hsa-let-7a-1	6	255	24M	*	0	0	TGAGGTAGGAGGTTGTATAGTTTT	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:8T15
+seq_2191_x12	0	hsa-let-7a-2	5	255	24M	*	0	0	TGAGGTAGGAGGTTGTATAGTTTA	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:8T15
+seq_2191_x12	256	hsa-let-7e	8	255	24M	*	0	0	*	*	NM:i:1	MD:Z:22G1
+seq_223902_x27	0	hsa-let-7a-1	57	255	21M	*	0	0	CTATACAATCTACTGTCTTTC	]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:21
+seq_223902_x27	256	hsa-let-7a-3	52	255	21M	*	0	0	*	*	NM:i:0	MD:Z:21
+seq_225704_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTACGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:10G10
+seq_225704_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:10G10
+seq_225704_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:10G10
+seq_226717_x9	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTAAAAAA	]]]]]]]]]]]]]]]]]]]]]]	NM:i:4	MD:Z:17T1GTT
+seq_226717_x9	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:4	MD:Z:17T1GTT
+seq_226717_x9	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:4	MD:Z:17T1GTT
+seq_227512_x10	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTATTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:7G14
+seq_227512_x10	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:7G14
+seq_227512_x10	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:7G14
+seq_227755_x2	0	hsa-let-7a-1	57	255	23M	*	0	0	CTATACAATCTACTGTCTTTCTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:21C1
+seq_227755_x2	256	hsa-let-7a-3	52	255	23M	*	0	0	*	*	NM:i:1	MD:Z:21C1
+seq_22794_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	TAAGGTAGTAGGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:1G20T
+seq_22794_x3	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:1G20TA
+seq_22794_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:1G20T
+seq_229644_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTATATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:14G8
+seq_229644_x2	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:14G8
+seq_229644_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:14G8
+seq_230972_x12	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATTGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:18A3
+seq_230972_x12	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:18A3
+seq_230972_x12	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:18A3
+seq_230972_x12	256	hsa-let-7c	11	255	22M	*	0	0	*	*	NM:i:1	MD:Z:18G3
+seq_230972_x12	256	hsa-mir-98	22	255	22M	*	0	0	*	*	NM:i:1	MD:Z:10A11
+seq_231915_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTTGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:9A11
+seq_231915_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:9A11
+seq_231915_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:9A11
+seq_233792_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGGTGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:12T10
+seq_233792_x2	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:12T10
+seq_233792_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:12T10
+seq_234090_x5	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTTTAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:16A5
+seq_234090_x5	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:16A5
+seq_234090_x5	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:16A5
+seq_236044_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	NGAGGTAGTAGGTTGTATAGTTG	!]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:T21T
+seq_236044_x2	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:2	MD:Z:T21T
+seq_236044_x2	256	hsa-let-7a-3	4	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:T21TG
+seq_236044_x2	256	hsa-let-7e	8	255	23M	*	0	0	*	*	NM:i:2	MD:Z:T7G14
+seq_236044_x2	256	hsa-let-7f-1	7	255	23M	*	0	0	*	*	NM:i:2	MD:Z:T10A11
+seq_236045_x21	0	hsa-let-7a-1	6	255	23M	*	0	0	NGAGGTAGTAGGTTGTATAGTTA	!]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:T21T
+seq_236045_x21	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:T21TA
+seq_236045_x21	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:T21T
+seq_236048_x34	0	hsa-let-7a-1	6	255	23M	*	0	0	NGAGGTAGTAGGTTGTATAGTTT	!]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:T22
+seq_236048_x34	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:T22
+seq_236048_x34	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:T22
+seq_236354_x21	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTACGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:10G11
+seq_236354_x21	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:10G11
+seq_236354_x21	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:10G11
+seq_23725_x14	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGCTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:11G10
+seq_23725_x14	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:11G10
+seq_23725_x14	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:11G10
+seq_23725_x14	256	hsa-let-7f-1	7	255	22M	*	0	0	*	*	NM:i:1	MD:Z:11A10
+seq_23725_x14	256	hsa-let-7f-2	8	255	22M	*	0	0	*	*	NM:i:1	MD:Z:11A10
+seq_241115_x8	0	hsa-let-7a-1	5	255	1D22M	*	0	0	AGAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:AT21
+seq_241115_x8	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:T21
+seq_241115_x8	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:T21
+seq_241115_x8	256	hsa-let-7d	8	255	22M	*	0	0	*	*	NM:i:1	MD:Z:15C6
+seq_241852_x90	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGCAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:5T16
+seq_241852_x90	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:5T16
+seq_241852_x90	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:5T16
+seq_243392_x74	0	hsa-let-7a-1	6	255	20M	*	0	0	TGAGGTAGTAGGTTGTATAA	]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:19G
+seq_243392_x74	256	hsa-let-7a-2	5	255	20M	*	0	0	*	*	NM:i:1	MD:Z:19G
+seq_243392_x74	256	hsa-let-7a-3	4	255	20M	*	0	0	*	*	NM:i:1	MD:Z:19G
+seq_243394_x1359	0	hsa-let-7a-1	6	255	20M	*	0	0	TGAGGTAGTAGGTTGTATAG	]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:20
+seq_243394_x1359	256	hsa-let-7a-2	5	255	20M	*	0	0	*	*	NM:i:0	MD:Z:20
+seq_243394_x1359	256	hsa-let-7a-3	4	255	20M	*	0	0	*	*	NM:i:0	MD:Z:20
+seq_243401_x33	0	hsa-let-7a-1	6	255	20M1D	*	0	0	TGAGGTAGTAGGTTGTATAT	]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:19GT
+seq_243401_x33	256	hsa-let-7a-2	5	255	20M1D	*	0	0	*	*	NM:i:1	MD:Z:19GT
+seq_243401_x33	256	hsa-let-7a-3	4	255	20M1D	*	0	0	*	*	NM:i:1	MD:Z:19GT
+seq_246184_x22	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGAAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:5T15
+seq_246184_x22	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:5T15
+seq_246184_x22	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:5T15
+seq_249313_x102	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTNTAGTT	]]]]]]]]]]]]]]]]!]]]]]	NM:i:1	MD:Z:16A5
+seq_249313_x102	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:16A5
+seq_249313_x102	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:16A5
+seq_250702_x16	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGATGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:12T9
+seq_250702_x16	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:12T9
+seq_250702_x16	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:12T9
+seq_252213_x19	0	hsa-let-7a-1	58	255	22M	*	0	0	TATACAATCTACTGTCTTTCCT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:22
+seq_252213_x19	256	hsa-let-7a-3	53	255	22M	*	0	0	*	*	NM:i:0	MD:Z:22
+seq_255466_x3	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGAATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:15T5
+seq_255466_x3	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:15T5
+seq_255466_x3	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:15T5
+seq_256776_x22	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGTTC	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:22T
+seq_256776_x22	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:22T
+seq_256776_x22	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:22T
+seq_259349_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGGTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:12T9T
+seq_259349_x2	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:12T9TA
+seq_259349_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:12T9T
+seq_260941_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTGTAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:16A5T
+seq_260941_x3	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:16A5TA
+seq_260941_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:16A5T
+seq_260941_x3	256	hsa-let-7b	6	255	23M	*	0	0	*	*	NM:i:2	MD:Z:18G3T
+seq_263391_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGGTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T2
+seq_263391_x3	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:20T2
+seq_263391_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:20T2
+seq_263391_x3	256	hsa-let-7c	11	255	18M1I4M	*	0	0	*	*	NM:i:1	MD:Z:22
+seq_263433_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGGTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:20T1T
+seq_263433_x2	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:20T1TA
+seq_263433_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:20T1T
+seq_263433_x2	256	hsa-let-7c	11	255	18M1I4M	*	0	0	*	*	NM:i:2	MD:Z:21T
+seq_265189_x10	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAATT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:19G2
+seq_265189_x10	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:19G2
+seq_265189_x10	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:19G2
+seq_265636_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTACAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:17T3
+seq_265636_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:17T3
+seq_265636_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:17T3
+seq_265636_x2	256	hsa-let-7g	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:11T9
+seq_270224_x14	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTACTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:7G14
+seq_270224_x14	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:7G14
+seq_270224_x14	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:7G14
+seq_276042_x4	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTATACT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:19G1
+seq_276042_x4	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:19G1
+seq_276042_x4	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:19G1
+seq_277204_x33	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAAGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:10G11
+seq_277204_x33	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:10G11
+seq_277204_x33	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:10G11
+seq_277204_x33	256	hsa-mir-98	22	255	22M	*	0	0	*	*	NM:i:1	MD:Z:18T3
+seq_279659_x81	0	hsa-let-7a-1	6	255	22M	*	0	0	TTAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G20
+seq_279659_x81	256	hsa-let-7a-2	4	255	1D22M	*	0	0	*	*	NM:i:1	MD:Z:T1G20
+seq_279659_x81	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:1G20
+seq_279992_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	TTAGGTAGTAGGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:1G20T
+seq_279992_x3	256	hsa-let-7a-2	4	255	1D23M1D	*	0	0	*	*	NM:i:2	MD:Z:T1G20TA
+seq_279992_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:1G20T
+seq_280002_x7	0	hsa-let-7a-1	6	255	23M	*	0	0	TTAGGTAGTAGGTTGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G21
+seq_280002_x7	256	hsa-let-7a-2	4	255	1D23M	*	0	0	*	*	NM:i:1	MD:Z:T1G21
+seq_280002_x7	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:1G21
+seq_281426_x82	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGAT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T1
+seq_281426_x82	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:20T1
+seq_281426_x82	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:20T1
+seq_281432_x2	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGAG	]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:20TT
+seq_281432_x2	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:2	MD:Z:20TT
+seq_281432_x2	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:2	MD:Z:20TT
+seq_281432_x2	256	hsa-let-7c	11	255	18M1I1M1I1M	*	0	0	*	*	NM:i:2	MD:Z:20
+seq_281436_x42	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGAA	]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:20TT
+seq_281436_x42	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:2	MD:Z:20TT
+seq_281436_x42	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:2	MD:Z:20TT
+seq_282662_x15	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTATATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:14G7
+seq_282662_x15	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:14G7
+seq_282662_x15	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:14G7
+seq_286323_x21	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGGAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:5T16
+seq_286323_x21	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:5T16
+seq_286323_x21	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:5T16
+seq_28633_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGGTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:12T8
+seq_28633_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:12T8
+seq_28633_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:12T8
+seq_287121_x217	0	hsa-let-7a-1	6	255	19M	*	0	0	TGAGGTAGTAGGTTGTATA	]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:19
+seq_287121_x217	256	hsa-let-7a-2	5	255	19M	*	0	0	*	*	NM:i:0	MD:Z:19
+seq_287121_x217	256	hsa-let-7a-3	4	255	19M	*	0	0	*	*	NM:i:0	MD:Z:19
+seq_288786_x231	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTATAGA	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T
+seq_288786_x231	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:20T
+seq_288786_x231	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:20T
+seq_289483_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAATAGGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:7G14T
+seq_289483_x2	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:7G14TA
+seq_289483_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:7G14T
+seq_29102_x10	0	hsa-let-7a-1	6	255	22M	*	0	0	TGACGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:3G18
+seq_29102_x10	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:3G18
+seq_29102_x10	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:3G18
+seq_292843_x5	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTGGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:6A14
+seq_292843_x5	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:6A14
+seq_292843_x5	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:6A14
+seq_293379_x26	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGGT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T1
+seq_293379_x26	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:20T1
+seq_293379_x26	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:20T1
+seq_293379_x26	256	hsa-let-7c	11	255	18M1I3M	*	0	0	*	*	NM:i:1	MD:Z:21
+seq_294361_x13	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTCGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:9A12
+seq_294361_x13	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:9A12
+seq_294361_x13	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:9A12
+seq_295265_x4	0	hsa-let-7a-1	7	255	22M	*	0	0	GAGGTAGTAGGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:21T
+seq_295265_x4	256	hsa-let-7a-2	6	255	22M1D	*	0	0	*	*	NM:i:1	MD:Z:21TA
+seq_295265_x4	256	hsa-let-7a-3	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:21T
+seq_295271_x2	0	hsa-let-7a-1	7	255	22M	*	0	0	GAGGTAGTAGGTTGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:22
+seq_295271_x2	256	hsa-let-7a-2	6	255	22M	*	0	0	*	*	NM:i:0	MD:Z:22
+seq_295271_x2	256	hsa-let-7a-3	5	255	22M	*	0	0	*	*	NM:i:0	MD:Z:22
+seq_295721_x6	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTNTAGTTT	]]]]]]]]]]]]]]]]!]]]]]]	NM:i:1	MD:Z:16A6
+seq_295721_x6	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:16A6
+seq_295721_x6	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:16A6
+seq_295728_x5	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTNTAGTTA	]]]]]]]]]]]]]]]]!]]]]]]	NM:i:2	MD:Z:16A5T
+seq_295728_x5	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:16A5TA
+seq_295728_x5	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:16A5T
+seq_300911_x3	0	hsa-let-7a-1	6	255	21M1D	*	0	0	TGAGGTAGTAGGTTGTATATT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:19G1T
+seq_300911_x3	256	hsa-let-7a-2	5	255	21M1D	*	0	0	*	*	NM:i:1	MD:Z:19G1T
+seq_300911_x3	256	hsa-let-7a-3	4	255	21M1D	*	0	0	*	*	NM:i:1	MD:Z:19G1T
+seq_304799_x11	0	hsa-let-7a-1	5	255	22M	*	0	0	CTGAGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:A21
+seq_304799_x11	256	hsa-let-7a-2	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:T21
+seq_304799_x11	256	hsa-let-7a-3	3	255	22M	*	0	0	*	*	NM:i:1	MD:Z:G21
+seq_304799_x11	256	hsa-let-7e	7	255	22M	*	0	0	*	*	NM:i:1	MD:Z:9G12
+seq_305676_x658	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGGAGGTTGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:8T14
+seq_305676_x658	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:8T14
+seq_305676_x658	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:8T14
+seq_305676_x658	256	hsa-let-7e	8	255	23M	*	0	0	*	*	NM:i:1	MD:Z:22G
+seq_306407_x3	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTAGAAA	]]]]]]]]]]]]]]]]]]]]]	NM:i:3	MD:Z:17T1GT
+seq_306407_x3	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:3	MD:Z:17T1GT
+seq_306407_x3	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:3	MD:Z:17T1GT
+seq_306956_x17	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTCGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:6A15
+seq_306956_x17	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:6A15
+seq_306956_x17	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:6A15
+seq_309591_x3	0	hsa-let-7a-3	4	255	24M	*	0	0	TGAGGTAGTAGGTTGTATGGTTTG	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:18A5
+seq_309591_x3	256	hsa-let-7c	11	255	24M1D	*	0	0	*	*	NM:i:1	MD:Z:23AG
+seq_309600_x54	0	hsa-let-7a-1	6	255	24M	*	0	0	TGAGGTAGTAGGTTGTATGGTTTT	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:18A5
+seq_309600_x54	256	hsa-let-7c	11	255	24M	*	0	0	*	*	NM:i:1	MD:Z:23A
+seq_310346_x6	0	hsa-let-7a-1	5	255	24M	*	0	0	CTGAGGTAGTAGGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:A22T
+seq_310346_x6	256	hsa-let-7a-2	4	255	24M1D	*	0	0	*	*	NM:i:2	MD:Z:T22TA
+seq_310346_x6	256	hsa-let-7a-3	3	255	24M	*	0	0	*	*	NM:i:2	MD:Z:G22T
+seq_310346_x6	256	hsa-let-7e	7	255	24M1D	*	0	0	*	*	NM:i:2	MD:Z:9G13GA
+seq_310349_x10	0	hsa-let-7a-1	5	255	24M	*	0	0	CTGAGGTAGTAGGTTGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:A23
+seq_310349_x10	256	hsa-let-7a-2	4	255	24M	*	0	0	*	*	NM:i:1	MD:Z:T23
+seq_310349_x10	256	hsa-let-7a-3	3	255	24M	*	0	0	*	*	NM:i:1	MD:Z:G23
+seq_310759_x15	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAAAA	]]]]]]]]]]]]]]]]]]]]]]	NM:i:3	MD:Z:19GTT
+seq_310759_x15	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:3	MD:Z:19GTT
+seq_310759_x15	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:3	MD:Z:19GTT
+seq_311290_x34	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTATAAA	]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:19GT
+seq_311290_x34	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:2	MD:Z:19GT
+seq_311290_x34	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:2	MD:Z:19GT
+seq_311300_x8	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTATAAT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:19G1
+seq_311300_x8	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:19G1
+seq_311300_x8	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:19G1
+seq_31888_x17	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGATAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:4G17
+seq_31888_x17	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:4G17
+seq_31888_x17	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:4G17
+seq_319301_x2	0	hsa-let-7a-2	5	255	24M2D	*	0	0	TGAGGTAGTAGGTTGTATAGTAGA	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:21TT1GA
+seq_319301_x2	256	hsa-let-7e	8	255	24M	*	0	0	*	*	NM:i:2	MD:Z:8G12T2
+seq_319677_x6	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTGGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:9A11
+seq_319677_x6	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:9A11
+seq_319677_x6	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:9A11
+seq_321839_x19	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGTTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:11G10
+seq_321839_x19	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:11G10
+seq_321839_x19	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:11G10
+seq_321839_x19	256	hsa-let-7f-1	7	255	22M	*	0	0	*	*	NM:i:1	MD:Z:11A10
+seq_321839_x19	256	hsa-let-7f-2	8	255	22M	*	0	0	*	*	NM:i:1	MD:Z:11A10
+seq_321839_x19	256	hsa-let-7g	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:17C4
+seq_3232_x15	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTAAAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:17T4
+seq_3232_x15	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:17T4
+seq_3232_x15	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:17T4
+seq_324940_x23	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGAAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:8T13
+seq_324940_x23	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:8T13
+seq_324940_x23	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:8T13
+seq_324940_x23	256	hsa-let-7e	8	255	22M	*	0	0	*	*	NM:i:1	MD:Z:8G13
+seq_332813_x3	0	hsa-let-7a-1	6	255	21M	*	0	0	TGACGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:3G17
+seq_332813_x3	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:3G17
+seq_332813_x3	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:3G17
+seq_336026_x4	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGTTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:4G17
+seq_336026_x4	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:4G17
+seq_336026_x4	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:4G17
+seq_33625_x6	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGCTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:4G17
+seq_33625_x6	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:4G17
+seq_33625_x6	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:4G17
+seq_338441_x4	0	hsa-let-7a-3	3	255	21M	*	0	0	GTGAGGTAGTAGGTTGTATAG	]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:21
+seq_338461_x7	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGAAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:8T12
+seq_338461_x7	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:8T12
+seq_338461_x7	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:8T12
+seq_338461_x7	256	hsa-let-7e	8	255	21M	*	0	0	*	*	NM:i:1	MD:Z:8G12
+seq_338565_x21	0	hsa-let-7a-1	6	255	22M	*	0	0	TGGGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:2A19
+seq_338565_x21	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:2A19
+seq_338565_x21	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:2A19
+seq_342985_x28	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGCAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:8T13
+seq_342985_x28	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:8T13
+seq_342985_x28	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:8T13
+seq_342985_x28	256	hsa-let-7e	8	255	22M	*	0	0	*	*	NM:i:1	MD:Z:8G13
+seq_343286_x2	0	hsa-let-7a-2	4	255	22M	*	0	0	TTGAGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:22
+seq_343446_x2	0	hsa-let-7a-2	5	255	24M	*	0	0	NGAGGTAGTAGGTTGTATAGTTAA	!]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:T21T1
+seq_344733_x46	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGCT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T1
+seq_344733_x46	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:20T1
+seq_344733_x46	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:20T1
+seq_346207_x8	0	hsa-let-7a-1	57	255	20M	*	0	0	CTATACAATCTACTGTCTTT	]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:20
+seq_346207_x8	256	hsa-let-7a-3	52	255	20M	*	0	0	*	*	NM:i:0	MD:Z:20
+seq_347045_x16	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTATAGG	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T
+seq_347045_x16	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:20T
+seq_347045_x16	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:20T
+seq_347045_x16	256	hsa-let-7c	11	255	18M1I2M	*	0	0	*	*	NM:i:1	MD:Z:20
+seq_347051_x17696	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:21
+seq_347051_x17696	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:0	MD:Z:21
+seq_347051_x17696	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:0	MD:Z:21
+seq_347348_x2	0	hsa-let-7a-1	6	255	20M	*	0	0	TTAGGTAGTAGGTTGTATAG	]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G18
+seq_347348_x2	256	hsa-let-7a-2	4	255	1D20M	*	0	0	*	*	NM:i:1	MD:Z:T1G18
+seq_347348_x2	256	hsa-let-7a-3	4	255	20M	*	0	0	*	*	NM:i:1	MD:Z:1G18
+seq_34827_x7	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGTTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:11G9
+seq_34827_x7	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:11G9
+seq_34827_x7	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:11G9
+seq_34827_x7	256	hsa-let-7f-1	7	255	21M	*	0	0	*	*	NM:i:1	MD:Z:11A9
+seq_34827_x7	256	hsa-let-7f-2	8	255	21M	*	0	0	*	*	NM:i:1	MD:Z:11A9
+seq_34827_x7	256	hsa-let-7g	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:17C3
+seq_350425_x7	0	hsa-let-7a-1	6	255	25M	*	0	0	TGAGGTAGTAGGTTGTATAGTTAAA	]]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:22TT1
+seq_350425_x7	256	hsa-let-7a-2	5	255	25M2D	*	0	0	*	*	NM:i:2	MD:Z:22T1GAA
+seq_350434_x2	0	hsa-let-7a-1	6	255	22M1I2M	*	0	0	TGAGGTAGTAGGTTGTATAGTTAAT	]]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:22T1
+seq_350434_x2	256	hsa-let-7a-2	5	255	25M	*	0	0	*	*	NM:i:2	MD:Z:22T1G
+seq_350434_x2	256	hsa-let-7a-3	4	255	22M2I1M	*	0	0	*	*	NM:i:2	MD:Z:23
+seq_352910_x13	0	hsa-let-7a-1	6	255	20M	*	0	0	NGAGGTAGTAGGTTGTATAG	!]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:T19
+seq_352910_x13	256	hsa-let-7a-2	5	255	20M	*	0	0	*	*	NM:i:1	MD:Z:T19
+seq_352910_x13	256	hsa-let-7a-3	4	255	20M	*	0	0	*	*	NM:i:1	MD:Z:T19
+seq_352923_x15	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTACAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:17T4
+seq_352923_x15	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:17T4
+seq_352923_x15	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:17T4
+seq_352923_x15	256	hsa-let-7g	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:11T10
+seq_355276_x5	0	hsa-let-7a-1	6	255	24M	*	0	0	TGAGGTAGTAGGTTGTATAGTAAT	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:21TT1
+seq_355276_x5	256	hsa-let-7a-2	5	255	21M1I2M	*	0	0	*	*	NM:i:2	MD:Z:21T1
+seq_355276_x5	256	hsa-let-7a-3	4	255	21M1I2M	*	0	0	*	*	NM:i:2	MD:Z:21T1
+seq_356256_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	CGAGGTAGTAGGTTGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:T22
+seq_356256_x3	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:T22
+seq_356256_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:T22
+seq_361539_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTACAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:17T4T
+seq_361539_x2	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:17T4TA
+seq_361539_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:17T4T
+seq_361539_x2	256	hsa-let-7g	5	255	23M	*	0	0	*	*	NM:i:2	MD:Z:11T10T
+seq_365571_x15	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTATGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:10G11
+seq_365571_x15	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:10G11
+seq_365571_x15	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:10G11
+seq_36719_x4	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGCTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T2
+seq_36719_x4	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:20T2
+seq_36719_x4	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:20T2
+seq_367465_x5	0	hsa-let-7a-3	4	255	24M	*	0	0	TGAGGTAGTAGGTTGTATAGTTTG	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:24
+seq_367470_x40	0	hsa-let-7a-2	5	255	24M	*	0	0	TGAGGTAGTAGGTTGTATAGTTTA	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:24
+seq_369141_x3	0	hsa-let-7a-1	6	255	25M	*	0	0	TGAGGTAGGAGGTTGTATAGTTTTT	]]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:8T15A
+seq_371081_x7	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTTTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:14G7
+seq_371081_x7	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:14G7
+seq_371081_x7	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:14G7
+seq_373424_x2	0	hsa-let-7a-1	58	255	21M	*	0	0	TATACAATCTACTGTCTTTCC	]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:21
+seq_373424_x2	256	hsa-let-7a-3	53	255	21M	*	0	0	*	*	NM:i:0	MD:Z:21
+seq_375649_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	CGAGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:T20
+seq_375649_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:T20
+seq_375649_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:T20
+seq_376102_x4	0	hsa-let-7a-1	6	255	22M	*	0	0	NGAGGTAGTAGGTTGTATAGTA	!]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:T20T
+seq_376102_x4	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:2	MD:Z:T20T
+seq_376102_x4	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:2	MD:Z:T20T
+seq_376110_x725	0	hsa-let-7a-1	6	255	22M	*	0	0	NGAGGTAGTAGGTTGTATAGTT	!]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:T21
+seq_376110_x725	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:T21
+seq_376110_x725	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:T21
+seq_381564_x4	0	hsa-let-7a-1	6	255	18M1I3M	*	0	0	TGAGGTAGTAGGTTGTGTAAGA	]]]]]]]]]]]]]]]]]]]]]]	NM:i:3	MD:Z:16A3T
+seq_381564_x4	256	hsa-let-7a-2	5	255	18M1I3M	*	0	0	*	*	NM:i:3	MD:Z:16A3T
+seq_381564_x4	256	hsa-let-7a-3	4	255	18M1I3M	*	0	0	*	*	NM:i:3	MD:Z:16A3T
+seq_381564_x4	256	hsa-let-7b	6	255	18M1I3M	*	0	0	*	*	NM:i:3	MD:Z:18G1T
+seq_39901_x3	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTATATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:14G6
+seq_39901_x3	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:14G6
+seq_39901_x3	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:14G6
+seq_39943_x8	0	hsa-let-7a-1	6	255	22M1D	*	0	0	TGAGGTAGTAGGTTGTATATTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:19G2T
+seq_39943_x8	256	hsa-let-7a-2	5	255	22M1D	*	0	0	*	*	NM:i:1	MD:Z:19G2T
+seq_39943_x8	256	hsa-let-7a-3	4	255	22M1D	*	0	0	*	*	NM:i:1	MD:Z:19G2T
+seq_43130_x16	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTAGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:13T8
+seq_43130_x16	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:13T8
+seq_43130_x16	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:13T8
+seq_44916_x59	0	hsa-let-7a-1	7	255	21M	*	0	0	GAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:21
+seq_44916_x59	256	hsa-let-7a-2	6	255	21M	*	0	0	*	*	NM:i:0	MD:Z:21
+seq_44916_x59	256	hsa-let-7a-3	5	255	21M	*	0	0	*	*	NM:i:0	MD:Z:21
+seq_45416_x98	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGAAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:5T16
+seq_45416_x98	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:5T16
+seq_45416_x98	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:5T16
+seq_48527_x5	0	hsa-let-7a-1	6	255	22M	*	0	0	TGATGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:3G18
+seq_48527_x5	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:3G18
+seq_48527_x5	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:3G18
+seq_49355_x6	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTTGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:9A12
+seq_49355_x6	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:9A12
+seq_49355_x6	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:9A12
+seq_51356_x2	0	hsa-let-7a-1	4	255	24M	*	0	0	AATGAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:G23
+seq_52652_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAGTCT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:21T1
+seq_52652_x2	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:21T1
+seq_52652_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:21T1
+seq_53072_x2	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTAGTAGGTTCTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:14G6
+seq_53072_x2	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:14G6
+seq_53072_x2	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:14G6
+seq_53488_x3	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGTATAAAAA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:4	MD:Z:19GTTT
+seq_53488_x3	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:4	MD:Z:19GTTTA
+seq_53488_x3	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:4	MD:Z:19GTTT
+seq_54408_x31	0	hsa-let-7a-3	3	255	23M	*	0	0	GTGAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:23
+seq_558_x12	0	hsa-let-7a-1	6	255	21M	*	0	0	TAAGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G19
+seq_558_x12	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:1G19
+seq_558_x12	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:1G19
+seq_56441_x86	0	hsa-let-7a-1	6	255	24M	*	0	0	TGAGGTAGTAGGTTGTATAGTTTT	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:24
+seq_57479_x95	0	hsa-let-7a-1	6	255	22M	*	0	0	TAAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G20
+seq_57479_x95	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:1G20
+seq_57479_x95	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:1G20
+seq_5884_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAAGTAGTAGGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:3G18T
+seq_5884_x2	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:3G18TA
+seq_5884_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:3G18T
+seq_60546_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGCAGTAGGTTGTATAGTTA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:2	MD:Z:5T16T
+seq_60546_x2	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:5T16TA
+seq_60546_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:5T16T
+seq_60554_x5	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGCAGTAGGTTGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:5T17
+seq_60554_x5	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:5T17
+seq_60554_x5	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:5T17
+seq_64874_x17	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATACTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:19G2
+seq_64874_x17	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:19G2
+seq_64874_x17	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:19G2
+seq_65652_x18	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAAGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:3G18
+seq_65652_x18	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:3G18
+seq_65652_x18	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:3G18
+seq_67829_x4	0	hsa-let-7a-2	4	255	23M	*	0	0	TTGAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:23
+seq_69689_x19	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTGTAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:16A5
+seq_69689_x19	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:16A5
+seq_69689_x19	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:16A5
+seq_69689_x19	256	hsa-let-7b	6	255	22M	*	0	0	*	*	NM:i:1	MD:Z:18G3
+seq_70194_x15	0	hsa-let-7a-1	6	255	22M	*	0	0	TGCGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:2A19
+seq_70194_x15	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:2A19
+seq_70194_x15	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:2A19
+seq_72726_x6	0	hsa-let-7a-1	6	255	21M	*	0	0	TCAGGTAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G19
+seq_72726_x6	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:1G19
+seq_72726_x6	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:1G19
+seq_73582_x7	0	hsa-let-7a-2	5	255	20M1D4M	*	0	0	TGAGGTAGTAGGTTGTATAGTTAG	]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:20T4
+seq_73582_x7	256	hsa-let-7a-3	4	255	24M	*	0	0	*	*	NM:i:1	MD:Z:22T1
+seq_74423_x3	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGATAGTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:4G16
+seq_74423_x3	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:4G16
+seq_74423_x3	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:4G16
+seq_75027_x179	0	hsa-let-7a-1	5	255	23M	*	0	0	CTGAGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:A22
+seq_75027_x179	256	hsa-let-7a-2	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:T22
+seq_75027_x179	256	hsa-let-7a-3	3	255	23M	*	0	0	*	*	NM:i:1	MD:Z:G22
+seq_75027_x179	256	hsa-let-7e	7	255	23M	*	0	0	*	*	NM:i:1	MD:Z:9G13
+seq_75092_x6	0	hsa-let-7a-1	57	255	23M	*	0	0	CTATACAATCTACTGTCTTTCCT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:0	MD:Z:23
+seq_75092_x6	256	hsa-let-7a-3	52	255	23M	*	0	0	*	*	NM:i:0	MD:Z:23
+seq_75099_x6	0	hsa-let-7a-1	57	255	23M1D	*	0	0	CTATACAATCTACTGTCTTTCCA	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:22TA
+seq_75099_x6	256	hsa-let-7a-3	52	255	23M	*	0	0	*	*	NM:i:1	MD:Z:22T
+seq_78384_x11	0	hsa-let-7a-1	6	255	22M	*	0	0	TGTGGTAGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:2A19
+seq_78384_x11	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:2A19
+seq_78384_x11	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:2A19
+seq_80551_x9	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTTGTAGGTTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:6A15
+seq_80551_x9	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:6A15
+seq_80551_x9	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:6A15
+seq_8127_x4	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTANGTTGTATAGTTT	]]]]]]]]]]!]]]]]]]]]]]]	NM:i:1	MD:Z:10G12
+seq_8127_x4	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:10G12
+seq_8127_x4	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:10G12
+seq_8135_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTANGTTGTATAGTTA	]]]]]]]]]]!]]]]]]]]]]]]	NM:i:2	MD:Z:10G11T
+seq_8135_x2	256	hsa-let-7a-2	5	255	23M1D	*	0	0	*	*	NM:i:2	MD:Z:10G11TA
+seq_8135_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:2	MD:Z:10G11T
+seq_82382_x3	0	hsa-let-7a-1	6	255	21M	*	0	0	TGAGGTACTAGGTTGTATAGT	]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:7G13
+seq_82382_x3	256	hsa-let-7a-2	5	255	21M	*	0	0	*	*	NM:i:1	MD:Z:7G13
+seq_82382_x3	256	hsa-let-7a-3	4	255	21M	*	0	0	*	*	NM:i:1	MD:Z:7G13
+seq_85608_x25	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGCTGTATAGTT	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:12T9
+seq_85608_x25	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:12T9
+seq_85608_x25	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:12T9
+seq_86214_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTCGTATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:13T9
+seq_86214_x2	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:13T9
+seq_86214_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:13T9
+seq_89205_x2	0	hsa-let-7a-1	6	255	23M	*	0	0	TGAGGTAGTAGGTTGCATAGTTT	]]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:15T7
+seq_89205_x2	256	hsa-let-7a-2	5	255	23M	*	0	0	*	*	NM:i:1	MD:Z:15T7
+seq_89205_x2	256	hsa-let-7a-3	4	255	23M	*	0	0	*	*	NM:i:1	MD:Z:15T7
+seq_89205_x2	256	hsa-let-7d	8	255	23M	*	0	0	*	*	NM:i:1	MD:Z:A22
+seq_916_x2	0	hsa-let-7a-1	6	255	25M	*	0	0	TGAGGTAGTAGGTTGTATAGTAAAA	]]]]]]]]]]]]]]]]]]]]]]]]]	NM:i:3	MD:Z:21TTT1
+seq_916_x2	256	hsa-let-7a-2	5	255	25M2D	*	0	0	*	*	NM:i:3	MD:Z:21TT1GAA
+seq_9338_x2	0	hsa-let-7a-1	6	255	20M	*	0	0	TAAGGTAGTAGGTTGTATAG	]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:1G18
+seq_9338_x2	256	hsa-let-7a-2	5	255	20M	*	0	0	*	*	NM:i:1	MD:Z:1G18
+seq_9338_x2	256	hsa-let-7a-3	4	255	20M	*	0	0	*	*	NM:i:1	MD:Z:1G18
+seq_93783_x809	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGTA	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:21T
+seq_93783_x809	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:21T
+seq_93783_x809	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:21T
+seq_93785_x21	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGTC	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:21T
+seq_93785_x21	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:21T
+seq_93785_x21	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:21T
+seq_93788_x31	0	hsa-let-7a-1	6	255	22M	*	0	0	TGAGGTAGTAGGTTGTATAGTG	]]]]]]]]]]]]]]]]]]]]]]	NM:i:1	MD:Z:21T
+seq_93788_x31	256	hsa-let-7a-2	5	255	22M	*	0	0	*	*	NM:i:1	MD:Z:21T
+seq_93788_x31	256	hsa-let-7a-3	4	255	22M	*	0	0	*	*	NM:i:1	MD:Z:21T
