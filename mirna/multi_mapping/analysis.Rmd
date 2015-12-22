@@ -1,0 +1,87 @@
+---
+output:
+  knitrBootstrap::bootstrap_document:
+    theme: readable
+    highlight: zenburn
+    theme.chooser: TRUE
+    highlight.chooser: TRUE
+  html_document:
+    toc: true
+    highlight: zenburn
+---
+
+```{r projsetup, echo=FALSE, warning=FALSE, message=FALSE}
+project=""
+labPI=""
+lablocation=""
+analystname="Lorena Pantano"
+analystemail="lpantano@hsph.harvard.edu"
+
+```
+
+
+```{r knitrsetup, echo=FALSE}
+knitr::opts_chunk$set(tidy=TRUE, highlight=TRUE, dev="png",
+                      cache=TRUE, highlight=TRUE, autodep=TRUE, 
+                      warning=FALSE, error=FALSE,
+                      eval=TRUE, fig.width= 9,
+                      message=FALSE, prompt=TRUE, comment='', fig.cap='', bootstrap.show.code=FALSE)
+options(bitmapType = 'cairo')
+```
+
+
+```{r render,echo=FALSE,eval=FALSE}
+library(knitrBootstrap)
+library(rmarkdown)
+# render_2_drop("feinberg-report.Rmd", "dropbox_folder")
+```
+
+---
+
+# Tittle
+
+# Setup
+```{r load}
+sam = read.table("hsa_let_7a.sam",comment.char = "@", sep="\t")
+bed = read.table("seqs_unique.bed", sep="\t")
+counts = read.table("seqs.ma", sep="\t", row.names=1, header=T)
+bed$pos = bed$V2
+bed$pos[bed$V6=="-"] = bed$V3[bed$V6=="-"]
+bed$pos = paste0(bed$V1, ":" ,bed$pos)
+count_by_pos = cbind(bed[,"pos",drop=FALSE], counts[as.character(bed$V4),2:9])
+df = melt(count_by_pos) %>% filter(value > 0) %>%
+     mutate(value=as.numeric(as.character(value))) %>%
+     group_by(pos, variable) %>%
+     summarise(exp=sum(value), n = n()) %>% ungroup() 
+```
+
+## Libraries
+
+```{r functions}
+library(ggplot2)
+library(gplots)
+library(dplyr)
+library(reshape)
+```
+
+```{r analysis}
+ggplot(sam, aes(x=V4)) +
+  geom_bar()+
+  facet_wrap(~V3)
+
+ggplot(df %>% filter(n>10), aes(x=exp, y=n)) +
+  geom_point()+
+  scale_y_log10() +
+  scale_x_log10() +
+  facet_wrap(~variable)
+```
+
+#R Session Info
+
+(useful if replicating these results)
+
+```{r sessioninfo}
+sessionInfo()
+```
+
+
