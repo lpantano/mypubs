@@ -2,7 +2,7 @@
 small RNA-seq with bcbio-nextgen
 =============================
 
-The study of small RNA helps to understand part of the regulation of a cell. There are different types of small RNAs, such as, miRNA, tRNA fragments and piRNAs. The adventage of small RNA-seq analysis is that we can study all small RNA types simultaneously and with the possibility to detect novel small RNAs in the same experiment. [bcbio-nextgen](http://github.com/chapmanb/bcbio-nextgen) is a python framework supported by a big scientific community that implements the best practices for next-generationg sequencing data and uses gold standard data to validate its analyses. It is well known for its variant calling and RNA-seq pipeline. Now, bcbio has an small RNA-seq pipeline that allows the quality control and adapter removal of the input files, followed by miRNA, isomiRs and tRNA annotation, and genome-wide characterization of other types of small RNAs. Here, I show the capabilities of the pipeline and its validation using data from the [miRQC project](http://www.nature.com/nmeth/journal/v11/n8/full/nmeth.3014.html).
+The study of small RNA helps to understand part of the gene regulation of a cell. There are different types of small RNAs, such as, miRNA, tRNA fragments and piRNAs. The adventage of small RNA-seq analysis is that we can study all small RNA types simultaneously and with the possibility to detect novel small RNAs at the same time. [bcbio-nextgen](http://github.com/chapmanb/bcbio-nextgen) is a python framework supported by a big scientific community that implements the best practices for next-generationg sequencing data and uses gold standard data to validate its analyses. It is well known for its variant calling and RNA-seq pipeline. Now, bcbio has an small RNA-seq pipeline that allows quality control and adapter removal of fastq files, followed by miRNA, isomiRs and tRNA annotation, and genome-wide characterization of other types of small RNAs. Here, I show the capabilities of the pipeline and its validation using data from the [miRQC project](http://www.nature.com/nmeth/journal/v11/n8/full/nmeth.3014.html).
 
 - [reproducible code](http://seqcluster.readthedocs.org/example_pipeline.html)
 - [R code](https://github.com/lpantano/mypubs/blob/master/srnaseq/mirqc/ready_report.rmd)
@@ -17,8 +17,8 @@ comparison of quantitation and detection of miRNAs. The main goal was to test
 different platforms for miRNA detection, but these are also great samples for
 benchmarking tools. 
 
-Samples are one Universal Human miRNA reference RNA (Agilent Technologies, #750700), one human brain total RNA (Life Technologies, #AM6050), human liver total RNA (LifeTechnologies, #AM7960) and MS2-phage RNA (Roche, #10165948001). Two more samples were created using
-different concentrations of UHmiRR and HBR. Two miRNA families were spiked in human liver and MS2-phage samples.
+Samples are one Universal Human miRNA reference RNA (Agilent Technologies, #750700), one human brain total RNA (Life Technologies, #AM6050), human liver total RNA (LifeTechnologies, #AM7960) and MS2-phage RNA (Roche, #10165948001). Moreover, two more samples were created using
+different concentrations of UHmiRR and HBR. And finally, two miRNA families were spiked in human liver and MS2-phage samples.
 
 
 ![samples](https://github.com/lpantano/mypubs/raw/master/srnaseq/mirqc/figure/nmeth.3014-F1.jpg)
@@ -28,6 +28,7 @@ There are 4 main steps in the small RNA-seq pipeline:
 
 * adapter removal
 * miRNA quantification
+* de-novo miRNA detection
 * other small RNAs detection and quantification
 * quality control metrics
 
@@ -46,6 +47,7 @@ for miRNA quantification and allows
 [isomiRs](https://en.wikipedia.org/wiki/IsomiR) analysis as well. Read more
 about why [isomiRs are important](http://link_to_bibliography_seqcluster).
 
+Although is not covered here, it is important to mention the pipeline uses [miRDeep2](https://www.mdc-berlin.de/8551903/en/) for de-novo miRNA discovery. In this case, it uses all samples for this analysis and then seqbuster for quantification of only the novel miRNAs.
 
 ### other smallRNAs quantification
 `bcbio` uses [seqcluster](http://github.com/lpantano/seqcluster) to detect
@@ -129,7 +131,6 @@ miRNAs which B > A are 181 and 174 follows B > C > D
 
 That is more than 95% of accuracy for miRs with more than 5 counts.
 
-
 ### specificity
 To evaluate specificity we used samples that included specific miRNAs that are not
 normally expressed there. These samples were analyzed in a different
@@ -169,7 +170,7 @@ report | 0| 1| 1
 
 ## Conclusion
 We can conclude that the current analysis has a reliable quantification and specificity of miRNAs and other small RNA molecules.What's more, it helps with the downstream analysis creating a complete _Rmd_ template that covers the most important section of small RNA studies.
-I am currently implementing miRDeep2 for the novel discovery of miRNAs, and post-processing of the tDRmapper output to allow an easy differential expression or clustering in downstream analysis. In the future, I would like to implement protac for the analysis of piRNAs.
+I am currently implementing post-processing steps of the tDRmapper output to allow an easy differential expression or sample clustering in downstream analysis. In the future, I would like to implement [proTRAC](http://sourceforge.net/p/protrac/home/Home/) for the analysis of piRNAs.
 
 # Thanks
 * [Harvard T.H. Chan School of Public Health](http://bioinformatics.sph.harvard.edu)
@@ -180,4 +181,3 @@ I am currently implementing miRDeep2 for the novel discovery of miRNAs, and post
   Chris Botka, Director of Research Computing and all the people in the team.
 * Special thanks to the author of that papers to make data available. I
   encourage to use this data for any tool that analyzes small RNA data.
-
