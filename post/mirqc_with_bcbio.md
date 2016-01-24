@@ -57,7 +57,8 @@ these small RNAs are dropped because they map multiple times on the genome and
 require special analysis to avoid bias in the quantification. Read more about
 why
 [other small RNAs are important](http://seqcluster.readthedocs.org/literature.html).
-
+It is important to mention that this tool produce a sqlite3 database to help with
+the visualization. An image example is [here](http://seqcluster.readthedocs.org/more_outputs.html#report).
 
 ### quality control metrics
 `bcbio` summarizes `Fastqc` metrics for each sample. Together with different
@@ -68,13 +69,11 @@ tRNA, rRNA, repeats among others. Other metrics such as, amount of data used unt
 the end of the analysis, or warning flags if the data is noisy, are provided by
 `seqcluster` and included in the final _Rmd_ [template report](https://github.com/lpantano/mypubs/blob/master/srnaseq/mirqc/ready_report.md). 
 
-
 ### automatic report
 `bcbio` generates a
 [_Rmd_ template report](https://github.com/lpantano/mypubs/blob/master/srnaseq/mirqc/ready_report.md)
 to make easy the visualization of all the results from each of the steps. It
 is inside the `report` folder in the working directory or final folder after the analysis.
-
 
 ## Results
 The mirRQC samples allow us to measure quantitation and detection
@@ -146,7 +145,7 @@ We should only see those miRNAs (let-7 and miR-302 families) in those samples. I
 
 hsa-let-7a appears in all samples. If you check the processed data is not due to
 wrong alignment. It would be interesting to figure out whether this signal is
-because of contamintation or errors in sequencing or/and amplification.
+because of contamintation or errors during sequencing or/and during amplification.
 
 ### clusters abundance detection of miRQC samples
 Similarly to miRs, we can do the same for other small RNAs detected by
@@ -170,7 +169,7 @@ report | 0| 1| 1
 
 ## Conclusion
 We can conclude that the current analysis has a reliable quantification and specificity of miRNAs and other small RNA molecules.What's more, it helps with the downstream analysis creating a complete _Rmd_ template that covers the most important section of small RNA studies.
-I am currently implementing post-processing steps of the tDRmapper output to allow an easy differential expression or sample clustering in downstream analysis. In the future, I would like to implement [proTRAC](http://sourceforge.net/p/protrac/home/Home/) for the analysis of piRNAs.
+I am currently implementing post-processing steps of the [tDRmapper](https://github.com/sararselitsky/tDRmapper) (analysis of tRNAs) output to allow an easy differential expression or clustering in downstream analysis. In the future, I would like to implement [proTRAC](http://sourceforge.net/p/protrac/home/Home/) for the analysis of piRNAs.
 
 # Thanks
 * [Harvard T.H. Chan School of Public Health](http://bioinformatics.sph.harvard.edu)
