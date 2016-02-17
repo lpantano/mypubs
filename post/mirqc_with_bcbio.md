@@ -1,8 +1,19 @@
-
 small RNA-seq with bcbio-nextgen
 =============================
 
-The study of small RNA helps to understand part of the gene regulation of a cell. There are different types of small RNAs, such as, miRNA, tRNA fragments and piRNAs. The adventage of small RNA-seq analysis is that we can study all small RNA types simultaneously and with the possibility to detect novel small RNAs at the same time. [bcbio-nextgen](http://github.com/chapmanb/bcbio-nextgen) is a python framework supported by a big scientific community that implements the best practices for next-generationg sequencing data and uses gold standard data to validate its analyses. It is well known for its variant calling and RNA-seq pipeline. Now, bcbio has an small RNA-seq pipeline that allows quality control and adapter removal of fastq files, followed by miRNA, isomiRs and tRNA annotation, and genome-wide characterization of other types of small RNAs. Here, I show the capabilities of the pipeline and its validation using data from the [miRQC project](http://www.nature.com/nmeth/journal/v11/n8/full/nmeth.3014.html).
+The study of small RNA helps to understand part of the gene regulation of a
+cell. There are different types of small RNAs: miRNA, tRNA fragments and piRNAs.
+The adventage of small RNA-seq analysis is that we can study all small RNA types
+simultaneously, with the possibility to detect novel small RNAs as well.
+[bcbio-nextgen](http://github.com/chapmanb/bcbio-nextgen) is a Python framework
+supported by a big scientific community that implements best practices for
+next-generationg sequencing data and uses gold standard data to validate its
+analyses. It is well known for its variant calling and RNA-seq pipeline. Now,
+bcbio has an small RNA-seq pipeline that allows quality control, adapter removal
+of fastq files, annotation of miRNA, isomiRs and tRNAs, and genome-wide
+characterization of other types of small RNAs. Here, I show the capabilities of
+the pipeline and its validation using data from the
+[miRQC project](http://www.nature.com/nmeth/journal/v11/n8/full/nmeth.3014.html).
 
 - [reproducible code](http://seqcluster.readthedocs.org/example_pipeline.html)
 - [R code](https://github.com/lpantano/mypubs/blob/master/srnaseq/mirqc/ready_report.rmd)
@@ -12,10 +23,10 @@ The study of small RNA helps to understand part of the gene regulation of a cell
 miRQC project
 --------------------
 
-miRQC project provides samples with known relative amounts of small RNAs, enabling
+miRQC provides samples with known relative amounts of small RNAs, enabling
 comparison of quantitation and detection of miRNAs. The main goal was to test
 different platforms for miRNA detection, but these are also great samples for
-benchmarking tools. 
+benchmarking tools.
 
 Samples are one Universal Human miRNA reference RNA (Agilent Technologies, #750700), one human brain total RNA (Life Technologies, #AM6050), human liver total RNA (LifeTechnologies, #AM7960) and MS2-phage RNA (Roche, #10165948001). Moreover, two more samples were created using
 different concentrations of UHmiRR and HBR. And finally, two miRNA families were spiked in human liver and MS2-phage samples.
@@ -47,7 +58,7 @@ for miRNA quantification and allows
 [isomiRs](https://en.wikipedia.org/wiki/IsomiR) analysis as well. Read more
 about why [isomiRs are important](http://link_to_bibliography_seqcluster).
 
-Although is not covered here, it is important to mention the pipeline uses [miRDeep2](https://www.mdc-berlin.de/8551903/en/) for de-novo miRNA discovery. In this case, it uses all samples for this analysis and then seqbuster for quantification of only the novel miRNAs.
+Although not covered here, it is important to mention the pipeline uses [miRDeep2](https://www.mdc-berlin.de/8551903/en/) for de-novo miRNA discovery. In this case, it uses all samples for this analysis and then seqbuster for quantification of only the novel miRNAs.
 
 ### other smallRNAs quantification
 `bcbio` uses [seqcluster](http://github.com/lpantano/seqcluster) to detect
@@ -57,8 +68,7 @@ these small RNAs are dropped because they map multiple times on the genome and
 require special analysis to avoid bias in the quantification. Read more about
 why
 [other small RNAs are important](http://seqcluster.readthedocs.org/literature.html).
-It is important to mention that this tool produce a sqlite3 database to help with
-the visualization. An image example is [here](http://seqcluster.readthedocs.org/more_outputs.html#report).
+This tool produce a sqlite3 database for visualization. An image example is [here](http://seqcluster.readthedocs.org/more_outputs.html#report).
 
 ### quality control metrics
 `bcbio` summarizes `Fastqc` metrics for each sample. Together with different
@@ -67,11 +77,11 @@ samples and the overall project. It includes `fastqc` results, size
 distribution after adapter removal and amount of small RNAs mapped to miRNAs,
 tRNA, rRNA, repeats among others. Other metrics such as, amount of data used until
 the end of the analysis, or warning flags if the data is noisy, are provided by
-`seqcluster` and included in the final _Rmd_ [template report](https://github.com/lpantano/mypubs/blob/master/srnaseq/mirqc/ready_report.md). 
+`seqcluster` and included in the final R markdown [template report](https://github.com/lpantano/mypubs/blob/master/srnaseq/mirqc/ready_report.md). 
 
 ### automatic report
 `bcbio` generates a
-[_Rmd_ template report](https://github.com/lpantano/mypubs/blob/master/srnaseq/mirqc/ready_report.md)
+[R markdown template report](https://github.com/lpantano/mypubs/blob/master/srnaseq/mirqc/ready_report.md)
 to make easy the visualization of all the results from each of the steps. It
 is inside the `report` folder in the working directory or final folder after the analysis.
 
@@ -168,8 +178,17 @@ quality control|0:01|8|20
 report | 0| 1| 1
 
 ## Conclusion
-We can conclude that the current analysis has a reliable quantification and specificity of miRNAs and other small RNA molecules.What's more, it helps with the downstream analysis creating a complete _Rmd_ template that covers the most important section of small RNA studies.
-I am currently implementing post-processing steps of the [tDRmapper](https://github.com/sararselitsky/tDRmapper) (analysis of tRNAs) output to allow an easy differential expression or clustering in downstream analysis. In the future, I would like to implement [proTRAC](http://sourceforge.net/p/protrac/home/Home/) for the analysis of piRNAs.
+We can conclude that the current analysis has a reliable quantification and
+specificity of miRNAs and other small RNA molecules. What's more, it helps with
+the downstream analysis creating a complete R markdown template that covers the
+most important section of small RNA studies.
+
+I am currently implementing post-processing steps of the
+[tDRmapper](https://github.com/sararselitsky/tDRmapper) (analysis of tRNAs)
+output to allow an easy differential expression or clustering in downstream
+analysis. In the future, I would like to implement
+[proTRAC](http://sourceforge.net/p/protrac/home/Home/) for the analysis of
+piRNAs.
 
 # Thanks
 * [Harvard T.H. Chan School of Public Health](http://bioinformatics.sph.harvard.edu)
