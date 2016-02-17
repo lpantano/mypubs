@@ -2,7 +2,8 @@ small RNA-seq with bcbio-nextgen
 =============================
 
 The study of small RNA helps to understand part of the gene regulation of a
-cell. There are different types of small RNAs: miRNA, tRNA fragments and piRNAs.
+cell. There are different types of small RNAs, the most important in mammas are:
+miRNA, tRNA fragments and piRNAs.
 The adventage of small RNA-seq analysis is that we can study all small RNA types
 simultaneously, with the possibility to detect novel small RNAs as well.
 [bcbio-nextgen](http://github.com/chapmanb/bcbio-nextgen) is a Python framework
@@ -28,7 +29,7 @@ comparison of quantitation and detection of miRNAs. The main goal was to test
 different platforms for miRNA detection, but these are also great samples for
 benchmarking tools.
 
-Samples are one Universal Human miRNA reference RNA (Agilent Technologies, #750700), one human brain total RNA (Life Technologies, #AM6050), human liver total RNA (LifeTechnologies, #AM7960) and MS2-phage RNA (Roche, #10165948001). Moreover, two more samples were created using
+Samples are: one Universal Human miRNA reference RNA (Agilent Technologies, #750700), one human brain total RNA (Life Technologies, #AM6050), several human liver total RNA (LifeTechnologies, #AM7960) and several MS2-phage RNA (Roche, #10165948001). Moreover, two more samples were created using
 different concentrations of UHmiRR and HBR. And finally, two miRNA families were spiked in human liver and MS2-phage samples.
 
 
@@ -38,9 +39,9 @@ different concentrations of UHmiRR and HBR. And finally, two miRNA families were
 There are 4 main steps in the small RNA-seq pipeline:
 
 * adapter removal
-* miRNA quantification
+* miRNA annotation
 * de-novo miRNA detection
-* other small RNAs detection and quantification
+* other small RNAs detection
 * quality control metrics
 
 ### adapter removal
@@ -49,7 +50,7 @@ allowing a minimum read size of 17 nts and removing the adapter if it is at
 least 8 nts long.
 
 
-### miRNA quantification
+### miRNA annotation
 `bcbio` uses
 [seqbuster](http://seqcluster.readthedocs.org/mirna_annotation.html) for this
 step. It has been used by
@@ -60,7 +61,7 @@ about why [isomiRs are important](http://link_to_bibliography_seqcluster).
 
 Although not covered here, it is important to mention the pipeline uses [miRDeep2](https://www.mdc-berlin.de/8551903/en/) for de-novo miRNA discovery. In this case, it uses all samples for this analysis and then seqbuster for quantification of only the novel miRNAs.
 
-### other smallRNAs quantification
+### other smallRNAs detection
 `bcbio` uses [seqcluster](http://github.com/lpantano/seqcluster) to detect
 unique units of transcription over the genome, allowing resolutions of small
 RNAs found in multiple genomic locations. Normally
@@ -132,7 +133,7 @@ While the text in the GEO web says:
 After the analysis with `bcbio`, we can calculate the amount of miRs that
 follows the relative abundance rule. To measure this, I took the average from
 the replicates and kept only the miRs with a median > 5 counts after
-normalization (upper quantile normalization) among samples.
+upper quantile normalization among samples.
 
 miRNAs which A > B are 111, and all of them follows A > D > C
 
@@ -145,7 +146,7 @@ To evaluate specificity we used samples that included specific miRNAs that are n
 normally expressed there. These samples were analyzed in a different
 [run](https://github.com/lpantano/seqcluster/blob/master/data/pipeline_example/mirqc/non_mirqc_bcbio.csv).
 
-Samples are 4 human liver RNAs and 4 MS2-phage RNAs with 8 synthetic miRNAs from two families (miR-302a/b/c/d and let-7a/b/c/d).
+Samples used are 4 human liver RNAs and 4 MS2-phage RNAs with 8 synthetic miRNAs from two families (miR-302a/b/c/d and let-7a/b/c/d).
 
 We should only see those miRNAs (let-7 and miR-302 families) in those samples. In this case, and similar to the paper, only sequences that appear > 2 times in the fastq files are considered.
 
