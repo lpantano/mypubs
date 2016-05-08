@@ -264,7 +264,7 @@ div.tocify {
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(knitr)
 <span class="kw">library</span>(rmarkdown)
 <span class="kw">options</span>(<span class="dt">bitmapType =</span> <span class="st">&quot;cairo&quot;</span>)
-opts_chunk$<span class="kw">set</span>(<span class="dt">tidy=</span><span class="ot">TRUE</span>, <span class="dt">highlight=</span>T, <span class="dt">figalign=</span><span class="st">&quot;center&quot;</span>, <span class="dt">cache=</span>F,
+opts_chunk$<span class="kw">set</span>(<span class="dt">tidy=</span><span class="ot">TRUE</span>, <span class="dt">highlight=</span>T, <span class="dt">figalign=</span><span class="st">&quot;center&quot;</span>,
                <span class="dt">fig.height=</span><span class="dv">6</span>, <span class="dt">fig.width=</span><span class="dv">10</span>, <span class="dt">message=</span>F, <span class="dt">error=</span>F, <span class="dt">warning=</span>F, <span class="dt">bootstrap.show.code=</span><span class="ot">FALSE</span>)</code></pre></div>
 <div id="methods" class="section level1">
 <h1>Methods</h1>
@@ -272,7 +272,7 @@ opts_chunk$<span class="kw">set</span>(<span class="dt">tidy=</span><span class=
 <li>isomiRs are simulated with the script inside <code>seqcsluter</code>. see <code>mirannotation.sh</code>.</li>
 <li>To see reproducibility, please check: <code>mirannotation.sh</code> script. <code>installer.sh</code> helps with installation of some specific tools that are less likely you have installed.</li>
 <li>miRBase 21 is the version used.</li>
-<li>scoring hits to precursor: in case the tool gives a score, the best score will be used. If not the first hit is the one used. If score is the same, the first hit is used. Tools that can be scored are: <code>bowtie, bowtie2, chimira_blast, GEM, microzer, miraligner, miraligner-python, novoaling, razer3, STAR</code></li>
+<li>scoring hits to precursor: in case the tool gives a score, the best score will be used. If not the first hit is the one used. If score is the same, the first hit is used. Tools that can be scored are: <code>bowtie, bowtie2, chimira_blast, GEM, microzer, miraligner, miraligner-python, novoaling, razer3, STAR, isomir-sea</code></li>
 <li>only <code>miraligner*</code> and <code>srnabench</code>gives miRNA annotation, so these tools should have an advantage since they are parsing the hits to get the best annotation. Anyway, I am trying to get the best of all of them using the precursor name instead of the miRNA. In the last section, since the rest tools are only alignerts, I call miRNA the firs three names in the precursor (i.e hsa-let-7a in hsa-let-7a-1/2/3).</li>
 </ul>
 <p><em>Note</em> Future work is the use of the <a href="http://seqcluster.readthedocs.org/mirna_annotation.html#miraligner-inside-seqcluster">python miraligner</a> version to annotate miRNA/isomiR from BAM files with precursor hits coming from any tool that gives a BAM file as output.</p>
