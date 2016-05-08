@@ -1,22 +1,20 @@
 ---
 title: "miRNA annotation"
 author: "Lorena Pantano"
-date: "10/02/2015"
+date: "07/05/2016"
 output:
-  knitrBootstrap::bootstrap_document:
+  html_document:
+    toc: true
+    toc_depth: 2
+    code_folding: hide
+    toc_float: true
     theme: readable
     highlight: zenburn
-    theme.chooser: TRUE
-    highlight.chooser: TRUE
-  html_document:
-    highlight: zenburn
-
 ---
 
 ```{r setup-mir}
 library(knitr)
 library(rmarkdown)
-library(knitrBootstrap)
 options(bitmapType = "cairo")
 opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
                fig.height=6, fig.width=10, message=F, error=F, warning=F, bootstrap.show.code=FALSE)
@@ -26,7 +24,7 @@ opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
  * isomiRs are simulated with the script inside `seqcsluter`. see `mirannotation.sh`.
  * To see reproducibility, please check: `mirannotation.sh` script. `installer.sh` helps with installation of some specific tools that are less likely you have installed.
  * miRBase 21 is the version used.
- * scoring hits to precursor: in case the tool gives a score, the best score will be used. If not the first hit is the one used. If score is the same, the first hit is used. Tools that can be scored are: `bowtie, bowtie2, chimira_blast, GEM, microzer, miraligner, miraligner-python, novoaling, razer3, STAR`
+ * scoring hits to precursor: in case the tool gives a score, the best score will be used. If not the first hit is the one used. If score is the same, the first hit is used. Tools that can be scored are: `bowtie, bowtie2, chimira_blast, GEM, microzer, miraligner, miraligner-python, novoaling, razer3, STAR, isomir-sea`
  * only `miraligner*` and `srnabench `gives miRNA annotation, so these tools should have an advantage since they are parsing the hits to get the best annotation. Anyway, I am trying to get the best of all of them using the precursor name instead of the miRNA. In the last section, since the rest tools are only alignerts, I call miRNA the firs three names in the precursor (i.e hsa-let-7a in hsa-let-7a-1/2/3).
  
 *Note* Future work is the use of the [python miraligner](http://seqcluster.readthedocs.org/mirna_annotation.html#miraligner-inside-seqcluster) version to annotate miRNA/isomiR from BAM files with precursor hits coming from any tool that gives a BAM file as output.
@@ -78,7 +76,7 @@ How size affects the alignments
 ggplot(data,aes(V8,V7,fill=V3))+
   geom_boxplot()+
   theme_bw()+ labs(x="")+
-  scale_fill_brewer("mapped",palette="Set1")
+  scale_fill_brewer("mapped",palette="Set1") + theme(axis.text.x = element_text(angle = 90))
 ```
 
 # Isomirs effect

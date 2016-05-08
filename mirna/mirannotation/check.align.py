@@ -50,6 +50,32 @@ for k in data.keys():
         mut=k.find("mut:null")
         print "%s\t%s\tno\tNA\t%s\t%s\t%s\tmiraligner" % (k,data[k],add,mut,lendata[k])
 
+#load isomir-sea results
+check, save = {}, {}
+mir=open('isomir-sea/sim.out.txt')
+for line in mir:
+    cols=line.split("\t")
+    ref = cols[5][1:].split(" ")[0]
+    add=line.find("add:null")
+    mut=line.find("mut:null")
+    score=0
+    if (line.find("hsa")>=0):
+        seq=cols[1].replace("U", "T")
+        name=dataseq[seq]
+        add=name.find("add:null")
+        mut=name.find("mut:null")
+        check[seq]=1
+        print "%s\t%s\tyes\t%s\t%s\t%s\t%s\tisomir-sea" %(name,ref,name.split("_")[1],add,mut,lendata[name])
+mir.close()
+
+# if not aligned, print them here
+for k in dataseq.keys():
+    if not check.has_key(k):
+        name = dataseq[k]
+        add=name.find("add:null")
+        mut=name.find("mut:null")
+        print "%s\t%s\tno\tNA\t%s\t%s\t%s\tisomir-sea" % (name,data[name],add,mut,lendata[name])
+
 
 #load miraligner-python results
 check, save = {}, {}
