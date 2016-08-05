@@ -1,7 +1,7 @@
 ---
 title: "miRNA annotation"
 author: "Lorena Pantano"
-date: "07/05/2016"
+date: "`r date()`"
 output:
   html_document:
     toc: true
@@ -87,7 +87,7 @@ How size affects the alignments
 ```{r size-mir}
 ggplot(data,aes(V8,V7,fill=V3))+
   geom_boxplot()+
-  theme_bw()+ labs(x="")+
+  theme_bw()+ labs(x="", y="length")+ 
   scale_fill_brewer("mapped",palette="Set1") + theme(axis.text.x = element_text(angle = 90))
 ```
 

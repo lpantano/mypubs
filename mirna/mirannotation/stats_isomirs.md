@@ -1,16 +1,15 @@
 ---
 title: "isomiR annotation"
 author: "Lorena Pantano"
-date: "10/10/2014"
+date: "Fri Aug  5 16:26:15 2016"
 output:
-  knitrBootstrap::bootstrap_document:
+  html_document:
+    toc: true
+    toc_depth: 2
+    code_folding: hide
+    toc_float: true
     theme: readable
     highlight: zenburn
-    theme.chooser: TRUE
-    highlight.chooser: TRUE
-  html_document:
-    highlight: zenburn
-
 ---
 
 
@@ -51,7 +50,7 @@ ggplot(data_gg, aes(tool, fill = is_iso)) + geom_bar() + scale_fill_brewer(palet
     hjust = 1))
 ```
 
-![plot of chunk iso](figure/iso-1.png) 
+![plot of chunk iso](figure/iso-1.png)
 
 
 #Accuracy
@@ -72,5 +71,5 @@ ggplot(subset(data_gg_ann, is_iso == "True" & find == "Yes"), aes(variable,
     hjust = 1))
 ```
 
-![plot of chunk acc-iso](figure/acc-iso-1.png) 
+![plot of chunk acc-iso](figure/acc-iso-1.png)
 

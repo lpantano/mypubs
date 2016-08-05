@@ -1,23 +1,21 @@
 ---
 title: "isomiR annotation"
 author: "Lorena Pantano"
-date: "10/10/2014"
+date: "`r date()`"
 output:
-  knitrBootstrap::bootstrap_document:
+  html_document:
+    toc: true
+    toc_depth: 2
+    code_folding: hide
+    toc_float: true
     theme: readable
     highlight: zenburn
-    theme.chooser: TRUE
-    highlight.chooser: TRUE
-  html_document:
-    highlight: zenburn
-
 ---
 
 
 ```{r setup-iso, echo=FALSE}
 library(knitr)
 library(rmarkdown)
-library(knitrBootstrap)
 
 opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
  fig.height=5, fig.width=9, message=F, error=F, warning=F)

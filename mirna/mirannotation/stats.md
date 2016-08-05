@@ -1,7 +1,7 @@
 ---
 title: "miRNA annotation"
 author: "Lorena Pantano"
-date: "07/05/2016"
+date: "Fri Aug  5 16:25:47 2016"
 output:
   html_document:
     toc: true
@@ -17,7 +17,8 @@ output:
 library(knitr)
 library(rmarkdown)
 options(bitmapType = "cairo")
-opts_chunk$set(tidy = TRUE, highlight = T, figalign = "center", fig.height = 6, fig.width = 10, message = F, error = F, warning = F, bootstrap.show.code = FALSE)
+opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
+               fig.height=6, fig.width=10, message=F, error=F, warning=F, bootstrap.show.code=FALSE)
 ```
 
 # Methods
@@ -78,21 +79,24 @@ Proportion of mapped and no-mapped sequences
 library(ggplot2)
 library(dplyr)
 dt = data %>% group_by(V8, V3) %>% summarise(total = n()) %>% as_data_frame()
-ggplot(dt, aes(x = V8, y = total, fill = V3)) + geom_bar(stat = "identity") + geom_text(aes(label = total), vjust = -1) + theme_bw() + labs(x = "") + ylim(0, max(dt$total) + 2000) + scale_fill_brewer("mapped", 
-    palette = "Set1") + facet_wrap(~V3, scales = "free_y", ncol = 1) + theme(axis.text.x = element_text(angle = 90))
+ggplot(dt, aes(x = V8, y = total, fill = V3)) + geom_bar(stat = "identity") + 
+    geom_text(aes(label = total), vjust = -1) + theme_bw() + labs(x = "") + 
+    ylim(0, max(dt$total) + 2000) + scale_fill_brewer("mapped", palette = "Set1") + 
+    facet_wrap(~V3, scales = "free_y", ncol = 1) + theme(axis.text.x = element_text(angle = 90))
 ```
 
-![](figure/mapped-mir-1.png)
+![plot of chunk mapped-mir](figure/mapped-mir-1.png)
 
 
 # Size effect
 How size affects the alignments
 
 ```r
-ggplot(data, aes(V8, V7, fill = V3)) + geom_boxplot() + theme_bw() + labs(x = "") + scale_fill_brewer("mapped", palette = "Set1") + theme(axis.text.x = element_text(angle = 90))
+ggplot(data, aes(V8, V7, fill = V3)) + geom_boxplot() + theme_bw() + labs(x = "", 
+    y = "length") + scale_fill_brewer("mapped", palette = "Set1") + theme(axis.text.x = element_text(angle = 90))
 ```
 
-![](figure/size-mir-1.png)
+![plot of chunk size-mir](figure/size-mir-1.png)
 
 # Isomirs effect
 How changes in the mature miRNA affect the alignment:
@@ -104,10 +108,11 @@ How changes in the mature miRNA affect the alignment:
 
 
 ```r
-ggplot(data, aes(V8, fill = changes)) + geom_bar() + theme_bw() + labs(x = "") + facet_wrap(~V3) + scale_fill_brewer("changes", palette = "Set1") + theme(axis.text.x = element_text(angle = 90))
+ggplot(data, aes(V8, fill = changes)) + geom_bar() + theme_bw() + labs(x = "") + 
+    facet_wrap(~V3) + scale_fill_brewer("changes", palette = "Set1") + theme(axis.text.x = element_text(angle = 90))
 ```
 
-![](figure/iso-mir-1.png)
+![plot of chunk iso-mir](figure/iso-mir-1.png)
 
 
 # Specificity at precursor level
@@ -115,22 +120,30 @@ How many were assigned to the correct miRNA using the precursor name as the true
 Red would be "not correct" and blue "correct". This is only considering mapped sequences.
 
 ```r
-dt = data %>% filter(V3 == "yes") %>% group_by(V8, TP) %>% summarise(total = n()) %>% as_data_frame()
-ggplot(dt, aes(x = V8, y = total, fill = factor(TP))) + geom_bar(stat = "identity") + geom_text(aes(label = total), vjust = -1, size = 3) + theme_bw() + labs(x = "") + ylim(0, max(dt$total) + 200) + scale_fill_brewer(guide = FALSE, 
-    "correct", palette = "Set1") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~TP, scales = "free_y") + ggtitle("Specificity at precursor level")
+dt = data %>% filter(V3 == "yes") %>% group_by(V8, TP) %>% summarise(total = n()) %>% 
+    as_data_frame()
+ggplot(dt, aes(x = V8, y = total, fill = factor(TP))) + geom_bar(stat = "identity") + 
+    geom_text(aes(label = total), vjust = -1, size = 3) + theme_bw() + labs(x = "") + 
+    ylim(0, max(dt$total) + 200) + scale_fill_brewer(guide = FALSE, "correct", 
+    palette = "Set1") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~TP, 
+    scales = "free_y") + ggtitle("Specificity at precursor level")
 ```
 
-![](figure/sp-precursor-1.png)
+![plot of chunk sp-precursor](figure/sp-precursor-1.png)
 
 
 # Specificity at miRNA level
 Same logic than before but with the miRNA names in case the tool gives the miRNA names, if not, only the three first field in the name are used as annotation (i.e hsa-let-7a-1 will ignore any character beyond 7a). This will increase the number of TP, since many miRNAs has multiple precursors being the same mature miRNA at the end.
 
 ```r
-dt = data %>% filter(V3 == "yes") %>% group_by(V8, TPmirna) %>% summarise(total = n()) %>% as_data_frame()
-ggplot(dt, aes(x = V8, y = total, fill = factor(TPmirna))) + geom_bar(stat = "identity") + geom_text(aes(label = total), vjust = -1, size = 3) + theme_bw() + labs(x = "") + ylim(0, max(dt$total) + 200) + 
-    scale_fill_brewer(guide = FALSE, "correct", palette = "Set1") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~TPmirna, scales = "free_y") + ggtitle("Specificity at mature miRNA level")
+dt = data %>% filter(V3 == "yes") %>% group_by(V8, TPmirna) %>% summarise(total = n()) %>% 
+    as_data_frame()
+ggplot(dt, aes(x = V8, y = total, fill = factor(TPmirna))) + geom_bar(stat = "identity") + 
+    geom_text(aes(label = total), vjust = -1, size = 3) + theme_bw() + labs(x = "") + 
+    ylim(0, max(dt$total) + 200) + scale_fill_brewer(guide = FALSE, "correct", 
+    palette = "Set1") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~TPmirna, 
+    scales = "free_y") + ggtitle("Specificity at mature miRNA level")
 ```
 
-![](figure/sp-mir-1.png)
+![plot of chunk sp-mir](figure/sp-mir-1.png)
 

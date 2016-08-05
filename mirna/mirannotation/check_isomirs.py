@@ -20,7 +20,7 @@ def _read_miraligner(in_file):
         for line in in_handle:
             cols = line.strip().split("\t")
             logger.debug(line)
-            ok_mir, ok_add, ok_mut, ok_t5, ok_t3 = _check_pos_miraligner(cols[1], cols[2], cols[5], cols[6], cols[7], cols[8])
+            ok_mir, ok_add, ok_mut, ok_t5, ok_t3 = _check_pos_mirlaigner_strict(cols[1], cols[2], cols[5], cols[6], cols[7], cols[8])
             print "%s %s %s %s %s %s %s True Yes miraligner" % (cols[1], _is_iso(cols[1]), ok_mir, ok_mut, ok_add, ok_t5, ok_t3)
             logger.debug("miraligner %s %s %s %s %s %s True" % (cols[1], ok_mir, ok_mut, ok_add, ok_t5, ok_t3))
             seen[cols[0]] = 0
@@ -64,15 +64,15 @@ def _check_pos_mirlaigner_strict(name, chr, mut, add, t5, t3):
     t5_ref, t3_ref = name.split("_")[3].split(":")
     mut_ref = name.split("_")[4].split(":")[1]
     add_ref = name.split("_")[5].split(":")[1]
-    if (len(t3)-2 == abs(int(t3_ref))) or (t3 == t3_ref):
+    if (len(t3) == abs(int(t3_ref))) or (t3 == t3_ref):
         ok_t3 = True
-    if (len(t5)-2 == abs(int(t5_ref))) or (t5 == t5_ref):
+    if (len(t5) == abs(int(t5_ref))) or (t5 == t5_ref):
         ok_t5 = True
     if mut != "0" and mut_ref != "null":
         ok_mut = True
     if mut == "0" and mut_ref == "null":
         ok_mut = True
-    if len(add)-2 == len(add_ref) or (add == "0" and add_ref == "null"):
+    if len(add) == len(add_ref) or (add == "0" and add_ref == "null"):
         ok_add = True
     if cref == cquery:
         ok_mir = True
@@ -176,6 +176,6 @@ if __name__ == "__main__":
             numeric_level = getattr(logging, "DEBUG", None)
         logging.basicConfig(level=numeric_level)
         print "name is_iso is_mir is_mut is_add is_t5 is_t3 info find tool"
-        _create_seqs_name_dict("sim.20.hsa.fa")
-        _read_srnabench("srnabench/miRBase_isoAnnotation.txt")
-        _read_miraligner("miraligner/sim.20.hsa.mirna")
+        _create_seqs_name_dict("sim.21.hsa.fa")
+        _read_srnabench("srnabench/srnabench/miRBase_isoAnnotation.txt")
+        _read_miraligner("miraligner/sim.21.hsa.mirna")
