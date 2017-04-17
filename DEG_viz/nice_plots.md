@@ -49,6 +49,12 @@ Make some nice plots:
 ![](figure/plots-1.png)
 
 ```r
+> DEGreport::degPlotWide(dds = dds, genes = row.names(res)[1:5], group = "condition")
+```
+
+![](figure/plots-2.png)
+
+```r
 > pattern = DEGreport::degPatterns(norm_counts[row.names(res)[1:500],], # norm counts
 +                                  meta, # design
 +                                  time = "type", col = "condition") # plot settings
@@ -62,7 +68,7 @@ Working with  500  genes
 
  Working with  494 genes after filtering: minc >  15 
 
-![](figure/plots-2.png)
+![](figure/plots-3.png)
 
 ```r
 > DEGreport::degVolcano(
@@ -70,4 +76,4 @@ Working with  500  genes
 +     plot_text=as.data.frame(res[1:10,c("log2FoldChange","padj","id")])) # table to add names
 ```
 
-![](figure/plots-3.png)
+![](figure/plots-4.png)
