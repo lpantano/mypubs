@@ -5,7 +5,7 @@ library(dplyr)
 dummyClass <- setClass("dummyClass", contains = "SummarizedExperiment")
 
 dds <- makeExampleDESeqDataSet(n = 10000, m = 100)
-ddsSmall <- makeExampleDESeqDataSet(n = 500, m = 5)
+ddsSmall <- makeExampleDESeqDataSet(n = 100, m = 5)
 
 
 dummyBig <- new("dummyClass",
@@ -62,8 +62,8 @@ save(dummySmart, file = "microSmart.rda")
 
 rdaSize <- sapply(list.files(".", pattern = "rda"),
                   function(x) file.size(x) / 1024 )
-objSize <- sapply(list.files(".", pattern = "rda"),
-                  function(x) format(object.size(x), units = "b"))
+objSize <- sapply(list(dummyBig, dummySmall, dummySilly, dummySmart),
+                  function(x) format(object.size(x), units = "Kb"))
 
 data.frame(file = list.files(".", pattern = "rda"),
            rdaSize = rdaSize,
@@ -72,3 +72,5 @@ data.frame(file = list.files(".", pattern = "rda"),
 lapply(list.files(".", pattern = "rda"), function(fn){
     unlink(fn)
 })
+
+sessionInfo()
