@@ -40,6 +40,34 @@ library(rmarkdown)
 
 # Tittle
 
+```{r functions}
+library(ggplot2)
+library(gplots)
+library(dplyr)
+library(reshape)
+library(readr)
+```
+
+```{r cluster-unique}
+clus = read_delim("seqs_unique_cluster.bed", delim="\t",
+                  col_names = c("chrom", "start", "end", "id", "score", "strand", "cluster"))
+bed = read_delim("seqs.ma", delim = "\t")
+
+clus = left_join(clus, bed, by="id")
+
+stats = clus %>% dplyr::select(cluster, miRQC_A:miRQC_D_rep2) %>% 
+    dplyr::group_by(cluster) %>% 
+    dplyr::summarize_all(sum) %>% left_join(.,clus %>% dplyr::group_by(cluster) %>% summarise(nseq=n()), by="cluster")
+
+df = melt(as.data.frame(stats), id.vars = c("nseq","cluster"))
+ggplot(df, aes(x=nseq, y=value, color=variable)) + 
+    geom_point() + 
+    scale_y_log10() +
+    scale_x_log10() +
+    facet_wrap(~variable)
+
+```
+
 # Setup
 ```{r load}
 sam = read.table("hsa_let_7a.sam",comment.char = "@", sep="\t")
@@ -57,12 +85,7 @@ df = melt(count_by_pos) %>% filter(value > 0) %>%
 
 ## Libraries
 
-```{r functions}
-library(ggplot2)
-library(gplots)
-library(dplyr)
-library(reshape)
-```
+``
 
 ```{r analysis}
 ggplot(sam, aes(x=V4)) +
