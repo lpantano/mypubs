@@ -1,0 +1,165 @@
+---
+title: "Example of miRNA/mRNA expression integration"
+author: "Lorena Pantano"
+date: "`r Sys.Date()`"
+output: 
+    md_document
+---
+```{r knitr-setup, echo = FALSE}
+# Set seed for reproducibility
+set.seed(1454944673)
+library(knitr)
+library(ggplot2)
+opts_chunk[["set"]](
+    autodep = TRUE,
+    bootstrap.show.code = FALSE,
+    cache = TRUE,
+    cache.lazy = TRUE,
+    dev = c("png", "pdf"),
+    error = TRUE,
+    fig.height = 6,
+    fig.retina = 2,
+    fig.width = 6,
+    highlight = TRUE,
+    message = FALSE,
+    prompt = TRUE,
+    # formatR required for tidy code
+    tidy = TRUE,
+    warning = FALSE)
+
+theme_set(
+    theme_light(base_size = 14))
+theme_update(
+    legend.justification = "center",
+    legend.position = "bottom")
+```
+
+
+This post should show you an easy way to get the following data type integrated
+into a figure:
+
+* functional enricment analysis
+* gene expression data from any technology
+* miRNA expression data from any technology
+
+I am using the function `isoNetwork` from the package `isomiRs`, that of course
+is developed by me :) My ego is not that big, it is just I wanted a figure
+showing that information, and I couldn't find any at a time, but if you know
+any, tweet me about it to @lopantano.
+
+This function needs some pre-computed information, like the normalized expression
+and the targeted genes by miRNAs. Normally, the significant genes and miRNAs from a differentially expression analysis would do it.
+
+The first requirement is two have these two datasets into a SummarizedExperiment object As an example, I am using the published data from Folic Acid Mouse model (GSE65267) that
+has been analyzed with bcbio-nextgen pipeline and bcbioRNASeq pacakge.
+
+I saved these analysis into an R object that contains:
+
+* fa_mrna: gene expression
+* fa_mirna: miRNA expression
+* fa_cold: metadata
+
+From that, I ran DESeq2 to get the significant genes and miRNAs from the
+comparison day14 vs day0 (normal).
+
+```{r}
+load("fa_isonetwork.rda")
+library(isomiRs)
+library(DESeq2)
+library(SummarizedExperiment)
+
+mi_cold = fa_cold[colnames(fa_mirna),, drop = F]
+mi_dse = DESeqDataSetFromMatrix(round(2^fa_mirna), mi_cold, design = ~ day)
+mi_dse = DESeq(mi_dse)
+mi_res = results(mi_dse, name = "day_day14_vs_normal")
+mi_res = mi_res[!is.na(mi_res$padj),]
+mi_top = row.names(mi_res[mi_res$padj < 0.05,])
+mi_rse = SummarizedExperiment(assays = SimpleList(norm=fa_mirna),
+                              colData = mi_cold,
+                              metadata = list(sign=mi_top))
+
+m_cold = fa_cold[colnames(fa_mrna),, drop = F]
+m_dse = DESeqDataSetFromMatrix(round(2^fa_mrna), m_cold, design = ~ day)
+m_dse = DESeq(m_dse)
+m_res = results(m_dse, name = "day_day14_vs_normal")
+m_res = m_res[!is.na(m_res$padj),]
+m_top = row.names(m_res[m_res$padj < 0.05,])
+m_rse = SummarizedExperiment(assays=SimpleList(norm=fa_mrna),
+                              colData = m_cold,
+                              metadata=list(sign=m_top))
+
+```
+
+After that, I ran the functional analysis with [`clusterProfiler` Bioc package](http://bioconductor.org/packages/release/bioc/html/clusterProfiler.html):
+
+```{r}
+library(org.Mm.eg.db)
+library(clusterProfiler)
+
+
+ego <- enrichGO(m_top,
+                org.Mm.eg.db,
+                "ENSEMBL",
+                ont = "MF",
+                universe = rownames(m_res))
+```
+
+Actually, it could be anything as far as the table have the same naming that
+the one comming from this package.
+
+Last step before the real integration analysis, is to get the predicted
+targets of the miRNA. This can be done with any package as far as you 
+get a table with two columns: gene and mirna.
+
+I used two options, one using the already implemented code in the package
+(that uses targetscan database):
+
+```{r}
+library(targetscan.Mm.eg.db)
+m2t = mirna2targetscan(mi_top, species = "mmu", org = org.Mm.eg.db, keytype = "ENSEMBL")
+
+mirna_targets = findTargets(mi_rse, m_rse, m2t[,c("ENSEMBL", "mir")], summarize = "day", min_cor = -0.7)
+
+```
+
+or using the function `get_multimir` implemented on [`multiMiR` Bioc package](http://bioconductor.org/packages/release/bioc/html/multiMir.html).
+
+```{r, eval = FALSE}
+library(multiMiR)
+multimir_results <- get_multimir(org     = 'mmu',
+                                 mirna   = mi_top,
+                                 table   = 'validated',
+                                 summary = TRUE)
+
+library(magrittr)
+m2t_multimir = slot(multimir_results, "data")[,c("target_ensembl", "mature_mirna_id")] %>%  dplyr::filter(target_ensembl != "") %>% dplyr::distinct()
+
+mirna_targets = findTargets(mi_rse, m_rse, m2t_multimir, summarize = "day", min_cor = -0.7)
+```
+
+In both cases, I ran `findTargets` to use the expression data to make sure
+the correlation between the miRNA and predicted gene is negative since is
+the known biological function of miRNAs, being negative modulators.
+
+Finally, we use `isoNetwork` to put all the data together, and `isoPlotNet` to
+create the final figure with all information.
+
+```{r}
+data <- isoNetwork(mi_rse, m_rse, min_fc = 0.1,
+                   summarize = "day",
+                   target = mirna_targets,
+                   enrich = ego)
+
+isoPlotNet(data, minGenes = 1)
+```
+
+It is an easy way to spot what pathways contain genes that are targeted by 
+miRNAs.
+
+Note that this function won't indicate if a pathway is enriched on miRNA targets.
+It shows how these three different data set can be put together to explore the
+relationship among them.
+
+
+------------------------------------
+> "self-control in bioinformatics: be nice to your collaborator when they can not open a TSV file with excel."

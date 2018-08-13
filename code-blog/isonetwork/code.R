@@ -4,10 +4,9 @@ library(DESeq2)
 library(SummarizedExperiment)
 
 mi_cold = fa_cold[colnames(fa_mirna),, drop = F]
-mi_cold$day = droplevels(mi_cold$day)
 mi_dse = DESeqDataSetFromMatrix(round(2^fa_mirna), mi_cold, design = ~ day)
 mi_dse = DESeq(mi_dse)
-mi_res = results(mi_dse)
+mi_res = results(mi_dse, name = "day_day14_vs_normal")
 mi_res = mi_res[!is.na(mi_res$padj),]
 mi_top = row.names(mi_res[mi_res$padj < 0.05,])
 mi_rse = SummarizedExperiment(assays = SimpleList(norm=fa_mirna),
@@ -15,20 +14,19 @@ mi_rse = SummarizedExperiment(assays = SimpleList(norm=fa_mirna),
                               metadata = list(sign=mi_top))
 
 m_cold = fa_cold[colnames(fa_mrna),, drop = F]
-m_cold$day = droplevels(m_cold$day)
 m_dse = DESeqDataSetFromMatrix(round(2^fa_mrna), m_cold, design = ~ day)
 m_dse = DESeq(m_dse)
-m_res = results(m_dse)
+m_res = results(m_dse, name = "day_day14_vs_normal")
 m_res = m_res[!is.na(m_res$padj),]
 m_top = row.names(m_res[m_res$padj < 0.05,])
-m_cold_fixed = m_cold[m_cold$day  %in%  mi_cold$day,, drop = F]
-m_cold_fixed$day = droplevels(m_cold_fixed$day)
-m_rse = SummarizedExperiment(assays=SimpleList(norm=fa_mrna[,m_cold$day  %in%  mi_cold$day]),
-                              colData = m_cold_fixed,
+m_rse = SummarizedExperiment(assays=SimpleList(norm=fa_mrna),
+                              colData = m_cold,
                               metadata=list(sign=m_top))
 
 library(org.Mm.eg.db)
 library(clusterProfiler)
+
+
 ego <- enrichGO(m_top,
                 org.Mm.eg.db,
                 "ENSEMBL",
