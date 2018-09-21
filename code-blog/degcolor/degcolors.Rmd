@@ -1,0 +1,65 @@
+---
+title: "Get colors for your heatmap annotation"
+output: 
+  md_document:
+    variant: markdown_github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This post will show how to configure quickly the colors for the annotation
+of rows/columns that go on top or on the side of a heatmap.
+
+I normally use `pheatmap` a lot. Recently I discovered `ComplexHeatmap`. In both cases I spend always sometime changing the colors of the annotations. I ended up coding a function inside my package `DEGreport` to do that.
+
+Given a data.frame with metadata data information will do:
+
+* white-black scale for numerical variables
+* blue-orange for categorical values with only two categories
+* `Set2` palette for categorical values with more than two categories 
+
+All three color sets can be changed using the [parameters function](http://lpantano.github.io/DEGreport/reference/degColors.html).
+
+```{r}
+library(DEGreport)
+library(stemHypoxia)
+data(stemHypoxia)
+```
+
+I am going to use this [stemcell experiment dataset](https://bioconductor.org/packages/release/data/experiment/html/stemHypoxia.html) I found randomly in Bioconductor page.
+
+```{r}
+exp = as.matrix(M[,3:30])
+rownames(exp) = M[,2]
+rownames(design) = colnames(exp)
+design = design[,c(1:2)]
+design$time = as.factor(design$time)
+```
+
+I'll find the most variable genes.
+
+```{r}
+most_variable = names(tail(sort(apply(exp, 1, sd)), 1000))
+design$mean_gene = colMeans(exp[most_variable,])
+```
+
+And we can plot the heatmap with new colors with need to specify each variable at a time.
+
+```{r, fig.height=8, fig.width=6}
+library(pheatmap)
+pheatmap(exp[most_variable,], scale = "row", show_rownames = FALSE,
+         annotation_col = design,
+         annotation_colors = degColors(design))
+```
+
+If you use `ComplexHeatmap` you can activate `col_fun = TRUE` to get it working.
+
+* R Session
+
+```{r}
+devtools::session_info()
+```
+
+
