@@ -21,7 +21,7 @@ opts_chunk$set(tidy=TRUE, highlight=T, figalign="center",
 ```
 
 # Methods
- * isomiRs are simulated with the script inside `seqcsluter`. see `mirannotation.sh`.
+ * isomiRs are simulated with the script inside `seqcluster`. see `mirannotation.sh`.
  * To see reproducibility, please check: `mirannotation.sh` script. `installer.sh` helps with installation of some specific tools that are less likely you have installed.
  * miRBase 21 is the version used.
  * scoring hits to precursor: in case the tool gives a score, the best score will be used. If not the first hit is the one used. If score is the same, the first hit is used. Tools that can be scored are: `bowtie, bowtie2, blast, GEM, microzer, miraligner, miraligner-python, novoaling, razer3, STAR, isomir-sea`
@@ -42,7 +42,7 @@ tools will give a good results for a real biological data and all of them help t
 *Note* Future work is the use of the [python miraligner](http://seqcluster.readthedocs.org/mirna_annotation.html#miraligner-inside-seqcluster) version to annotate miRNA/isomiR from BAM files with precursor hits coming from any tool that gives a BAM file as output.
 
 ```{r load-mir}
-data<-read.table("stats",skip=1)
+data<-read.table("stats",skip=1, stringsAsFactors = F)
 data$V2<-as.character(data$V2)
 data$V4<-as.character(data$V4)
 data$V5<-data$V5/abs(data$V5)
@@ -52,7 +52,7 @@ data$V6<-data$V6/abs(data$V6)
 data$V6[data$V6==1]<-"Na"
 data$V6[data$V6==-1]<-"Mut"
 data$changes<-paste(data$V5,data$V6)
-data$TP<-apply(data[,c(2,4)],1,function(x){
+data$TP <- apply(data[,c(2,4)],1,function(x){
   v<-grep(x[1],x[2],ignore.case=T)
   if (length(v)==0){v<-0}
   return (v)
@@ -111,7 +111,7 @@ ggplot(data,aes(V8,fill=changes))+
 # Specificity at precursor level
 How many were assigned to the correct miRNA using the precursor name as the true positive.
 Red would be "not correct" and blue "correct". This is only considering mapped sequences.
-```{r sp-precursor}
+```{r sp-precursor, fig.width=9}
 dt = data %>% filter(V3=="yes") %>% group_by(V8,TP) %>% summarise(total=n()) %>% as_data_frame()
 ggplot(dt,aes(x=V8,y=total,fill=factor(TP)))+
   geom_bar(stat = "identity")+
@@ -120,6 +120,15 @@ ggplot(dt,aes(x=V8,y=total,fill=factor(TP)))+
   scale_fill_brewer(guide=FALSE,"correct",palette="Set1") + theme(axis.text.x = element_text(angle = 90))+
     facet_wrap(~TP,scales = "free_y") +
   ggtitle("Specificity at precursor level")
+
+dtr = dt %>% spread(TP, total) %>% mutate(ratio=`0`/`1`)
+ggplot(dtr,aes(x=V8,y=ratio)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label=round(ratio,3)),vjust=-1,size=3) +
+  theme_bw()+ labs(x="")+ ylim(0,max(dtr$ratio)+0.01) +
+  scale_fill_brewer(guide=FALSE,palette="Set1") + theme(axis.text.x = element_text(angle = 90)) +
+  ggtitle("Specificity at precursor level")
+
 ```
 
 
@@ -134,5 +143,13 @@ ggplot(dt,aes(x=V8,y=total,fill=factor(TPmirna)))+
   scale_fill_brewer(guide=FALSE,"correct",palette="Set1") + theme(axis.text.x = element_text(angle = 90))+
     facet_wrap(~TPmirna,scales = "free_y")+
   ggtitle("Specificity at mature miRNA level")
+
+dtr = dt %>% spread(is_mir, total) %>% mutate(ratio=False/True)
+ggplot(dtr,aes(x=tool,y=ratio)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label=round(ratio,3)),vjust=-1,size=3) +
+  theme_bw()+ labs(x="")+ ylim(0,max(dtr$ratio)+0.01) +
+  scale_fill_brewer(guide=FALSE,palette="Set1") + theme(axis.text.x = element_text(angle = 90)) +
+  ggtitle("Specificity at miRNA level")
 ```
 
